@@ -105,7 +105,7 @@ nl:
       show_link: Bekijk debat
     form:
       debate_text: Omschrijving
-      debate_title: Ondewerp
+      debate_title: Onderwerp
       tags_instructions: Voeg labels toe.
       tags_label: Onderwerpen
       tags_placeholder: Voeg de gewenste labels toe, gescheiden door een komma (',')
