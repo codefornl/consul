@@ -447,7 +447,9 @@ nl:
         one: " bevat de term <strong>'%{search_term}'</strong>"
         other: " bevat de term <strong>'%{search_term}'</strong>"
       section_footer:
-        description: Citizens' proposals are an opportunity for neighbours and collectives to decide directly how they want their city to be, after getting sufficient support and submitting to a citizens' vote.
+        description: Dien een idee in of steun een idee en bepaal mee aan de toekomst van je stad.
+        help_text_1: Wanneer burgers of collectieven voldoende steun hebben verworven voor hun idee wordt deze in stemming gebracht.
+        help_text_2: "Meld je aan op %{org} om een idee in te dienen of te steunen. Deelnemers kunnen reageren op bestaande ideen en deze steunen met de knop 'Steun' die bij ideeën staat."
         title: Over ideeën
       section_header:
         help: Help
