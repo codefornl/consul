@@ -14,7 +14,7 @@
 
       <li <%= "class=is-active" if controller_name == "proposal_notifications" %>>
         <%= link_to moderation_proposal_notifications_path do %>
-          <span class="fas fa-lightbulb fa-fw"></span>
+          <span class="fas fa-sticky-note fa-fw"></span>
           <%= t("moderation.menu.proposal_notifications") %>
         <% end %>
       </li>
@@ -23,7 +23,7 @@
     <% if feature?(:debates) %>
       <li <%= "class=is-active" if controller_name == "debates" %>>
         <%= link_to moderation_debates_path do %>
-          <span class="fa-comment-alt"></span>
+          <span class="fas fa-comment-alt fa-fw"></span>
           <%= t('moderation.menu.flagged_debates') %>
         <% end %>
       </li>
@@ -32,7 +32,7 @@
     <% if feature?(:budgets) %>
       <li <%= "class=is-active" if controller_name == "investments" %>>
         <%= link_to moderation_budget_investments_path do %>
-          <span class="fas fa-hand-holding-usd fa-fw"></span>
+          <span class="fas fa-hand-holding-heart fa-fw"></span>
           <%= t("moderation.menu.flagged_investments") %>
         <% end %>
       </li>

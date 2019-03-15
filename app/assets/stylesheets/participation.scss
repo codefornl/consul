@@ -248,7 +248,7 @@
 
   .fa-comment-alt,
   .fa-lightbulb,
-  .fa-hand-holding-usd,
+  .fa-hand-holding-heart,
   .fa-image {
     font-size: rem-calc(50);
     line-height: $line-height;
@@ -264,7 +264,7 @@
     color: $proposals;
   }
 
-  .fa-hand-holding-usd {
+  .fa-hand-holding-heart {
     color: $budget;
   }
 }
@@ -662,7 +662,7 @@
 
   .fa-comment-alt,
   .fa-lightbulb,
-  .fa-hand-holding-usd {
+  .fa-hand-holding-heart {
     font-size: rem-calc(18);
     line-height: $line-height;
     margin-left: rem-calc(6);
@@ -677,7 +677,7 @@
     color: $proposals-dark;
   }
 
-  .fa-hand-holding-usd {
+  .fa-hand-holding-heart {
     color: $budget;
     font-size: $small-font-size;
   }
@@ -880,7 +880,7 @@
     text-transform: uppercase;
   }
 
-  .fa-hand-holding-usd {
+  .fa-hand-holding-heart {
     color: $budget;
     font-size: $small-font-size;
     line-height: $line-height;

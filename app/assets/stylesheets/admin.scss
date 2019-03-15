@@ -373,6 +373,9 @@ $sidebar-active: #f4fcd0;
 }
 
 .icon-sortable {
+  font-style: normal;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free" !important;
   font-family: "icons";
   font-size: $small-font-size;
   padding-right: $line-height / 2;
@@ -386,13 +389,13 @@ $sidebar-active: #f4fcd0;
   }
 
   &::before {
-    content: "\57";
-    top: -2px;
+    content: "\f0de";
+    top: -4px;
   }
 
   &::after {
-    content: "\52";
-    bottom: -10px;
+    content: "\f0dd";
+    bottom: -4px;
   }
 
   &.asc {

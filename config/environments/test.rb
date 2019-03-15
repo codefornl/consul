@@ -37,7 +37,7 @@ Rails.application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
   config.action_mailer.default_url_options = {
-    host: 'test'
+    :host => 'test'
   }
   config.action_mailer.asset_host = 'http://consul.test'
 
