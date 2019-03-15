@@ -601,6 +601,7 @@ en:
       emails_download: Emails download
       valuators: Valuators
       poll_officers: Poll officers
+
       polls: Polls
       poll_booths: Booths location
       poll_booth_assignments: Booths Assignments
@@ -632,6 +633,7 @@ en:
             update: "Update Block"
       title_moderated_content: Moderated content
       title_budgets: Budgets
+      title_polls: Polls
       title_profiles: Profiles
       title_settings: Settings
       title_site_customization: Site content
