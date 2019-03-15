@@ -285,3 +285,5 @@ end
 if !WebSection.exists?(:name => "help_page")
   WebSection.create(name: "help_page")
 end
+# Default custom pages
+load Rails.root.join("db", "pages.rb")
