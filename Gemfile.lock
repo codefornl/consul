@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/jwickard/omniauth-wordpress-oauth2-plugin.git
+  revision: 6944e5a7f0cc99d7622099fd88ec5ea545ea2b22
+  specs:
+    omniauth-wordpress_hosted (0.0.5)
+      omniauth-oauth2
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -551,6 +558,7 @@ DEPENDENCIES
   omniauth-facebook (~> 4.0.0)
   omniauth-google-oauth2 (~> 0.4.0)
   omniauth-twitter (~> 1.4.0)
+  omniauth-wordpress_hosted!
   paperclip (~> 5.2.1)
   paranoia (~> 2.4.1)
   pg (~> 0.21.0)

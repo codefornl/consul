@@ -285,5 +285,8 @@ end
 if !WebSection.exists?(:name => "help_page")
   WebSection.create(name: "help_page")
 end
+if !Setting["feature.wordpress_login"]
+  Setting["feature.wordpress_login"] = false
+end
 # Default custom pages
 load Rails.root.join("db", "pages.rb")

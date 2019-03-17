@@ -14,7 +14,10 @@
         <%# Omniauth features %>
         <% if Devise.omniauth_configs.any? %>
           <%# check to see if the omniauth for this one exists %>
-          <% if Devise.omniauth_configs[feature_flag.key.sub("feature.","").split("_").first.to_sym].present? || (feature_flag.key.sub("feature.","").split("_").first == "google" && Devise.omniauth_configs[:google_oauth2].present?)%>
+          <% if Devise.omniauth_configs[feature_flag.key.sub("feature.","").split("_").first.to_sym].present? || 
+            (feature_flag.key.sub("feature.","").split("_").first == "google" && Devise.omniauth_configs[:google_oauth2].present?) ||
+            (feature_flag.key.sub("feature.","").split("_").first == "wordpress" && Devise.omniauth_configs[:wordpress_oauth2].present?)
+          %>
             <tr class="<%= feature_flag.key.sub("feature.","").split("_").first%>">
               <%# Omniauth for this provider available %>
               <td class="small-8">

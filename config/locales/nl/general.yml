@@ -292,8 +292,12 @@ nl:
       username_warning: Door een verandering in de manier waarop we met sociale netwerken communiceren, is het mogelijk dat uw gebruikersnaam nu als 'al in gebruik' verschijnt. Kiest u dan een andere gebruikersnaam, aub.
     google_oauth2:
       name: Google
-      sign_in: Aanmelden Google
-      sign_up: Registreer via Google
+      sign_in: Aanmelden met Google
+      sign_up: Registreer met Google
+    wordpress_oauth2:
+      name: Wordpress
+      sign_in: Aanmelden met Wordpress
+      sign_up: Registreer via Wordpress
     info_sign_in: 'Aanmelden via sociale media'
     info_sign_up: 'Registreren via sociale media'
     or_fill: 'Direct aanmelden'

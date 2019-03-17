@@ -252,6 +252,13 @@ Devise.setup do |config|
   if (Rails.application.secrets.google_oauth2_key && Rails.application.secrets.google_oauth2_key.length > 0)
     config.omniauth :google_oauth2, Rails.application.secrets.google_oauth2_key, Rails.application.secrets.google_oauth2_secret
   end
+  if (Rails.application.secrets.wordpress_oauth2_key && Rails.application.secrets.wordpress_oauth2_key.length > 0)
+    config.omniauth :wordpress_oauth2, Rails.application.secrets.wordpress_oauth2_key, Rails.application.secrets.wordpress_oauth2_secret, 
+    strategy_class: OmniAuth::Strategies::WordpressHosted, 
+    client_options: {
+      site: Rails.application.secrets.wordpress_oauth2_site
+    }
+  end
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

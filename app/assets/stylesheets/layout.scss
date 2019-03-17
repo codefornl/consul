@@ -1454,6 +1454,7 @@ table {
 .button.button-facebook,
 .button.button-google,
 .button.button-google_oauth2,
+.button.button-wordpress_oauth2,
 .button.button-telegram {
   background: #fff;
   color: $text;
@@ -1475,7 +1476,7 @@ table {
     font-weight: normal;
     font-family: "Font Awesome 5 Brands" !important;
     font-size: rem-calc(24);
-    left: 0;
+    left: -12px;
     line-height: $line-height * 2;
     padding: 0 rem-calc(20);
     position: absolute;
@@ -1522,7 +1523,7 @@ table {
     font-weight: normal;
     font-family: "Font Awesome 5 Brands" !important;
     font-size: rem-calc(24);
-    left: 0;
+    left: -12px;
     line-height: $line-height * 2;
     padding: 0 rem-calc(20);
     position: absolute;
@@ -1569,7 +1570,7 @@ table {
     font-weight: normal;
     font-family: "Font Awesome 5 Brands" !important;
     font-size: rem-calc(24);
-    left: 0;
+    left: -12px;
     line-height: $line-height * 2;
     padding: 0 rem-calc(20);
     position: absolute;
@@ -1582,17 +1583,36 @@ table {
 
   &::before {
     color: #de4c34;
-    content: "B";
-    font-family: "icons" !important;
+    content: "\f1a0";
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Font Awesome 5 Brands" !important;
     font-size: rem-calc(24);
-    left: 0;
+    left: -12px;
     line-height: $line-height * 2;
     padding: 0 rem-calc(20);
     position: absolute;
     top: 0;
   }
 }
+.button.button-wordpress_oauth2 {
+  background: #afccf3;
+  border-left: 3px solid #3461de;
 
+  &::before {
+    color: #3461de;
+    content: "\f19a";
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Font Awesome 5 Brands" !important;
+    font-size: rem-calc(24);
+    left: -12px;
+    line-height: $line-height * 2;
+    padding: 0 rem-calc(20);
+    position: absolute;
+    top: 0;
+  }
+}
 [class^="ssb-icon ssb-google"] {
   background: #de4c34;
   background-image: none !important;

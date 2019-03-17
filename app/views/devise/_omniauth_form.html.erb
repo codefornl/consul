@@ -1,6 +1,5 @@
 <%# If no omniauth_configs are available, there is no need to show them %>
 <% if Devise.omniauth_configs.any? %>
-    
     <%# The only difference between sign_in and sign_up is the title for this partial the loop has been shortened. %>
     <% if current_page?(new_user_session_path) %>
       <%# sign in %>
@@ -23,7 +22,7 @@
     <%#loop through the omniauth providers. If they have a client ID, enable them, otherwise disable. %>
     <% Devise.omniauth_configs.select do |key, value|  %>
       <%# Check if feature is enabled %>
-      <% if (key.to_s == "google_oauth2" && feature?("google_login")) || feature?(key.to_s + "_login") %>
+      <% if (key.to_s == "google_oauth2" && feature?("google_login")) || (key.to_s == "wordpress_oauth2" && feature?("wordpress_login"))  || feature?(key.to_s + "_login") %>
         <div class="small-12 medium-6 large-4 column end">
           <%= link_to t("omniauth." + key.to_s + ".name"), user_omniauth_authorize_path(key),
                   title: current_page?(new_user_session_path) ? t("omniauth." + key.to_s + ".sign_in") : t("omniauth." + key.to_s + ".sign_up"),

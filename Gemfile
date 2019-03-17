@@ -57,6 +57,7 @@ gem 'globalize-accessors', '~> 0.2.1'
 gem 'recipient_interceptor', '~> 0.2.0'
 gem 'faker', '~> 1.8.7'
 gem 'font-awesome-sass', '~> 5.6.1'
+gem 'omniauth-wordpress_hosted', github: 'jwickard/omniauth-wordpress-oauth2-plugin'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-leaflet'

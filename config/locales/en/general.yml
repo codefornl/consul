@@ -279,6 +279,10 @@ en:
       sign_in: Sign in with Google
       sign_up: Sign up with Google
       name: Google
+    wordpress_oauth2:
+      sign_in: Sign in with Wordpress
+      sign_up: Sign up with Wordpress
+      name: Wordpress
     twitter:
       sign_in: Sign in with Twitter
       sign_up: Sign up with Twitter
@@ -545,7 +549,6 @@ en:
       search: 'Filter'
       title: 'Advanced search'
       to: 'To'
-    delete: Delete
     author_info:
       author_deleted: User deleted
     back: Go back
