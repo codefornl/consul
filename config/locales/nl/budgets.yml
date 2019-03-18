@@ -124,7 +124,7 @@ nl:
           other: "%{count} steunbetuigingen"
           zero: Geen steunbetuigingen
       share:
-        message: Ik heb investeringsvoorstel %{title} gemaakt in %{org}. Jij kunt ook een investeringsvoorstel doen!
+        message: Ik heb investeringsvoorstel %{title} gemaakt in %{handle}. Jij kunt ook een investeringsvoorstel doen!
       show:
         author: Auteur
         author_deleted: Auteur verwijderd
