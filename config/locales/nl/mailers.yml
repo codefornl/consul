@@ -3,7 +3,7 @@ nl:
   mailers:
     budget_investment_created:
       follow_html: We will inform you about how the process progresses, which you can also follow on <strong>%{link}</strong>.
-      follow_link: Participatory Budgets
+      follow_link: Budgetten
       intro_html: Hi <strong>%{author}</strong>,
       share: Comparte tu proyecto
       sincerely: Sincerely,

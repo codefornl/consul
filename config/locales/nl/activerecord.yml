@@ -18,7 +18,7 @@ nl:
         description_reviewing: Omschrijving gedurende de Beoordelingsase
         description_reviewing_ballots: Omschrijving gedurende de beoordeling van de Stemfase
         description_selecting: Omschrijving gedurende de Selectiefase
-        description_valuating: Omschrijving gedurende de Waarderingsfase
+        description_valuating: Omschrijving gedurende de Evaluatiefase
         name: Naam
         phase: Fase
       budget/heading:
@@ -66,8 +66,8 @@ nl:
         allegations_end_date: Einddatum bewijsvoering
         allegations_start_date: Startdatum bewijsvoering
         background_color: Background color
-        debate_end_date: Debat einddatum
-        debate_start_date: De begindatum van het debat
+        debate_end_date: Einddatum discussie
+        debate_start_date: Begindatum discussie
         description: Beschrijving
         draft_end_date: Einddatum concept
         draft_publication_date: Publicatiedatum concept
@@ -240,9 +240,9 @@ nl:
             allegations_end_date:
               invalid_date_range: moet op of na de startdatum van bewijsvoering zijn
             debate_end_date:
-              invalid_date_range: moet op of na de begindatum van het debat zijn
+              invalid_date_range: moet op of na de begindatum van de discussie zijn
             draft_end_date:
-              invalid_date_range: moet op of na de begindatum van het debat zijn
+              invalid_date_range: moet op of na de begindatum van de discussie zijn
             end_date:
               invalid_date_range: moet op of na de begindatum liggen
         map_location:
@@ -298,11 +298,11 @@ nl:
         one: Investering
         other: Investeringen
       comment:
-        one: Commentaar
-        other: Comments
+        one: Reactie
+        other: Reacties
       debate:
-        one: Debat
-        other: Debatten
+        one: Discussie
+        other: Discussies
       documents:
         one: Document
         other: Documenten
@@ -319,8 +319,8 @@ nl:
         one: Proces
         other: Plannen
       legislation/proposal:
-        one: Idee
-        other: Ideeën
+        one: Voorstel
+        other: Voorstellen
       legislation/question_options:
         one: Vraag optie
         other: Vraag keuzen
@@ -358,11 +358,11 @@ nl:
         one: Voortgang
         other: Voortgang
       proposal:
-        one: Idee
-        other: Ideeën
+        one: Voorstel
+        other: Voorstellen
       proposal_notification:
-        one: Voorgestelde notificaties
-        other: Voorstel notificaties
+        one: NNotificatie
+        other: Notificaties
       site_customization/content_block:
         one: Aangepaste inhoud
         other: Custom content blocks
@@ -373,14 +373,14 @@ nl:
         one: Aangepaste pagina
         other: Aangepaste paginas
       spending_proposal:
-        one: Investment project
-        other: Budget bestemmingen
+        one: Investering
+        other: Investeringen
       tag:
         one: Term
         other: Termen
       topic:
         one: Onderwerp
-        other: Termen
+        other: Onderwerpen
       user:
         one: Gebruiker
         other: Gebruikers

@@ -45,38 +45,38 @@ nl:
         by: Sent by
         currency: "€"
         dossier: Dossier
-        duration: Time scope
-        edit_dossier: Bewerk dossier
-        feasibility: Feasibility
-        feasible: Feasible
-        heading: Partida
+        duration: Duur
+        edit_dossier: Bewerken
+        feasibility: Haalbaarheid
+        feasible: Haalbaar
+        heading: Rubriek
         info: Over de auteur
         price: Prijs
-        price_first_year: Cost during the first year
+        price_first_year: Eerste jaar
         responsibles: Responsibles
         sent: Sent at
-        title: Investment project
+        title: Investeringen
         undefined: Niet gedefinieerd
-        unfeasible: Unfeasible
+        unfeasible: Onhaalbaar
         valuation_finished: Beoordeling voltooid
-      valuation_comments: Reacties op evaluaties
+      valuation_comments: Reacties
     budgets:
       index:
-        evaluate: Evaluate
+        evaluate: Evalueren
         filters:
           current: Open
           finished: Afgelopen
-        no_budgets: There are no budgets
-        table_actions: Activiteiten
-        table_assigned_investments_valuation_open: Investment projects assigned with valuation open
-        table_name: Name
-        table_phase: Phase
-        title: Participatory budgets
+        no_budgets: Er zijn geen budgetten
+        table_actions: Acties
+        table_assigned_investments_valuation_open: Open investeringen
+        table_name: Naam
+        table_phase: Fase
+        title: Budgetten
     header:
       title: Evaluatie
     menu:
-      budgets: Participatory budgets
-      spending_proposals: Spending proposals
+      budgets: Budgetten
+      spending_proposals: Investeringen
       title: Evaluatie
     spending_proposals:
       edit:
@@ -105,8 +105,8 @@ nl:
       notice:
         valuate: Dossier bijgewerkt
       show:
-        assigned_admin: Toegewezen beheerder
-        assigned_valuators: Toegewezen beoordelaars
+        assigned_admin: Beheerder
+        assigned_valuators: Beoordelaars
         association_name: Associatie
         back: Terug
         by: Verzonden door
@@ -116,7 +116,7 @@ nl:
         feasibility: Feasibility
         feasible: Haalbaar
         geozone: Scope
-        heading: Investment project
+        heading: Investeringen
         info: Over de auteur
         internal_comments: Internal comments
         not_feasible: Onhaalbaar

@@ -24,9 +24,9 @@ nl:
           one: "%{count} reactie"
           other: "%{count} opmerkingen"
         see_in_context: Bekijk in de context
-        title: Comments
+        title: Reacties
       show:
-        title: Commentaar
+        title: Reactie
       version_chooser:
         see_text: Bekijk concept tekst
         seeing_version: Reacties voor versie
@@ -43,13 +43,13 @@ nl:
         select_draft_version: Selecteer concept
         select_version_submit: bekijk
         text_body: Tekst
-        text_comments: Comments
+        text_comments: Reacties
         text_toc: Inhoudsopgave
         updated_at: bijgewerkt op %{date}
     processes:
       debate:
         empty_questions: Er zijn geen vragen
-        participate: Neem deel aan debatten
+        participate: Neem deel aan discussies
       header:
         additional_info: Aanvullende informatie
         description: Omschrijving
@@ -81,13 +81,13 @@ nl:
           random: Random
           winners: Geselecteerd
       shared:
-        allegations_dates: Comments
+        allegations_dates: Reacties
         debate_dates: Debatdatum
         draft_publication_date: Concept publicatie
         homepage: Homepage
         key_dates: Data
         milestones_date: Volgend
-        proposals_dates: Ideeën
+        proposals_dates: Voorstellen
         result_publication_date: Eindversie publicatie
     proposals:
       form:
@@ -114,7 +114,7 @@ nl:
           one: "%{count} reactie"
           other: "%{count} opmerkingen"
           zero: Geen reacties
-        debate: Debat
+        debate: Discussie
       show:
         answer_question: Antwoord indienen
         first_question: Eerste vraag

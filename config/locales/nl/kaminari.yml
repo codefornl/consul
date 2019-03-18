@@ -7,12 +7,12 @@ nl:
         other: Bijdragen
         zero: Bijdragen
       more_pages:
-        display_entries: "<b>%{first}&nbsp;-&nbsp;%{last}</b> van <b>%{total}</b> %{entry_name} getoond"
+        display_entries: "<b>%{first}&nbsp;-&nbsp;%{last}</b> van <b>%{total}</b> %{entry_name}"
       one_page:
         display_entries:
-          one: Er is <b>1</b> %{entry_name}
-          other: Er zijn <b> %{count}</b> %{entry_name}
-          zero: "%{entry_name} niet gevonden"
+          one: <b>1</b> %{entry_name} gevonden
+          other: <b>%{count}</b> %{entry_name} gevonden
+          zero: "Geen %{entry_name} gevonden"
   views:
     pagination:
       current: U bent op pagina

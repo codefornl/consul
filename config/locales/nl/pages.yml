@@ -11,8 +11,8 @@ nl:
         Wanneer websites zijn ontworpen met toegankelijkheid in het achterhoofd, kunnen alle gebruikers toegang tot inhoud in gelijke omstandigheden krijgen, bijvoorbeeld:
       examples:
       - Providing alternative text to the images, blind or visually impaired users can use special readers to access the information.
-      - Wanneer video's ondertitels hebben begrijpen deelnemers met gehoorproblemen deze ook.
-      - Als de inhoud in een eenvoudige en geïllustreerde taal zijn geschreven, zijn deelnemers met leerproblemen beter in staat om hen te begrijpen.
+      - Wanneer video's ondertitels hebben begrijpen gebruikers met gehoorproblemen deze ook.
+      - Als de inhoud in een eenvoudige en geïllustreerde taal zijn geschreven, zijn gebruikers met leerproblemen beter in staat om hen te begrijpen.
       - Als de deelnemer beschikt over mobiliteitsproblemen en het is moeilijk om de muis te gebruiken, dan helpen de alternatieven met het toetsenbord bij navigatie.
       keyboard_shortcuts:
         browser_table:
@@ -40,13 +40,13 @@ nl:
           - key_column: 0
             page_column: Homepagina
           - key_column: 1
-            page_column: Debat
+            page_column: Discussie
           - key_column: 2
             page_column: Proposals
           - key_column: 3
             page_column: Votes
           - key_column: 4
-            page_column: Participatory budgets
+            page_column: Budgetten
           - key_column: 5
             page_column: Plannen
         title: Sneltoetsen
@@ -91,8 +91,8 @@ nl:
         feature_link: registreren in %{org}
         figcaption: '"Eens" en "Oneens" knoppen om een debat te beoordelen.'
         image_alt: Knoppen om een debat te beoordelen
-        link: Debatten
-        title: Debat
+        link: Discussies
+        title: Discussie
       faq:
         button: Bekijk de meest gestelde vragen
         description: Lees de FAQs en kijk of dat helpt.
@@ -112,11 +112,11 @@ nl:
           Als je programmeur bent kun je de code bekijken en ons helpen deze te verbeteren via [CONSUL app](https://github.com/consul/consul 'consul github').
       menu:
         budgets: Budget
-        debates: Debat
+        debates: Discussie
         other: Verdere informatie
         polls: Peilingen
         processes: Proces
-        proposals: Ideeën
+        proposals: Voorstellen
       other:
         how_to_use: Gebruik %{org_name} in uw gemeente
         title: Verdere informatie
@@ -127,15 +127,15 @@ nl:
         link: peilingen
         title: Polls
       processes:
-        description: In het %{link} onderdeel kun je meehelpen met het opstellen en aanpassen van regelgeving en formele stukken. Je kunt hier ook je mening geven over beleid en plannen uit eerdere debatten.
+        description: In het %{link} onderdeel kun je meehelpen met het opstellen en aanpassen van regelgeving en formele stukken. Je kunt hier ook je mening geven over beleid en plannen uit eerdere discussies.
         link: plannen
         title: Proces
       proposals:
-        description: In dit %{link} onderdeel kun je ideeën indienen en reageren op ideeën van anderen. Ideeën hebben steun van anderen nodig om tot een stemronde te leiden. Als een idee veel stemmen krijgt, wordt het geaccepteerd en uitgevoerd.
+        description: In dit %{link} onderdeel kun je voorstellen indienen en reageren op ideeën van anderen. Voorstellen hebben steun van anderen nodig om tot een stemronde te leiden. Als een voorstel veel stemmen krijgt, wordt het geaccepteerd en uitgevoerd.
         figcaption_html: Knop om een voorstel te ''steunen''.
         image_alt: Knop om een voorstel te steunen
-        link: Ideeën
-        title: Ideeën
+        link: Voorstellen
+        title: Voorstellen
       title: "%{org} is een platform voor burgerparticipatie"
       titles:
         how_to_use: Gebruik het in uw gemeente

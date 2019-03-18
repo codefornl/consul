@@ -17,10 +17,10 @@ nl:
         new_topic: Nieuw Onderwerp
         participate: Deelnemen
       tab:
-        participants: deelnemers
+        participants: gebruikers
       title:
         investment: Inversteringsbudget community
-        proposal: Ideeën community
+        proposal: Voorstellen community
       topic:
         comments:
           one: 1 opmerking
@@ -50,11 +50,11 @@ nl:
           submit_button: Werk onderwerp bij
       show:
         tab:
-          comments_tab: Comments
+          comments_tab: Reacties
       sidebar:
         recommendation_one: Gebruik geen hoofdletters voor de titel, of voor hele zinnen. Dit is equivalent aan schreeuwen op het internet, en niemand houdt ervan toegeschreeuwd te worden.
         recommendation_three: Geniet van deze ruimte, en van de stemmen die 'm vullen.
-        recommendation_two: Ieder debat of opmerking waarin een illegale activiteit wordt aangemoedigd zal worden verwijderd, alsmede opmerkingen die het debat saboteren. Verder is alles toegestaan.
+        recommendation_two: Ieder debat of opmerking waarin een illegale activiteit wordt aangemoedigd zal worden verwijderd, alsmede opmerkingen die de discussie saboteren. Verder is alles toegestaan.
         recommendations_title: Advies bij het beginnen van een debat.
   topics:
     show:

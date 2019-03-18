@@ -9,7 +9,7 @@ nl:
         not_enough_money_html: U hebt al het beschikbare budget toegewezen. <br><small>U kunt op elk gewenst moment %{change_ballot}</small>
         not_logged_in: Je dient %{signin} of %{signup} om verder te gaan.
         not_selected: Niet-geselecteerde begrotingsvoorstellen kunnen niet worden gesteund
-        not_verified: Alleen geverrifieerde deelnemers kunnen op begrotingsvoorstellen stemmen; %{verify_account}.
+        not_verified: Alleen geverrifieerde gebruikers kunnen op begrotingsvoorstellen stemmen; %{verify_account}.
         organization: Organisaties mogen niet stemmen
       show:
         amount_spent: Uitgegeven
@@ -129,7 +129,7 @@ nl:
         author: Auteur
         author_deleted: Auteur verwijderd
         code_html: 'Begrotingsvoorstel code: <strong>%{code}</strong>'
-        comments_tab: Comments
+        comments_tab: Reacties
         location_html: 'Plaats: <strong>%{location}</strong>'
         milestones_tab: Mijlpalen
         organization_name_html: 'Voorgesteld namens: <strong>%{name}</strong>'
@@ -147,7 +147,7 @@ nl:
         votes: Votes
       wrong_price_format: Alleen hele cijfers
     phase:
-      accepting: begrotingsvoorstellen doen
+      accepting: Investeringsfase
       balloting: begrotingsvoorstellen die in stemming zijn
       drafting: Concept (niet publiekelijk zichtbaar)
       finished: Afronden budgetvoorstel

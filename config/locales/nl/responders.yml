@@ -3,8 +3,8 @@ nl:
   flash:
     actions:
       create:
-        budget_investment: Budget investering is aangemaakt.
-        debate: Debat is gestart.
+        budget_investment: Investering is aangemaakt.
+        debate: Discussie gestart.
         direct_message: Uw boodschap is verzonden.
         notice: "%{resource_name} aangemaakt."
         poll: Peiling is aangemaakt.
@@ -29,7 +29,7 @@ nl:
         notice: Veranderingen opgeslagen
       update:
         budget_investment: Budget investering is bijgewerkt.
-        debate: Debat is bijgewerkt.
+        debate: Discussie bijgewerkt.
         notice: "%{resource_name} is bijgewerkt."
         poll: Peiling is bijgewerkt.
         poll_booth: Stemlocatie is bijgewerkt.
