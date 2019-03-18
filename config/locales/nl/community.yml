@@ -54,8 +54,8 @@ nl:
       sidebar:
         recommendation_one: Gebruik geen hoofdletters voor de titel, of voor hele zinnen. Dit is equivalent aan schreeuwen op het internet, en niemand houdt ervan toegeschreeuwd te worden.
         recommendation_three: Geniet van deze ruimte, en van de stemmen die 'm vullen.
-        recommendation_two: Ieder debat of opmerking waarin een illegale activiteit wordt aangemoedigd zal worden verwijderd, alsmede opmerkingen die de discussie saboteren. Verder is alles toegestaan.
-        recommendations_title: Advies bij het beginnen van een debat.
+        recommendation_two: Iedere discussie of opmerking waarin een illegale activiteit wordt aangemoedigd zal worden verwijderd, alsmede opmerkingen die de discussie saboteren. Verder is alles toegestaan.
+        recommendations_title: Advies bij het beginnen van een discussie.
   topics:
     show:
       login_to_comment: Je dient %{signin} of %{signup} om te reageren.

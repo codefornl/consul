@@ -86,11 +86,11 @@ nl:
         link: Budgetten
         title: Budget
       debates:
-        description: Bij %{link} kun je debateren en je mening met anderen delen en bespreken. Dit is ook een plek waar je ideeën kunt presenteren, die via andere onderdelen van %{org} tot concrete acties kunnen leiden.
-        feature_html: Je kunt een debat een score geven via de <strong>Eens</strong> of <strong>Oneens</strong> knoppen. Daarvoor moet je %{link}.
+        description: Bij %{link} kun je discussieren en je mening met anderen delen en bespreken. Dit is ook een plek waar je voorstellen kunt presenteren, die via andere onderdelen van %{org} tot concrete acties kunnen leiden.
+        feature_html: Je kunt een discussie een score geven via de <strong>Eens</strong> of <strong>Oneens</strong> knoppen. Daarvoor moet je %{link}.
         feature_link: registreren in %{org}
-        figcaption: '"Eens" en "Oneens" knoppen om een debat te beoordelen.'
-        image_alt: Knoppen om een debat te beoordelen
+        figcaption: '"Eens" en "Oneens" knoppen om een discussie te beoordelen.'
+        image_alt: Knoppen om een discussie te beoordelen
         link: Discussies
         title: Discussie
       faq:
@@ -131,7 +131,7 @@ nl:
         link: plannen
         title: Proces
       proposals:
-        description: In dit %{link} onderdeel kun je voorstellen indienen en reageren op ideeën van anderen. Voorstellen hebben steun van anderen nodig om tot een stemronde te leiden. Als een voorstel veel stemmen krijgt, wordt het geaccepteerd en uitgevoerd.
+        description: In dit %{link} onderdeel kun je voorstellen indienen en reageren op voorstellen van anderen. Voorstellen hebben steun van anderen nodig om tot een stemronde te leiden. Als een voorstel veel stemmen krijgt, wordt het geaccepteerd en uitgevoerd.
         figcaption_html: Knop om een voorstel te ''steunen''.
         image_alt: Knop om een voorstel te steunen
         link: Voorstellen

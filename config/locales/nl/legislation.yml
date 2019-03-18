@@ -76,13 +76,13 @@ nl:
         see_latest_comments: Bekijk de laatste reacties
         see_latest_comments_title: Reageer op dit proces
       proposals:
-        empty_proposals: Er zijn geen ideeën
+        empty_proposals: Er zijn geen voorstellen
         filters:
           random: Random
           winners: Geselecteerd
       shared:
         allegations_dates: Reacties
-        debate_dates: Debatdatum
+        debate_dates: Datum
         draft_publication_date: Concept publicatie
         homepage: Homepage
         key_dates: Data
@@ -92,7 +92,7 @@ nl:
     proposals:
       form:
         tags_label: Categorieën
-      not_verified: Voor stemideeën %{verify_account}.
+      not_verified: Voor stemvoorstellen %{verify_account}.
     questions:
       comments:
         comment_button: Publiceer antwoord
@@ -101,8 +101,8 @@ nl:
         form:
           leave_comment: Laat jouw antwoord achter
       participation:
-        debate_phase_not_open: Het debat is gesloten en reacties worden niet meer geaccepteerd.
-        organizations: Deelname van organisaties in debat is niet toegestaan
+        debate_phase_not_open: De discussie is gesloten en reacties worden niet meer geaccepteerd.
+        organizations: Deelname van organisaties in discussies is niet toegestaan
         phase_not_open: Deze fase is niet open
         signin: Aanmelden
         signup: Registreer

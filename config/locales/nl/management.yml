@@ -93,10 +93,10 @@ nl:
       user_invites: Verstuur uitnodigingen
       users: Gebruikersbeheer
     permissions:
-      create_proposals: Create proposals
-      debates: Engage in debates
-      support_proposals: Support proposals
-      vote_proposals: Vote proposals
+      create_proposals: Dien voorstellen in
+      debates: Neem deel in discussies
+      support_proposals: Steun voorstellen
+      vote_proposals: Stem
     print:
       budget_investments_info: Neem deel op http://url.consul
       proposals_info: Maak je eigen voorstel op http://url.consul

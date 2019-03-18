@@ -403,7 +403,7 @@ nl:
           with_confirmed_hide: Bevestigd
           without_confirmed_hide: In afwachting
         no_hidden_debates: Er zijn geen verborgen discussies.
-        title: Hidden debates
+        title: Verborgen discussies
     emails_download:
       index:
         download_emails_button: Download lijst e-mails
@@ -455,8 +455,8 @@ nl:
           all: Alles
           with_confirmed_hide: Bevestigd
           without_confirmed_hide: In afwachting
-        no_hidden_proposals: Er zijn geen verborgen ideeën.
-        title: Verborgen ideeën
+        no_hidden_proposals: Er zijn geen verborgen voorstellen.
+        title: Verborgen voorstellen
     hidden_users:
       index:
         filter: Filter
@@ -581,7 +581,7 @@ nl:
           homepage_description: Hier können Sie den Inhalt des Beteiligungsverfahrens erläutern
           homepage_enabled: Homepage aktiviert
           process: Proces
-          proposals_phase: Ideeënfase
+          proposals_phase: Voorstelfase
           start: Start
           summary_placeholder: Korte samenvatting van de beschrijving
           title_placeholder: De titel van het plan
@@ -695,7 +695,7 @@ nl:
       hidden_comments: Verborgen commentaar
       hidden_debates: Verborgen discussies
       hidden_proposal_notifications: Verborgen notificaties
-      hidden_proposals: Verborgen ideeën
+      hidden_proposals: Verborgen voorstellen
       hidden_users: Verborgen gebruikers
       legislation: Plannen
       managers: Managers
@@ -711,7 +711,7 @@ nl:
       poll_shifts: Piket
       polls: Peilingen
       proposals: Voorstellen
-      proposals_topics: Ideeonderwerpen
+      proposals_topics: Voorstelonderwerpen
       settings: Instellingen
       signature_sheets: Signature Sheets
       site_customization:
@@ -1020,7 +1020,7 @@ nl:
         author: Auteur
         id: ID
         milestones: Mijlpalen
-        no_proposals: Geen ideeën aanwezig
+        no_proposals: Geen voorstellen aanwezig
         title: Voorstellen
     questions:
       answers:
@@ -1037,7 +1037,7 @@ nl:
         poll_not_assigned: Peiling niet toegewezen
         questions_tab: Vragen
         select_poll: Peiling selecteren
-        successful_proposals_tab: Succesvolle ideeën
+        successful_proposals_tab: Succesvolle voorstellen
         table_poll: Peiling
         table_proposal: Voorstel
         table_question: Vraag
@@ -1148,7 +1148,7 @@ nl:
       proposal: Voorstel
       proposal_search:
         button: Zoeken
-        placeholder: Doorzoek ideeën op titel, code omschrijving of vraag
+        placeholder: Doorzoek voorstellen op titel, code omschrijving of vraag
       search_results: Zoekresultaten
       show_image: Toon afbeelding
       spending_proposal_search:
@@ -1370,7 +1370,7 @@ nl:
           comments: Opmerkingen
           debate_votes: Stemmen op discussies
           debates: Discussies
-          proposal_votes: Stemmen op ideeën
+          proposal_votes: Stemmen op voorstellen
           proposals: Voorstellen
           spending_proposals: Investeringen
           unverified_users: Ongeverifieerde gebruikers
