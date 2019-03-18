@@ -451,7 +451,7 @@ nl:
         one: " bevat de term <strong>'%{search_term}'</strong>"
         other: " bevat de term <strong>'%{search_term}'</strong>"
       section_footer:
-        description: Citizens' proposals are an opportunity for neighbours and collectives to decide directly how they want their city to be, after getting sufficient support and submitting to a citizens' vote.
+        description: Voorstellen bieden de mogelijkheden voor buurten en collectieven om te bespreken hoe ze hun omgeving willen zien en nadat er voldoende steun is, kan worden gevraagd om steun.
         title: Over voorstellen
       section_header:
         help: Help
