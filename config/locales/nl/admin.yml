@@ -10,9 +10,9 @@ nl:
       edit: Bewerk
       hide: Verberg
       hide_author: Auteur verbergen
-      mark_featured: Featured
+      mark_featured: Uitgelicht
       restore: Restore
-      unmark_featured: Unmark featured
+      unmark_featured: Uitlichten ongedaan maken
     activity:
       show:
         action: Action
@@ -255,7 +255,7 @@ nl:
         filters:
           all: Alles
           feasible: Haalbaar
-          min_total_supports: Minimale ondersteuning
+          min_total_supports: Minimale stemmen
           one_filter_html: 'Actieve filter: <b><em>%{filter}</em></b>'
           selected: Selected
           two_filters_html: 'Actieve filters: <b><em>%{filter}, %{advanced_filters}</em></b>'
@@ -275,7 +275,7 @@ nl:
           id: ID
           incompatible: Onverenigbaar
           selected: Geselecteerd
-          supports: Steun
+          supports: Stem
           title: Titel
           valuation_finished: Beoordeeld
           valuation_group: Groep
@@ -608,7 +608,7 @@ nl:
         proposals:
           orders:
             id: ID
-            supports: Steun
+            supports: Stem
             title: Titel
           select_order: Sorteer op
         subnav:
@@ -631,7 +631,7 @@ nl:
           id: ID
           select: Select
           selected: Geselecteerd
-          supports: Steun
+          supports: Stem
           title: Titel
       questions:
         create:
@@ -1092,7 +1092,7 @@ nl:
       feasible_and_undecided_investment_authors: 'Auteurs van sommige investeringen in het huidige budget die niet voldoen: [beoordeling afgerond onhaalbaar]'
       invalid_recipients_segment: Ongeldige ontvangers
       investment_authors: Budgethouders
-      not_supported_on_current_budget: Gebruikers die geen voorstellen hebben gesteund in het huidige budget
+      not_supported_on_current_budget: Gebruikers niet op voorstellen hebben gestemd in het huidige budget
       proposal_authors: Auteurs
       selected_investment_authors: Houders van geselecteerd budget
       winner_investment_authors: Houders van populaire budget
@@ -1332,7 +1332,7 @@ nl:
         geozone_name: Scope
         in_evaluation_count: In overweging
         title: Samenvatting voor bestedingsvoorstellen
-        title_proposals_with_supports: Samenvatting voor bestedingsvoorstellen die gesteund worden
+        title_proposals_with_supports: Samenvatting voor investeringen waar op gestemd is
         total_count: Totaal
     stats:
       direct_messages:
@@ -1367,7 +1367,7 @@ nl:
           budget_investments: Budget bestemmingen
           budgets: Open budgetten
           comment_votes: Comment votes
-          comments: Opmerkingen
+          comments: Reacties
           debate_votes: Stemmen op discussies
           debates: Discussies
           proposal_votes: Stemmen op voorstellen

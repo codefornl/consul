@@ -6,7 +6,7 @@ nl:
         cancel: Annuleren
         comments_count:
           one: "%{count} reactie"
-          other: "%{count} opmerkingen"
+          other: "%{count} reacties"
         publish_comment: Publiceer reactie
         replies_count:
           one: "%{count} antwoord"
@@ -22,7 +22,7 @@ nl:
         comments_about: Reacties over
         comments_count:
           one: "%{count} reactie"
-          other: "%{count} opmerkingen"
+          other: "%{count} reacties"
         see_in_context: Bekijk in de context
         title: Reacties
       show:
@@ -112,7 +112,7 @@ nl:
       question:
         comments:
           one: "%{count} reactie"
-          other: "%{count} opmerkingen"
+          other: "%{count} reacties"
           zero: Geen reacties
         debate: Discussie
       show:

@@ -81,7 +81,7 @@ nl:
     help:
       budgets:
         description: Het %{link} onderdeel helpt bij het geven van direct zeggenschap aan inwoners over de besteding van gebiedsbudgetten van de gemeente.
-        figcaption_html: 'Steun- en stemfase voor het budget.'
+        figcaption_html: 'Stemfase voor het budget.'
         image_alt: Verschillende fasen in het budget
         link: Budgetten
         title: Budget
@@ -121,7 +121,7 @@ nl:
         how_to_use: Gebruik %{org_name} in uw gemeente
         title: Verdere informatie
       polls:
-        description: Het %{link} onderdeel wordt geactiveerd elke keer wanneer een voorstel 1% steun krijgt en tot stemming over gaat, of als de gemeente een vraagstuk en besluit aan de inwoners wil voorleggen.
+        description: Het %{link} onderdeel wordt geactiveerd elke keer wanneer een voorstel 1% stem krijgt en tot stemming over gaat, of als de gemeente een vraagstuk en besluit aan de inwoners wil voorleggen.
         feature_1: Om te participeren bij de peilingen moet je %{link} en je account verifiëren.
         feature_1_link: registreren in %{org_name}
         link: peilingen
@@ -131,9 +131,9 @@ nl:
         link: plannen
         title: Proces
       proposals:
-        description: In dit %{link} onderdeel kun je voorstellen indienen en reageren op voorstellen van anderen. Voorstellen hebben steun van anderen nodig om tot een stemronde te leiden. Als een voorstel veel stemmen krijgt, wordt het geaccepteerd en uitgevoerd.
-        figcaption_html: Knop om een voorstel te ''steunen''.
-        image_alt: Knop om een voorstel te steunen
+        description: In dit %{link} onderdeel kun je voorstellen indienen en reageren op voorstellen van anderen. Voorstellen hebben stemmen van anderen nodig om tot een stemronde te leiden. Als een voorstel veel stemmen krijgt, wordt het geaccepteerd en uitgevoerd.
+        figcaption_html: Knop om op een voorstel te ''stemmen''.
+        image_alt: Knop om op een voorstel te stemmen
         link: Voorstellen
         title: Voorstellen
       title: "%{org} is een platform voor burgerparticipatie"

@@ -34,27 +34,27 @@ nl:
       create: Nieuw begrotingsvoorstel maken
       filters:
         heading: Concept
-        unfeasible: Unfeasible investment
+        unfeasible: Onhaalbare investering
       print:
         print_button: Afdrukken
       search_results:
         one: " bevat de term'%{search_term}'"
         other: " bevat de term'%{search_term}'"
     budgets:
-      create_new_investment: Maak budgetinvestering
-      no_budgets: Er zijn geen actieve participatieve budgetten.
-      print_investments: Druk begrotinginvestering af
-      support_investments: Steun budgetinvestering
+      create_new_investment: Investering maken
+      no_budgets: Er zijn geen actieve budgetten.
+      print_investments: Druk investering af
+      support_investments: Stem op investeringen
       table_actions: Activiteiten
-      table_name: Name
-      table_phase: Phase
+      table_name: Naam
+      table_phase: Fase
     check: Kies bestand
     dashboard:
       index:
         info: Hier kunt u gebruikers beheren via alle acties die in het linkermenu zijn vermeld.
         title: Beheer
-    date_of_birth: Date of birth
-    document_number: Document nummer
+    date_of_birth: Geboortedatum
+    document_number: Documentnummer
     document_type_label: Documentsoort
     document_verifications:
       already_verified: Dit gebruikersaccount is al geverifieerd.
@@ -87,7 +87,7 @@ nl:
       print_proposals: Print proposals
       print_spending_proposals: Print spending proposals
       select_user: Selecteer gebruiker
-      support_budget_investments: Steun budgetinvestering
+      support_budget_investments: Stem op investeringen
       support_proposals: Support proposals
       support_spending_proposals: Support spending proposals
       user_invites: Verstuur uitnodigingen
@@ -95,7 +95,7 @@ nl:
     permissions:
       create_proposals: Dien voorstellen in
       debates: Neem deel in discussies
-      support_proposals: Steun voorstellen
+      support_proposals: Stem op investeringen
       vote_proposals: Stem
     print:
       budget_investments_info: Neem deel op http://url.consul

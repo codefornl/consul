@@ -229,7 +229,7 @@ nl:
         direct_message:
           attributes:
             max_per_day:
-              invalid: U heeft het maximum aan privé berichten per dag bereikt
+              invalid: Je hebt het maximaal aantal privéberichten per dag bereikt
         image:
           attributes:
             attachment:

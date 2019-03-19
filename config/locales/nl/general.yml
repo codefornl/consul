@@ -28,7 +28,7 @@ nl:
       user_permission_debates: Meedoen met discussies
       user_permission_info: With your account you can...
       user_permission_proposal: Nieuw voorstel inbrengen
-      user_permission_support_proposal: Voorstel steunen
+      user_permission_support_proposal: Op voorstel stemmen
       user_permission_title: Participatie
       user_permission_verify: Verifieer uw account om alles te kunnen.
       user_permission_verify_info: "* Alleen voor gebruikers in de regio."
@@ -91,8 +91,8 @@ nl:
         submit_button: Begin een discussie
     debate:
       comments:
-        one: 1 opmerking
-        other: "%{count} opmerkingen"
+        one: 1 reactie
+        other: "%{count} reacties"
         zero: Geen reacties
       votes:
         one: 1 stem
@@ -156,15 +156,15 @@ nl:
       recommendation_four: Geniet van deze ruimte, en van de stemmen die 'm vullen.
       recommendation_one: Gebruik geen hoofdletters voor de titel, of voor hele zinnen. Dit is equivalent aan schreeuwen op het internet, en niemand houdt ervan toegeschreeuwd te worden.
       recommendation_three: Stevige kritiek is welkom, dit is de plek daarvoor. Maar we raden u wel aan de discussie elegant en intelligent te voeren, dan blijft deze ruimte leefbaar.
-      recommendation_two: Iedere discussie of opmerking waarin een illegale activiteit wordt aanmoedigd zal worden verwijderd, en ook die welke de discussie saboteren. Verder is alles toegestaan.
+      recommendation_two: Iedere discussie of reactie waarin een illegale activiteit wordt aanmoedigd zal worden verwijderd, en ook die welke de discussie saboteren. Verder is alles toegestaan.
       recommendations_title: Advies bij het beginnen van een discussie
       start_new: Nieuwe discussie
     show:
       author: Auteur
       author_deleted: Auteur verwijderd
       comments:
-        one: 1 opmerking
-        other: "%{count} opmerkingen"
+        one: 1 reactie
+        other: "%{count} reacties"
         zero: Geen reacties
       comments_title: Reacties
       edit_debate_link: Bewerken
@@ -310,7 +310,7 @@ nl:
     show:
       vote_answer: Stem %{answer}
       voted: U heeft %{answer} gestemd
-      voted_token: 'Je kunt deze code voor de stemming noteren, om je stem bij de eindresultaten te kunnen bekijken:'
+      voted_token: 'Je kunt de referentiecode noteren, om je stem bij de eindresultaten te kunnen bekijken:'
   polls:
     all: Alles
     dates: Van %{open_at} tot %{closed_at}
@@ -415,7 +415,7 @@ nl:
       tags_label: Tags
       tags_placeholder: Voer de labels in die je wilt gebruiken, gescheiden door kommas (',')
     index:
-      featured_proposals: Featured
+      featured_proposals: Uitgelicht
       filter_topic:
         one: " met onderwerp'%{topic}'"
         other: " met onderwerp'%{topic}'"
@@ -451,7 +451,7 @@ nl:
         one: " bevat de term <strong>'%{search_term}'</strong>"
         other: " bevat de term <strong>'%{search_term}'</strong>"
       section_footer:
-        description: Voorstellen bieden de mogelijkheden voor buurten en collectieven om te bespreken hoe ze hun omgeving willen zien en nadat er voldoende steun is, kan worden gevraagd om steun.
+        description: Voorstellen bieden de mogelijkheden voor buurten en collectieven om te bespreken hoe ze hun omgeving willen zien en nadat er voldoende stemmen zijn, kan worden gevraagd om het aan te nemen.
         title: Over voorstellen
       section_header:
         help: Help
@@ -462,7 +462,7 @@ nl:
       start_proposal: Nieuw voorstel
       title: Voorstellen
       top: Wekelijkse top
-      top_link_proposals: De meest gesteunde voorstellen per categorie
+      top_link_proposals: Voorstellen met de meeste stemmen per categorie
     new:
       form:
         submit_button: Maak voorstel
@@ -475,27 +475,27 @@ nl:
     notice:
       retired: Voorstel gearchiveerd
     proposal:
-      already_supported: U steunt dit voorstel al. Deel het!
-      archived: Dit voorstel is gearchiveerd en kan niet worden gesteund.
+      already_supported: Je hebt al gestemd op dit voorstel al. Deel het!
+      archived: Dit voorstel is gearchiveerd. Er kan niet meer worden gestemd.
       comments:
-        one: 1 opmerking
-        other: "%{count} opmerkingen"
+        one: 1 reactie
+        other: "%{count} reacties"
         zero: Geen reacties
       created: Je hebt een voorstel gedaan!
-      improve_info: Verbeter je campagne en krijg meer steun
+      improve_info: Verbeter je campagne en krijg meer stemmen
       improve_info_link: Bekijk meer informatie
       share:
         edit: Voordat het gedeeld gaat worden, kun je de tekst nog wijzigen.
-        guide: Nu kun je jouw voorstel gaan delen zodat mensen het kunnen gaan steunen.
+        guide: Nu kun je jouw voorstel delen zodat mensen kunnen stemmen.
         view_proposal: Niet nu, door naar mijn voorstel
-      successful: Dit voorstel heeft de benodigde steun gekregen.
-      support: Steun
-      support_title: Steun dit voorstel
+      successful: Dit voorstel heeft de benodigde stemmen gekregen.
+      support: Stem
+      support_title: Stem op dit voorstel
       supports:
-        one: 1 steunbetuiging
-        other: "%{count} steunbetuigingen"
-        zero: Geen steunbetuigingen
-      supports_necessary: "%{number} steunbetuigingen nodig"
+        one: 1 stem
+        other: "%{count} stemmen"
+        zero: Geen stemmen
+      supports_necessary: "%{number} stemmen nodig"
       total_percent: 100%
       votes:
         one: 1 stem
@@ -503,12 +503,12 @@ nl:
         zero: Geen stemmen
     retire_form:
       retired_explanation_label: Uitleg
-      retired_explanation_placeholder: Leg kort uit waarom u denkt dat dit voorstel niet meer gesteund moet worden
+      retired_explanation_placeholder: Leg kort uit waarom u denkt dat op dit voorstel niet meer gestemd moet worden
       retired_reason_blank: Kies één van de mogelijkheden
       retired_reason_label: Reden het voorstel terug te trekken
       submit_button: Trek voorstel terug
       title: Trek voorstel terug
-      warning: Als u het voorstel terugtrekt kan het nog steeds ondersteund worden. Het wordt verwijderd van de hoofdlijst en er wordt een bericht zichtbaar voor alle gebruikers waarin wordt verklaard dat de auteur van mening is dat het voorstel niet meer ondersteund zou moeten worden
+      warning: Als u het voorstel terugtrekt kan er nog steeds gestemd worden. Het wordt verwijderd van de hoofdlijst en er wordt een bericht zichtbaar voor alle gebruikers waarin wordt verklaard dat de auteur van mening is dat op het voorstel niet meer gestemd zou moeten worden
     retire_options:
       done: Gereed
       duplicated: Dubbele
@@ -516,14 +516,14 @@ nl:
       started: Gestart
       unfeasible: Unfeasible
     share:
-      message: Ik heb het voorstel %{summary} in %{handle} gesteund. Steun het ook!
+      message: Ik heb op het voorstel %{title} in %{handle} gestemd. Stem ook!
     show:
       author: Auteur
       author_deleted: Auteur verwijderd
-      code: 'Voorstel code:'
+      code: 'Referentie:'
       comments:
-        one: 1 opmerking
-        other: "%{count} opmerkingen"
+        one: 1 reactie
+        other: "%{count} reacties"
         zero: Geen reacties
       comments_tab: Reacties
       edit_proposal_link: Bewerken
@@ -534,7 +534,7 @@ nl:
       no_notifications: Dit voorstel heeft geen meldingen.
       notifications_tab: Notificaties
       retired: Voorstel teruggetrokken door de auteur
-      retired_warning: De auteur vind dat dit voorstel niet langer moet worden gesteund.
+      retired_warning: De auteur vind dat op dit voorstel niet langer moet worden gestemd.
       retired_warning_link_to_explanation: Lees de uitleg vóór u er voor stemt.
       send_notification: Stuur melding
       share: Deel
@@ -700,23 +700,23 @@ nl:
       start_new: Create spending proposal
     show:
       author_deleted: Auteur verwijderd
-      code: 'Code:'
+      code: 'Referentie:'
       share: Deel
     spending_proposal:
       already_supported: U heeft dit al gestuend. Deel 't!
       spending_proposal: Investment project
       support: Support
-      support_title: Steun dit voorstel
+      support_title: Stem op dit voorstel
       supports:
-        one: 1 steunbetuiging
-        other: "%{count} steunbetuigingen"
-        zero: Geen steunbetuigingen
+        one: 1 stem
+        other: "%{count} stemmen"
+        zero: Geen stemmen
     wrong_price_format: Alleen hele nummers
   stats:
     index:
       comment_votes: Stemmen op reacties
       comments: Reacties
-      debate_votes: Discussies steunen
+      debate_votes: Op discussies stemmen
       debates: Discussie
       proposal_votes: Stemmen op voorstellen
       proposals: Voorstellen
@@ -784,31 +784,31 @@ nl:
     anonymous: Er zijn al te veel anonieme stemmen; %{verify_account}.
     budget_investments:
       different_heading_assigned:
-        one: Je kunt alleen in %{count} regio investeringsprojecten steunen
-        other: Je kunt alleen in %{count} regio's investeringsprojecten steunen
+        one: Je kunt alleen in %{count} gebied op investeringen stemmen
+        other: Je kunt alleen in %{count} gebieden op investeringen stemmen
       not_logged_in: Je dient %{signin} of %{signup} om verder te gaan.
       not_verified: Alleen geverifieerde gebruikers mogen stemmen op begrotingsvoorstellen; %{verify_account}.
       not_voting_allowed: Stemronde is gesloten.
       organization: Organisaties mogen niet stemmen
-      unfeasible: Onhaalbare voorstellen kunnen niet gesteund worden.
-    comment_unauthenticated: Je dient %{signin} of %{signup} om voorstellen te steunen.
+      unfeasible: Op onhaalbare voorstellen kan niet gestemd worden.
+    comment_unauthenticated: Je dient %{signin} of %{signup} om op voorstellen te stemmen.
     disagree: Ik ben het oneens
     organizations: Organisaties kunnen niet stemmen
     signin: aan te melden
     signup: te registreren
     spending_proposals:
       not_logged_in: Je dient %{signin} of %{signup} om verder te gaan.
-      not_verified: Alleen geverifieerde gebruikers kunnen voorstellen steunen; %{verify_account}.
+      not_verified: Alleen geverifieerde gebruikers kunnen op voorstellen stemmen; %{verify_account}.
       not_voting_allowed: Stemronde is gesloten
       organization: Organisaties mogen niet stemmen
-      unfeasible: Onhaalbare voorstellen kunnen niet worden gesteund
-    supports: Steunt
+      unfeasible: Op onhaalbare voorstellen kunnen niet worden gestemd
+    supports: Heeft gestemd op
     unauthenticated: Je dient %{signin} of %{signup} om verder te gaan.
-    verified_only: Alleen geverifieerde gebruikers kunnen voorstellen steunen; %{verify_account}.
+    verified_only: Alleen geverifieerde gebruikers kunnen op voorstellen stemmen; %{verify_account}.
     verify_account: je account verifieren
   welcome:
     cards:
-      title: Featured
+      title: Uitgelicht
     feed:
       most_active:
         debates: Discussie
@@ -825,7 +825,7 @@ nl:
       debates:
         btn_text_link: Alle aanbevolen discussies
         title: Aanbevolen discussies
-      help: Deze aanbevelingen worden gegenereerd door de codes van de discussies en voorstellen die u volgen.
+      help: Deze aanbevelingen worden gegenereerd op basis van de referenties van discussies en voorstellen die je volgt.
       proposals:
         btn_text_link: Alle aanbevolen voorstellen
         title: Aanbevolen voorstellen
@@ -842,7 +842,7 @@ nl:
       user_permission_debates: Neem deel aan discussies
       user_permission_info: Met je account kun je...
       user_permission_proposal: Nieuw voorstel aanmaken
-      user_permission_support_proposal: Voorstellen steunen*
+      user_permission_support_proposal: Op voorstellen stemmen*
       user_permission_verify: Verifieren
       user_permission_verify_info: "* Alleen voor lokale gebruikers."
       user_permission_verify_my_account: Verifieer mijn account
