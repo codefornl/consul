@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 <%= back_link_to admin_budget_budget_investment_path(@budget, @investment, Budget::Investment.filter_params(params)) %>
-=======
-<%= link_to admin_budget_budget_investment_path(@budget, @investment, Budget::Investment.filter_params(params)), class: "back" do %>
-  <span class="icon-angle-left"></span> <%= t("shared.back") %>
-<% end %>
->>>>>>> 8d83e70ef4b678c42fd30b1a98015bb6dca633be
 
 <%= form_for @investment,
              url: admin_budget_budget_investment_path(@budget, @investment) do |f| %>
