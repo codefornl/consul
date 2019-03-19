@@ -11,27 +11,27 @@ nl:
           print: Wachtwoord afdrukken
           print_help: U kunt het wachtwoord afdrukken wanneer het is opgeslagen.
           random: Genereer willekeurig wachtwoord
-          reset_email_send: E-mail correct verzonden.
-          reseted: Wachtwoord is succesvol hersteld
-          save: Sla wachtwoord op
+          reset_email_send: E-mail verzonden.
+          reseted: Wachtwoord hersteld
+          save: Opslaan
           send_email: Stuur een nieuw wachtwoord per mail
-        title: 'Gebruikersaccount bewerken: Reset wachtwoord'
+        title: "Gebruikersaccount bewerken: wachtwoord herstellen"
       menu:
-        reset_password_email: Reset wachtwoord via e-mail
-        reset_password_manually: Wachtwoord handmatig opnieuw instellen
+        reset_password_email: Wachtwoord herstellen
+        reset_password_manually: Wachtwoord instellen
       show:
         title: Gebruikers account
     account_info:
       change_user: Wijzig gebruiker
-      document_number_label: 'Document nummer:'
-      document_type_label: 'Document soort:'
-      email_label: 'E-mail:'
-      identified_label: 'Geïdentificeerd als:'
-      username_label: 'Gebruikersnaam:'
+      document_number_label: "Documentnummer:"
+      document_type_label: "Documentsoort:"
+      email_label: "E-mail:"
+      identified_label: "Geïdentificeerd als:"
+      username_label: "Gebruikersnaam:"
     budget_investments:
       alert:
         unverified_user: Gebruiker is niet geverifieerd
-      create: Nieuw begrotingsvoorstel maken
+      create: Nieuwe investering
       filters:
         heading: Concept
         unfeasible: Onhaalbare investering
@@ -41,14 +41,14 @@ nl:
         one: " bevat de term'%{search_term}'"
         other: " bevat de term'%{search_term}'"
     budgets:
-      create_new_investment: Investering maken
-      no_budgets: Er zijn geen actieve budgetten.
+      create_new_investment: Nieuwe investering
+      no_budgets: Geen actieve budgetten.
       print_investments: Druk investering af
-      support_investments: Stem op investeringen
-      table_actions: Activiteiten
+      support_investments: Investeringen
+      table_actions: Acties
       table_name: Naam
       table_phase: Fase
-    check: Kies bestand
+    check: Selecteer
     dashboard:
       index:
         info: Hier kunt u gebruikers beheren via alle acties die in het linkermenu zijn vermeld.
@@ -80,17 +80,17 @@ nl:
       introduce_email: 'Please introduce the email used on the account:'
       send_email: Send verification email
     menu:
-      create_budget_investment: Nieuw begrotingsvoorstel
-      create_proposal: Maak voorstel
-      create_spending_proposal: Maak een begrotingsvoorstel
-      print_budget_investments: Druk begrotinginvestering af
-      print_proposals: Print proposals
-      print_spending_proposals: Print spending proposals
-      select_user: Selecteer gebruiker
-      support_budget_investments: Stem op investeringen
-      support_proposals: Support proposals
+      create_budget_investment: Nieuwe investering
+      create_proposal: Nieuw voorstel
+      create_spending_proposal: Maak een investering
+      print_budget_investments: Budget afdrukken
+      print_proposals: Voorstel afdrukken
+      print_spending_proposals: Investering afdrukken
+      select_user: Gebruiker
+      support_budget_investments: Investeringoverzicht
+      support_proposals: Voorsteloverzicht
       support_spending_proposals: Support spending proposals
-      user_invites: Verstuur uitnodigingen
+      user_invites: Gebruikers uitnodigen
       users: Gebruikersbeheer
     permissions:
       create_proposals: Dien voorstellen in
@@ -106,11 +106,11 @@ nl:
     proposals:
       alert:
         unverified_user: User is not verified
-      create_proposal: Maak voorstel
+      create_proposal: Nieuw voorstel
       index:
-        title: Support proposals
+        title: Voorstellen
       print:
-        print_button: Print
+        print_button: Afdrukken
     sessions:
       signed_out: Signed out successfully.
       signed_out_managed_user: User session signed out successfully.

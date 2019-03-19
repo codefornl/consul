@@ -58,12 +58,12 @@ nl:
         submit_disable_with: Een moment geduld a.u.b., stem wordt bevestigd...
       new:
         not_to_vote: De persoon heeft besloten niet te stemmen op dit moment
-        table_actions: Activiteiten
-        table_poll: Poll
-        table_status: Polls status
-        title: Polls
+        table_actions: Acties
+        table_poll: Peiling
+        table_status: Peilinstatus
+        title: Peilingen
       show:
-        can_vote: Can vote
-        error_already_voted: Has already participated in this poll
-        submit: Confirm vote
-        success: Vote introduced!
+        can_vote: Kan stemmen
+        error_already_voted: Heeft al deelgenomen aan de peiling
+        submit: Stem bevestigen
+        success: Gestemd

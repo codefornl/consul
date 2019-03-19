@@ -14,10 +14,10 @@ nl:
         in_between: moet tussen %{min} en %{max} zijn
         wrong_content_type: type bestand afbeelding %{content_type} komt niet overeen met een van de toegestane type bestanden %{accepted_content_types}
     form:
-      add_new_document: Nieuw bestand toevoegen
-      attachment_label: Kies bestand
-      cancel_button: Cancel
-      delete_button: Verwijder bestand
+      add_new_document: Bestand toevoegen
+      attachment_label: Selecteer
+      cancel_button: Annuleren
+      delete_button: Verwijderen
       note: 'Je kunt tot een maximum van %{max_documents_allowed} bestanden of andere typen inhoud uploaden: %{accepted_content_types}, tot maximum van %{max_file_size} MB per bestand.'
       title: Documenten
       title_placeholder: Voeg een omschrijving toe voor het bestand

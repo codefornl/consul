@@ -98,7 +98,7 @@ nl:
         description: Lees de FAQs en kijk of dat helpt.
         page:
           description: Gebruik deze pagina veelgestelde vragen van de gebruikers van de site te beantwoorden.
-          faq_1_description: Dit is een voorbeeld voor de beschrijving van de eerste vraag.
+          faq_1_description: Dit is een voorbeeld voor de omschrijving van de eerste vraag.
           faq_1_title: Vraag 1
           title: Veel gestelde vragen
         title: Technische problemen?

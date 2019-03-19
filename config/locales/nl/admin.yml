@@ -40,8 +40,8 @@ nl:
         section_title: Bericht bewerken
         submit_button: Bericht opslaan
       index:
-        actions: Activiteiten
-        delete: Delete
+        actions: Acties
+        delete: Verwijderen
         draft: Concept
         edit: Bewerken
         empty_notifications: Er zijn geen meldingen te tonen
@@ -50,7 +50,7 @@ nl:
         section_title: Notificaties
         segment_recipient: Ontvangers
         sent: Verzonden
-        title: Title
+        title: Titel
         view: Weergave
       new:
         section_title: Nieuwe melding
@@ -67,7 +67,7 @@ nl:
         send_alert: Weet u zeker dat u deze melding naar %{n} gebruikers wilt sturen?
         sent_at: Verzonden naar
         sent_guide: 'Dit is hoe de gebruikers de melding zullen zien:'
-        title: Title
+        title: Titel
         will_get_notified: "(de%{n} gebruikers zullen worden aangemeld)"
       update_success: Kennisgeving met succes bijgewerkt
     administrators:
@@ -89,25 +89,25 @@ nl:
       new:
         title: Nieuw antwoord
       show:
-        description: Beschrijving
+        description: Omschrijving
         edit: Bewerk antwoord
         images: Afbeeldingen
         images_list: Lijst afbeeldingen
-        title: Title
+        title: Titel
       videos:
         edit:
           title: Bewerk video
         index:
           add_video: Voeg video toe
           title: Videos
-          video_title: Title
+          video_title: Titel
           video_url: Externe video
         new:
           title: Nieuwe video
     banners:
       banner:
         background_color: Achtergrondkleur
-        description: Beschrijving
+        description: Omschrijving
         font_color: Kleur van het lettertype
         post_ended_at: Post ended at
         post_started_at: Post started at
@@ -119,7 +119,7 @@ nl:
           proposals: Voorstellen
         sections_label: Secties waar het wordt weergegeven
         target_url: Link
-        title: Title
+        title: Titel
       edit:
         editing: Banner bewerken
         form:
@@ -330,7 +330,7 @@ nl:
           'true': Ja
     budget_phases:
       edit:
-        description: Beschrijving
+        description: Omschrijving
         description_help_text: Deze tekst verschijnt in de kop wanneer de fase actief is
         enabled: Fase actief
         enabled_help_text: Deze fase is openbaar in de tijdlijn van de budgetfasen, maar ook actief voor andere doeleinden
@@ -394,7 +394,7 @@ nl:
       index:
         back: Terug naar %{org}
         description: Welkom op de %{org} beheers pagina.
-        title: Administration
+        title: Algemeen
     debates:
       index:
         filter: Filter
@@ -438,7 +438,7 @@ nl:
         back: Ga terug
         creating: Create district
     header:
-      title: Administration
+      title: Algemeen
     hidden_budget_investments:
       index:
         filter: Filter
@@ -474,10 +474,10 @@ nl:
         title: Activiteit van deelnemer (%{user})
     homepage:
       cards:
-        description: Beschrijving
+        description: Omschrijving
         link_text: Tekst link
         link_url: URL link
-        title: Title
+        title: Titel
       cards_title: Tegels
       create_card: Tegel aanmaken
       create_header: Koptekst maken
@@ -544,7 +544,7 @@ nl:
           created_at: Created at
           final_version: Eindversie
           status: Status
-          title: Title
+          title: Titel
         update:
           error: Concept kon niet worden opgeslagen
           notice: Concept opgeslagen. <a href="%{link}">Klik om te zien</a>
@@ -572,18 +572,18 @@ nl:
           banner_title: Header colors
           color_help: Hexadecimal format
           debate_phase: Debatfase
-          description_placeholder: Voeg een beschrijving van het plan toe
+          description_placeholder: Voeg een omschrijving van het plan toe
           draft_phase: Ontwerpfase
           draft_phase_description: Omschrijving ontwerpfase
           enabled: Ingeschakeld
           end: Eind
-          homepage: Beschrijving
+          homepage: Omschrijving
           homepage_description: Hier können Sie den Inhalt des Beteiligungsverfahrens erläutern
           homepage_enabled: Homepage aktiviert
           process: Proces
           proposals_phase: Voorstelfase
           start: Start
-          summary_placeholder: Korte samenvatting van de beschrijving
+          summary_placeholder: Korte samenvatting
           title_placeholder: De titel van het plan
           use_markdown: Gebruik Markdown om de tekst vorm te geven
         index:
@@ -623,9 +623,9 @@ nl:
           notice: Plan opgeslagen. <a href="%{link}">Klik om te zien</a>
       proposals:
         form:
-          custom_categories: Categorieen
-          custom_categories_description: Categorieën die gebruikers kunnen selecteren bij het maken van het voorstel.
-          custom_categories_placeholder: Voer de tags die u wilt gebruiken in, gescheiden door komma's (,) en tussen aanhalingstekens ("")
+          custom_categories: "Categorieën"
+          custom_categories_description: "Categorieën die gebruikers kunnen selecteren bij het maken van het voorstel."
+          custom_categories_placeholder: Voer de categorieën die u wilt gebruiken in, gescheiden door komma's (,) en tussen aanhalingstekens ("")
         index:
           back: Terug
           id: ID
@@ -667,7 +667,7 @@ nl:
           answers_count: Aantal antwoorden
           comments_count: Aantal commentaar
           question_options: Vraag opties
-          title: Title
+          title: Titel
         update:
           error: Vraag kon niet worden aangepast
           notice: Vraag aangepast. <a href="%{link}">Klik om te zien</a>
@@ -733,7 +733,7 @@ nl:
           proposals: "Voorstellen"
           welcome: Welkom
         pages: Aangepaste pagina's
-      spending_proposals: Begrotingsvoorstellen
+      spending_proposals: Investeringen
       stats: Statistics
       system_emails: Systeemberichten
       title_booths: Stemmen
@@ -763,16 +763,16 @@ nl:
         new_milestone: Nieuwe mijlpaal instellen
         no_milestones: Zonder gedefinieerde mijlpalen
         show_image: Toon afbeelding
-        table_actions: Activiteiten
-        table_description: Beschrijving
+        table_actions: Acties
+        table_description: Omschrijving
         table_id: ID
         table_publication_date: Publicatiedatum
         table_status: Status
-        table_title: Title
+        table_title: Titel
       new:
         creating: Nieuwe mijlpaal
         date: Datum
-        description: Beschrijving
+        description: Omschrijving
       update:
         notice: Mijlpaal opgeslagen
     moderators:
@@ -792,7 +792,7 @@ nl:
       edit:
         title: Bewerk nieuwsbrief
       index:
-        actions: Activiteiten
+        actions: Acties
         delete: Verwijderen
         draft: Concept
         edit: Bewerken
@@ -1025,8 +1025,8 @@ nl:
     questions:
       answers:
         images:
-          add_image: Voeg afbeelding toe
-          save_image: Sla afbeelding op
+          add_image: Afbeelding toevoegen
+          save_image: Opslaan
       edit:
         title: Vraag bewerken
       index:
@@ -1048,15 +1048,15 @@ nl:
       show:
         add_answer: Nieuwe keuze
         answers:
-          description: Beschrijving
-          document_actions: Activiteiten
+          description: Omschrijving
+          document_actions: Acties
           document_title: Titel
           documents: Documenten
           documents_list: Lijst documenten
           images: Afbeeldingen
           images_list: Lijst afbeeldingen
           title: Keuze
-          video_list: Lijst video's
+          video_list: Videolijst
           videos: Videos
         author: Auteur
         edit_question: Bewerk vraag
@@ -1098,7 +1098,7 @@ nl:
       winner_investment_authors: Houders van populaire budget
     settings:
       flash:
-        updated: Value updated
+        updated: Waarde bijgewerkt
       index:
         banner_imgs: Afbeeldingen
         banners: Banners
@@ -1118,15 +1118,15 @@ nl:
         no_banners_images: Geen banner afbeeldingen
         no_banners_styles: Geen banner stijlen
         title: Configuratie
-        update_setting: Update
-      no_description: Geen beschrijving
+        update_setting: Bijwerken
+      no_description: Geen omschrijving
       setting: Functie
-      setting_actions: Activiteiten
+      setting_actions: Acties
       setting_name: Instelling
       setting_status: Status
       setting_value: Waarde
     shared:
-      actions: Activiteiten
+      actions: Acties
       author: Auteur
       booths_search:
         button: Search
@@ -1134,7 +1134,7 @@ nl:
       content: Content
       created_at: Created at
       delete: Delete
-      description: Beschrijving
+      description: Omschrijving
       false_value: Nee
       image: Afbeelding
       moderated_content: Controleer de inhoud die door de moderators is aangemaakt en bevestig wanneer dit correct is gedaan.
@@ -1237,13 +1237,13 @@ nl:
           create:
             notice: Aanmaken
           create_card: Kaart aanmaken
-          description: Beschrijving
+          description: Omschrijving
           destroy:
             notice: Verwijderen
           link_text: Tekst link
           link_url: URL link
           no_cards: There are no cards.
-          title: Title
+          title: Titel
           update:
             notice: Bewerken
         create:
@@ -1394,8 +1394,8 @@ nl:
         edit: Bewerken
         empty_statuses: Er zijn nog geen gedefinieerde investeringsstatussen aangemaakt
         new_status: Maak een nieuwe investeringsstatus aan
-        table_actions: Activiteiten
-        table_description: Beschrijving
+        table_actions: Acties
+        table_description: Omschrijving
         table_name: Name
         title: Investeringsstatussen
       new:
@@ -1460,11 +1460,11 @@ nl:
         update: Sla op
         updated: Beoordelaar aangepast
       index:
-        description: Beschrijving
+        description: Omschrijving
         email: E-mail
         group: Groep
         name: Name
-        no_description: Geen beschrijving
+        no_description: Geen omschrijving
         no_group: Geen groep
         no_valuators: Er zijn geen beoordelaars.
         title: beoordelaars
@@ -1472,10 +1472,10 @@ nl:
       search:
         title: 'Beoordelaars: zoek gebruikers'
       show:
-        description: Beschrijving
+        description: Omschrijving
         email: E-mail
         group: Groep
-        no_description: Geen beschrijving
+        no_description: Geen omschrijving
         no_group: Geen groep
       summary:
         cost: Kosten

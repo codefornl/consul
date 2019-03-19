@@ -15,7 +15,7 @@ nl:
       organization_responsible_name_placeholder: Vertegenwoordiger van de organisatie of het collectief
       personal: Persoonlijke gegevens
       phone_number_label: Telefoonnummer
-      public_activity_label: Mijn activiteiten zijn publiek
+      public_activity_label: Mijn activiteit is publiek
       public_interests_label: Termen die ik volg zijn zichtbaar voor anderen
       public_interests_my_title_list: Labels van zaken die je volgt
       public_interests_user_title_list: Termen die deze persoon volgt
@@ -31,14 +31,14 @@ nl:
       user_permission_support_proposal: Op voorstel stemmen
       user_permission_title: Participatie
       user_permission_verify: Verifieer uw account om alles te kunnen.
-      user_permission_verify_info: "* Alleen voor gebruikers in de regio."
+      user_permission_verify_info: "* Alleen voor gebruikers in het gebied."
       user_permission_votes: Neem deel aan definitieve stemronde
       username_label: Username
       verified_account: Account geverifiëerd
       verify_my_account: Verifieer mijn account
   admin/widget:
     header:
-      title: Administration
+      title: Algemeen
   annotator:
     help:
       alt: Selecteer de tekst waarop u wilt reageren en druk op de knop met het potlood.
@@ -106,9 +106,9 @@ nl:
     form:
       debate_text: Omschrijving
       debate_title: Ondewerp
-      tags_instructions: Voeg labels toe.
-      tags_label: Onderwerpen
-      tags_placeholder: Voeg de gewenste labels toe, gescheiden door een komma (',')
+      tags_instructions: Voeg termen toe.
+      tags_label: Termen
+      tags_placeholder: Voeg de gewenste termen toe, gescheiden door een komma (',')
     index:
       featured_debates: Uitgelicht
       filter_topic:
@@ -179,7 +179,7 @@ nl:
       invalid_date_range: Ongeldige periode
       user_not_found: User not found
   form:
-    accept_terms: Ik accepteer het %{policy} en de %{conditions}
+    accept_terms: Ik accepteer de %{policy} en de %{conditions}
     accept_terms_title: Ik ga akkoord met het privacybeleid en de gebruiksvoorwaarden
     budget/group: Budget Group
     budget/heading: Budget onderdeel
@@ -230,8 +230,8 @@ nl:
       participation_title: Participatie
       privacy: Privacy Verklaring
     header:
-      administration: Administration
-      administration_menu: Beheerder
+      administration: Algemeen
+      administration_menu: Configuratie
       available_locales: Beschikbare talen
       budgets: Budget
       collaborative_legislation: Plannen
@@ -257,10 +257,10 @@ nl:
       spending_proposals: Begrotingsvoorstellen
       valuation: Evaluatie
   map:
-    proposal_for_district: Plaats een voorstel voor uw regio
+    proposal_for_district: Plaats een voorstel voor je gebied
     select_district: Scope of operation
     start_proposal: Plaats een voorstel
-    title: Regio's
+    title: Gebieden
   notifications:
     index:
       empty_notifications: U heeft geen nieuwe meldingen.
@@ -322,7 +322,7 @@ nl:
         current: Actueel
         expired: Gearchiveerd
       geozone_info: 'Open voor gebruikers uit: '
-      geozone_restricted: Regio's
+      geozone_restricted: Gebieden
       no_geozone_restricted: Hele stad
       no_polls: Er zijn geen actuele peilingen.
       not_logged_in: Je dient aan te melden of te registreren om deel te nemen
@@ -345,7 +345,7 @@ nl:
       cant_answer_expired: Deze stemronde is voorbij.
       cant_answer_not_logged_in: Je dient %{signin} of %{signup} om deel te nemen.
       cant_answer_verify_html: Je moet %{verify_link} om te antwoorden.
-      cant_answer_wrong_geozone: Deze vraag wordt niet behandeld in uw regio
+      cant_answer_wrong_geozone: Deze vraag wordt niet behandeld in je gebied
       comments_tab: Reacties
       documents: Documenten
       info_menu: Informatie
@@ -381,7 +381,7 @@ nl:
       proposal_page: Voorstelpagina
       submit_button: Stuur bericht
       title: Stuur bericht
-      title_label: Title
+      title_label: Titel
     show:
       back: Terug naar mijn bijdragen
   proposals:
@@ -394,26 +394,26 @@ nl:
         submit_button: Bewaar wijzigingen
       show_link: Bekijk voorstel
     form:
-      geozone: Betreffende regio
+      geozone: Gebied
       map_location: Locatie
-      map_location_instructions: Beweeg de kaart en wijs de locatie aan.
+      map_location_instructions: Je kunt de kaart schuiven en een locatie aanwijzen.
       map_remove_marker: Locatie verwijderen
       map_skip_checkbox: De locatie voor het voorstel is niet bekend.
       proposal_external_url: Verwijzing
       proposal_question: Vraag
-      proposal_question_example_html: Moeten worden samengevat in één vraag met een Ja of nee als antwoord
+      proposal_question_example_html: Eén vraag die met Ja of Nee kan worden beantwoord
       proposal_responsible_name: Volledige naam van persoon die het voorstel doet
       proposal_responsible_name_note: "(individueel of als vertegenwoordiger van een collectief; niet publiek zichtbaar)"
       proposal_summary: Samenvatting
-      proposal_summary_note: "(max is 200 letters)"
+      proposal_summary_note: "(maximaal 200 karakters)"
       proposal_text: Omschrijving
       proposal_title: Titel
       proposal_video_url: Video
-      proposal_video_url_note: U kunt een link naar YouTube of Vimeo toevoegen
-      tag_category_label: Categories
-      tags_instructions: Label dit voorstel. U kunt uw eigen categorie kiezen of één van de bestaande.
-      tags_label: Tags
-      tags_placeholder: Voer de labels in die je wilt gebruiken, gescheiden door kommas (',')
+      proposal_video_url_note: Je kunt een link naar YouTube of Vimeo toevoegen
+      tag_category_label: Bestaande termen
+      tags_instructions: Voeg termen toe. Je kunt eigen termen opgeven of uit bestaande termen kiezen.
+      tags_label: Termen
+      tags_placeholder: Voer de termen in die je wilt gebruiken, gescheiden door kommas (',')
     index:
       featured_proposals: Uitgelicht
       filter_topic:
@@ -465,7 +465,7 @@ nl:
       top_link_proposals: Voorstellen met de meeste stemmen per categorie
     new:
       form:
-        submit_button: Maak voorstel
+        submit_button: Opslaan
       more_info: Hoe plaats je een voorstel?
       recommendation_one: Gebruik geen hoofdletters voor de titel, of voor hele zinnen. Dit is equivalent aan schreeuwen op het internet, en niemand houdt ervan toegeschreeuwd te worden.
       recommendation_three: Geniet van deze ruimte, en van de stemmen die 'm vullen.
@@ -613,7 +613,7 @@ nl:
       budget: Participatieve begroting
       searcher: Zoeker
     print:
-      print_button: Print this info
+      print_button: Afdrukken
     recommended_index:
       hide: Verborgen aanbevelingen
       see_more: Meer aanbevelingen bekijken
@@ -643,9 +643,9 @@ nl:
         message: Er worden %{limit} uit %{count} voorstellen met de term '%{query}' getoond
         see_all: Alles tonen
     tags_cloud:
-      categories: Categorieen
-      districts: Regio's
-      districts_list: Regio lijst
+      categories: Categorieën
+      districts: Gebieden
+      districts_list: Gebiedenlijst
       tags: Trending
     target_blank_html: " (link opent in nieuw window)"
     unflag: Hef markering op
@@ -654,7 +654,7 @@ nl:
       cards: Kaarten
       list: Lijst
       title: Weergavemodus
-    'yes': Ja
+    "yes": Ja
     you_are_in: U bent in
   social:
     blog: "%{org} Blog"
@@ -670,7 +670,7 @@ nl:
       association_name_label: Voeg hier de naam toe als u een voorstel doet namens een vereniging of collectief
       description: Omschrijving
       external_url: Link naar meer informatie
-      geozone: Betreffende regio
+      geozone: Gebied
       submit_buttons:
         create: Voeg toe
         new: Maak
@@ -686,7 +686,7 @@ nl:
         other: " containing the term '%{search_term}'"
       sidebar:
         feasibility: Feasibility
-        geozones: Betreffende regio
+        geozones: Gebieden
         unfeasible: Unfeasible
       start_spending_proposal: Initieer een begrotingsvoorstel
       title: Budgetten
@@ -695,17 +695,17 @@ nl:
       more_info: Hoe werkt een budget?
       recommendation_one: Het voorstel moet refereren aan een begrootbare activiteit.
       recommendation_three: Geef voldoende en gedetailleerde informatie, zodat de beoordelingscommissie goed begrijpt waar het over gaat.
-      recommendation_two: Voorstellen die illegale activiteiten stimuleren worden verwijderd.
+      recommendation_two: Voorstellen die illegale activiteit stimuleert worden verwijderd.
       recommendations_title: Hoe doet u een begrotingsvoorstel
       start_new: Create spending proposal
     show:
       author_deleted: Auteur verwijderd
-      code: 'Referentie:'
+      code: "Referentie:"
       share: Deel
     spending_proposal:
-      already_supported: U heeft dit al gestuend. Deel 't!
+      already_supported: U heeft al gestemd. Deel!
       spending_proposal: Investment project
-      support: Support
+      support: Stem
       support_title: Stem op dit voorstel
       supports:
         one: 1 stem
@@ -737,8 +737,8 @@ nl:
         signin: Aanmelden
         signup: Registreren
         submit_button: Stuur bericht
-        title: Stuur privé bericht aan %{receiver}
-        title_label: Title
+        title: Stuur privébericht aan %{receiver}
+        title_label: Titel
         verified_only: Om een privebericht te sturen moet je %{verify_account}
         verify_account: je account verifieren
       show:
@@ -749,7 +749,7 @@ nl:
       see: Voorstel bekijken
       send_notification: Notificatie verzenden
     show:
-      actions: Activiteiten
+      actions: Acties
       budget_investments: Begrotingsvoorstellen
       comments: Reacties
       debates: Discussie
@@ -776,7 +776,7 @@ nl:
           other: "%{count} voorstellen"
       no_activity: Deze deelnemer heeft geen publieke activiteit
       no_private_messages: Deze deelnemer ontvangt geen privé berichten.
-      private_activity: Deze deelnemer heeft besloten de lijst met activiteiten niet te delen"
+      private_activity: Deze deelnemer heeft besloten zijn activiteit niet te delen"
       proposals: Voorstellen
       send_private_message: Stuur privé bericht
   votes:

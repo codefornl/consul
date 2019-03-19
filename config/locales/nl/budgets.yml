@@ -61,21 +61,21 @@ nl:
       form:
         location: Aanvullende informatie over de locatie
         map_location: Locatie
-        map_location_instructions: Beweeg de kaart en wijs de locatie aan
+        map_location_instructions: Je kunt de kaart schuiven en een locatie aanwijzen.
         map_remove_marker: Locatie verwijderen
         map_skip_checkbox: Deze investering heeft geen concrete locatie of ik ben er niet van op de hoogte.
-        tag_category_label: Categorieen
-        tags_instructions: 'Label dit begrotingsvoorstel. U kunt '
-        tags_label: Tags
-        tags_placeholder: Voer de labels in die je wilt gebruiken, gescheiden door kommas (',')
+        tag_category_label: Bestaande termen
+        tags_instructions: "Voeg termen toe. Je kunt eigen termen opgeven of uit bestaande termen kiezen."
+        tags_label: Termen
+        tags_placeholder: Voer de termen in die je wilt gebruiken, gescheiden door kommas (',')
       header:
         change_ballot: ALs je je bedenkt kun je je stemmen in %{check_ballot} verwijderen en opnieuw beginnen.
         check_ballot: Check mijn stemmen
         check_ballot_link: bekijk mijn stemmen
-        different_heading_assigned_html: 'U heeft een actieve stemming in een andere rubriek: %{heading_link}'
+        different_heading_assigned_html: "U heeft een actieve stemming in een andere rubriek: %{heading_link}"
         price: Deze rubriek heeft een budget van
       index:
-        by_heading: 'Begrotingsvoorstellen in de context van: %{heading}'
+        by_heading: "Begrotingsvoorstellen in de context van: %{heading}"
         orders:
           confidence_score: Populair
           price: op bedrag

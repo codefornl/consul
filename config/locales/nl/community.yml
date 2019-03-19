@@ -45,7 +45,7 @@ nl:
         new:
           submit_button: Creeer onderwerp
         topic_text: Tekst
-        topic_title: Title
+        topic_title: Titel
         update:
           submit_button: Werk onderwerp bij
       show:

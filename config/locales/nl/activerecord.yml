@@ -6,10 +6,10 @@ nl:
         body: Tekst
         link: Link
         segment_recipient: Ontvangers
-        title: Title
+        title: Titel
       admin_notification/translation:
         body: Tekst
-        title: Title
+        title: Titel
       budget:
         currency_symbol: Valuta
         description_accepting: Omschrijving gedurende de Acceptatiefase
@@ -27,7 +27,7 @@ nl:
         price: Prijs
       budget/investment:
         administrator_id: Beheerder
-        description: Beschrijving
+        description: Omschrijving
         external_url: Link naar meer informatie
         heading_id: Rubriek
         image: Afbeelding ter omschrijving van het voorstel
@@ -42,13 +42,13 @@ nl:
         author: Auteur
         description: Mening
         terms_of_service: Gebruiksvoorwaarden
-        title: Title
+        title: Titel
       document:
         attachment: Bijlage
-        title: Title
+        title: Titel
       image:
         attachment: Bijlage
-        title: Title
+        title: Titel
       legislation/annotation:
         text: Commentaar
       legislation/draft_version:
@@ -68,7 +68,7 @@ nl:
         background_color: Background color
         debate_end_date: Einddatum discussie
         debate_start_date: Begindatum discussie
-        description: Beschrijving
+        description: Omschrijving
         draft_end_date: Einddatum concept
         draft_publication_date: Publicatiedatum concept
         draft_start_date: Begindatum concept
@@ -80,13 +80,13 @@ nl:
         title: Proces titel
       legislation/process/translation:
         additional_info: Aanvullende informatie
-        description: Beschrijving
+        description: Omschrijving
         milestones_summary: Samenvatting
         summary: Samenvatting
         title: Titel van het proces
       legislation/question:
         question_options: Instellingen
-        title: Title
+        title: Titel
       legislation/question_option:
         value: Waarde
       milestone:
@@ -95,7 +95,7 @@ nl:
         status_id: Huidige investeringsstatus (optioneel)
         title: Titel
       milestone/status:
-        description: Beschrijving (optioneel)
+        description: Omschrijving (optioneel)
         name: Naam
       newsletter:
         body: E-mail inhoud
@@ -106,30 +106,30 @@ nl:
         name: Organisatienaam
         responsible_name: Persoon verantwoordelijk voor de groep
       poll:
-        description: Beschrijving
+        description: Omschrijving
         ends_at: Einde
         geozone_restricted: Deelname beperken op basis van gebied
         name: Naam
         starts_at: Aanvang
         summary: Samenvatting
       poll/question:
-        description: Beschrijving
+        description: Omschrijving
         external_url: Link naar meer informatie
         summary: Samenvatting
         title: Question
       poll/question/answer:
-        description: Beschrijving
+        description: Omschrijving
         title: Antwoord
       poll/question/answer/translation:
-        description: Beschrijving
+        description: Omschrijving
         title: Antwoord
       poll/question/answer/video:
-        title: Title
+        title: Titel
         url: Externe video
       poll/question/translation:
         title: Question
       poll/translation:
-        description: Beschrijving
+        description: Omschrijving
         name: Naam
         summary: Samenvatting
       progress_bar:
@@ -141,7 +141,7 @@ nl:
         secondary: Secundair
       proposal:
         author: Auteur
-        description: Beschrijving
+        description: Omschrijving
         question: Vraag
         terms_of_service: Gebruiksvoorwaarden
         title: Titel
@@ -165,19 +165,19 @@ nl:
         slug: Slug
         status: Status
         subtitle: Subtitel
-        title: Title
-        updated_at: Updated at
+        title: Titel
+        updated_at: Bijgewerk
       site_customization/page/translation:
         content: Content
         subtitle: Ondertitel
-        title: Title
+        title: Titel
       spending_proposal:
         administrator_id: Beheerder
         association_name: Naam van de vereniging
-        description: Beschrijving
+        description: Omschrijving
         external_url: Link naar meer informatie
-        geozone_id: Betreffende regio
-        title: Title
+        geozone_id: Gebied
+        title: Titel
       user:
         current_password: Huidig wachtwoord
         email: Email
@@ -191,16 +191,16 @@ nl:
         username: Username
       widget/card:
         columns: Number of columns
-        description: Beschrijving
-        label: Label (optioneel)
+        description: Omschrijving
+        label: Term (optioneel)
         link_text: Tekst link
         link_url: URL link
-        title: Title
+        title: Titel
       widget/card/translation:
-        description: Beschrijving
-        label: Label (optioneel)
+        description: Omschrijving
+        label: Term (optioneel)
         link_text: Tekst link
-        title: Title
+        title: Titel
       widget/feed:
         limit: Aantal items
     errors:
@@ -287,7 +287,7 @@ nl:
     models:
       activity:
         one: activiteit
-        other: activiteiten
+        other: activiteit
       administrator:
         one: Beheerder
         other: Beheerders

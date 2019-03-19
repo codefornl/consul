@@ -63,7 +63,7 @@ nl:
     meta_title: "Site titel (SEO)"
     meta_title_description: "Titel voor de site <title>, gebruikt om SEO te verbeteren"
     meta_description: "Site description (SEO)"
-    meta_description_description: 'Sitebeschrijving <meta name = "description">, gebruikt om SEO te verbeteren'
+    meta_description_description: 'Siteomschrijving <meta name = "description">, gebruikt om SEO te verbeteren'
     meta_keywords: "Keywords (SEO)"
     meta_keywords_description: 'Sleutelwoorden <meta name = "keywords">, gebruikt om SEO te verbeteren'
     min_age_to_participate: Minimum age needed to participate
