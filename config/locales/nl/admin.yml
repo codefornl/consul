@@ -734,7 +734,7 @@ nl:
           welcome: Welkom
         pages: Aangepaste pagina's
       spending_proposals: Investeringen
-      stats: Statistics
+      stats: Statistieken
       system_emails: Systeemberichten
       title_booths: Stemmen
       title_budgets: Budgetten
@@ -836,11 +836,11 @@ nl:
         official_position: Positie
         title: Bemensing
       level_0: Vrijwillig
-      level_1: Level 1
-      level_2: Level 2
-      level_3: Level 3
-      level_4: Level 4
-      level_5: Level 5
+      level_1: Niveau 1
+      level_2: Niveau 2
+      level_3: Niveau 3
+      level_4: Niveau 4
+      level_5: Niveau 5
       search:
         edit_official: Official bewerken
         make_official: Make official
@@ -1120,7 +1120,7 @@ nl:
         title: Configuratie
         update_setting: Bijwerken
       no_description: Geen omschrijving
-      setting: Functie
+      setting: Module
       setting_actions: Acties
       setting_name: Instelling
       setting_status: Status
@@ -1357,16 +1357,16 @@ nl:
         total: Totaal
       show:
         budgets_title: Budgetten
-        direct_messages: Direct messages
-        incomplete_verifications: Incomplete verifications
+        direct_messages: Privéberichten
+        incomplete_verifications: Incomplete verificaties
         polls: Peilingen
         proposal_notifications: Notificaties
         spending_proposals_title: Investeringen
-        stats_title: Stats
+        stats_title: Statistieken
         summary:
-          budget_investments: Budget bestemmingen
+          budget_investments: Investeringen
           budgets: Open budgetten
-          comment_votes: Comment votes
+          comment_votes: Stemmen op reacties
           comments: Reacties
           debate_votes: Stemmen op discussies
           debates: Discussies

@@ -1,14 +1,5 @@
 <div class="admin-sidebar" data-equalizer-watch>
   <ul id="admin_menu" data-accordion-menu data-multi-open="false">
-    <% if feature?(:proposals) %>
-      <li class="section-title">
-        <%= link_to admin_proposals_path do %>
-          <span class="icon-proposals"></span>
-          <strong><%= t("admin.menu.proposals") %></strong>
-        <% end %>
-      </li>
-    <% end %>
-
     <% if feature?(:polls) %>
       <li class="section-title">
         <a href="#">
