@@ -30,7 +30,7 @@ nl:
         table_actions: Acties
         table_heading_name: Kop naam
         table_id: ID
-        table_title: Title
+        table_title: Titel
         title: Budget bestemmingen
         valuators_assigned:
           one: Assigned valuator
