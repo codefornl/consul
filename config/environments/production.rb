@@ -22,8 +22,7 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.serve_static_file = ENV['RAILS_SERVE_STATIC_FILES'].present?
-  # config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.serve_static_files = ENV["RAILS_SERVE_STATIC_FILES"].present?
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -39,8 +38,8 @@ Rails.application.configure do
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.
-  # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
-  # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
+  # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for Apache
+  # config.action_dispatch.x_sendfile_header = "X-Accel-Redirect" # for NGINX
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = ENV['FORCE_SSL'] || nil
@@ -59,7 +58,7 @@ Rails.application.configure do
   config.cache_store = :dalli_store, { value_max_bytes: 2000000 }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = 'http://assets.example.com'
+  # config.action_controller.asset_host = "http://assets.example.com"
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -70,13 +69,13 @@ Rails.application.configure do
   # Uncomment the following block of code and add your SMTP service credentials
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              ENV['SMTP_HOST'] || 'smtp.example.com',
-    port:                 ENV['SMTP_PORT'] || 587,
-    domain:               ENV['SMTP_DOMAIN'] || 'example.com',
-    user_name:            ENV['SMTP_USER'] || 'username',
-    password:             ENV['SMTP_PASSWORD'] || 'password',
-    authentication:       ENV['SMTP_AUTHENTICATION'] || 'plain',
-    enable_starttls_auto: ENV['SMTP_STARTTLS_AUTO'] || true }
+    address:              ENV["SMTP_HOST"] || "smtp.example.com",
+    port:                 ENV["SMTP_PORT"] || 587,
+    domain:               ENV["SMTP_DOMAIN"] || "example.com",
+    user_name:            ENV["SMTP_USER"] || "<username>",
+    password:             ENV["SMTP_PASSWORD"] || "<password>",
+    authentication:       ENV["SMTP_AUTHENTICATION"] || "plain",
+    enable_starttls_auto: ENV["SMTP_STARTTLS_AUTO"] || true }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).

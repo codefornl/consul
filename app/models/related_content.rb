@@ -4,10 +4,10 @@ class RelatedContent < ActiveRecord::Base
   acts_as_paranoid column: :hidden_at
   include ActsAsParanoidAliases
 
-  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
+  belongs_to :author, class_name: "User", foreign_key: "author_id"
   belongs_to :parent_relationable, polymorphic: true, touch: true
   belongs_to :child_relationable, polymorphic: true, touch: true
-  has_one :opposite_related_content, class_name: 'RelatedContent', foreign_key: :related_content_id
+  has_one :opposite_related_content, class_name: "RelatedContent", foreign_key: :related_content_id
   has_many :related_content_scores
 
   validates :parent_relationable_id, presence: true
@@ -43,7 +43,7 @@ class RelatedContent < ActiveRecord::Base
 
   def score(value, user)
     score_with_opposite(value, user)
-    hide_with_opposite if (related_content_scores.sum(:value) / related_content_scores_count) < Setting['related_content_score_threshold'].to_f
+    hide_with_opposite if (related_content_scores.sum(:value) / related_content_scores_count) < Setting["related_content_score_threshold"].to_f
   end
 
   def hide_with_opposite

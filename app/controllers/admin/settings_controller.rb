@@ -2,6 +2,7 @@ class Admin::SettingsController < Admin::BaseController
 
   def index
     all_settings = Setting.all.group_by { |s| s.type }
+<<<<<<< HEAD
     @settings = []
     @feature_flags = []
     @banner_styles = []
@@ -20,6 +21,10 @@ class Admin::SettingsController < Admin::BaseController
         @banner_imgs = all_settings['banner-img']
       end
     end
+=======
+    @settings = all_settings["common"]
+    @feature_flags = all_settings["feature"]
+>>>>>>> master
   end
 
   def update
