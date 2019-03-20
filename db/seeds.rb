@@ -253,9 +253,7 @@ end
 if !Setting["related_content_score_threshold"]
   Setting["related_content_score_threshold"] = -0.3
 end
-if !Setting["feature.user.skip_verification"]
-  Setting["feature.user.skip_verification"] = "true"
-end
+
 if !Setting["feature.homepage.widgets.feeds.proposals"]
   Setting["feature.homepage.widgets.feeds.proposals"] = true
 end
