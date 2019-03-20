@@ -66,12 +66,12 @@ if !Setting["email_domain_for_officials"]
   Setting["email_domain_for_officials"] = ""
 end
 # Code to be included at the top (inside <head>) of every page (useful for tracking)
-if !Setting["per_page_code_head"]
-  Setting["per_page_code_head"] = ""
+if !Setting["html.per_page_code_head"]
+  Setting["html.per_page_code_head"] = ""
 end
 # Code to be included at the top (inside <body>) of every page
-if !Setting["per_page_code_body"]
-  Setting["per_page_code_body"] = ""
+if !Setting["html.per_page_code_body"]
+  Setting["html.per_page_code_body"] = ""
 end
 # Social settings
 if !Setting["twitter_handle"]
@@ -123,22 +123,32 @@ end
 if !Setting["meta_keywords"]
   Setting["meta_keywords"] = nil
 end
+
+# Processes
+if !Setting["process.debates"]
+  Setting["process.debates"] = true
+end
+if !Setting["process.proposals"]
+ Setting["process.proposals"] = true
+end
+if !Setting["process.polls"]
+  Setting["process.polls"] = true
+end
+if !Setting["process.budgets"]
+  Setting["process.budgets"] = true
+end
+if !Setting["process.legislation"]
+  Setting["process.legislation"] = true
+end
+
 # Feature flags
-if !Setting["feature.debates"]
-  Setting["feature.debates"] = true
-end
-if !Setting["feature.proposals"]
- Setting["feature.proposals"] = true
-end
 if !Setting["feature.featured_proposals"]
   Setting["feature.featured_proposals"] = true
 end
 if !Setting["feature.spending_proposals"]
   Setting["feature.spending_proposals"] = nil
 end
-if !Setting["feature.polls"]
-  Setting["feature.polls"] = true
-end
+
 if !Setting["feature.twitter_login"]
   Setting["feature.twitter_login"] = true
 end
@@ -148,17 +158,14 @@ end
 if !Setting["feature.google_login"]
   Setting["feature.google_login"] = true
 end
+if !Setting["feature.wordpress_login"]
+  Setting["feature.wordpress_login"] = false
+end
 if !Setting["feature.public_stats"]
   Setting["feature.public_stats"] = true
 end
-if !Setting["feature.budgets"]
-  Setting["feature.budgets"] = true
-end
 if !Setting["feature.signature_sheets"]
   Setting["feature.signature_sheets"] = true
-end
-if !Setting["feature.legislation"]
-  Setting["feature.legislation"] = true
 end
 if !Setting["feature.user.recommendations"]
   Setting["feature.user.recommendations"] = true
@@ -168,6 +175,9 @@ if !Setting["feature.user.recommendations_on_debates"]
 end
 if !Setting["feature.user.recommendations_on_proposals"]
   Setting["feature.user.recommendations_on_proposals"] = true
+end
+if !Setting["feature.user.skip_verification"]
+  Setting["feature.user.skip_verification"] = "true"
 end
 if !Setting["feature.cummunity"]
   Setting["feature.community"] = true
@@ -239,14 +249,14 @@ if !Setting["proposal_improvement_path"]
 end
 
 # City map feature default configuration (Greenwich)
-if !Setting["map_latitude"]
-  Setting["map_latitude"] = 51.48
+if !Setting["map.latitude"]
+  Setting["map.latitude"] = 51.48
 end
-if !Setting["map_longitude"]
-  Setting["map_longitude"] = 0.0
+if !Setting["map.longitude"]
+  Setting["map.longitude"] = 0.0
 end
-if !Setting["map_zoom"]
-  Setting["map_zoom"] = 10
+if !Setting["map.zoom"]
+  Setting["map.zoom"] = 10
 end
 
 # Related content
@@ -254,14 +264,14 @@ if !Setting["related_content_score_threshold"]
   Setting["related_content_score_threshold"] = -0.3
 end
 
-if !Setting["feature.homepage.widgets.feeds.proposals"]
-  Setting["feature.homepage.widgets.feeds.proposals"] = true
+if !Setting["homepage.widgets.feeds.proposals"]
+  Setting["homepage.widgets.feeds.proposals"] = true
 end
-if !Setting["feature.homepage.widgets.feeds.debates"]
-  Setting["feature.homepage.widgets.feeds.debates"] = true
+if !Setting["homepage.widgets.feeds.debates"]
+  Setting["homepage.widgets.feeds.debates"] = true
 end
-if !Setting["feature.homepage.widgets.feeds.processes"]
-  Setting["feature.homepage.widgets.feeds.processes"] = true
+if !Setting["homepage.widgets.feeds.processes"]
+  Setting["homepage.widgets.feeds.processes"] = true
 end
 
 # Votes hot_score configuration
@@ -283,8 +293,6 @@ end
 if !WebSection.exists?(:name => "help_page")
   WebSection.create(name: "help_page")
 end
-if !Setting["feature.wordpress_login"]
-  Setting["feature.wordpress_login"] = false
-end
+
 # Default custom pages
 load Rails.root.join("db", "pages.rb")
