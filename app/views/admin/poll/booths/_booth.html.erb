@@ -7,11 +7,11 @@
   </td>
   <td class="text-right">
     <% if controller_name == "shifts" || controller_name == "booths" && action_name == "available" %>
-      <%= link_to t("admin.booths.booth.shifts"),
-                  new_admin_booth_shift_path(booth),
-                  class: "button hollow" %>
+      <%= link_to new_admin_booth_shift_path(booth) do %>
+        <i class="fas fa-cog" title="<%= t("admin.booths.booth.shifts") %>"></i>
+      <% end %>
     <% else %>
-      <%= link_to edit_admin_booth_path(booth), class: "button" do %>
+      <%= link_to edit_admin_booth_path(booth) do %>
         <i class="fas fa-pencil-alt" title="<%= t("admin.booths.booth.edit") %>"></i>
       <% end %>
     <% end %>

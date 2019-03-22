@@ -93,13 +93,9 @@
       <% end %>
     </div>
 
-    <div class="small-12 medium-3 column">
-
-      <aside class="margin-bottom">
-        <%= link_to t("debates.index.start_debate"), new_debate_path, class: "button expanded" %>
-        <%= render "shared/tag_cloud", taggable: "debate" %>
-      </aside>
+    <div class="sidebar-block small-12 medium-3 column">
+      <%= link_to t("debates.index.start_debate"), new_debate_path, class: "button expanded" %>
+      <%= render "shared/tag_cloud", taggable: "debate" %>
     </div>
-
   </div>
 </main>

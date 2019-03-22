@@ -424,18 +424,6 @@
     }
   }
 
-  aside {
-
-    h2 {
-      border-top: 2px solid $brand;
-      display: inline-block;
-      font-size: rem-calc(16);
-      margin: -1px 0 rem-calc(12);
-      padding-top: rem-calc(6);
-      text-transform: uppercase;
-    }
-  }
-
   blockquote {
     color: #4c4c4c;
     margin-top: rem-calc(12);
@@ -1128,8 +1116,6 @@
 .expanded {
 
   &.budget {
-    background: $budget;
-
     h1,
     h2,
     p,
@@ -1772,68 +1758,110 @@
   }
 }
 
+.folded-corner-right {
+  right: 0;
+  border-bottom: 60px solid transparent;
+  &::after {
+    top: 6px;
+    margin-left: 36px;
+  }
+  &.can-answer {
+    border-right: 60px solid $info-bg;
+  }
+  &.cant-answer {
+    border-right: 60px solid $info-bg;
+  }
+  &.not-logged-in {
+    border-right: 60px solid $info-bg;
+  }
+  &.unverified {
+    border-right: 60px solid $warning-bg;
+  }
+  &.already-answer {
+    border-right: 60px solid $success-bg;
+  }
+}
+
+.folded-corner-left {
+  left: 0;
+  border-bottom: 60px solid transparent;
+  &::after {
+    top: 6px;
+    margin-left: -46px;
+  }
+  &.can-answer {
+    border-left: 60px solid $info-bg;
+  }
+  &.cant-answer {
+    border-left: 60px solid $alert-bg;
+  }
+  &.not-logged-in {
+    border-left: 60px solid $info-bg;
+  }
+  &.unverified {
+    border-left: 60px solid $warning-bg;
+  }
+
+  &.already-answer {
+    border-left: 60px solid $success-bg;
+  }
+}
+.poll {
+  .folded-corner {
+    position: absolute !important;  
+  }
+}
+.folded-corner {
+  height: 0;
+  position: inherit;
+  top: 0;
+  width: 0;
+  z-index: 900;
+  margin-bottom: -60px;
+  &::after {
+    position: relative;
+    font-style: normal;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free" !important;
+  }
+  &.can-answer {
+    &::after {
+      color: $color-info;
+      content: "\f058";
+    }
+  }
+  &.cant-answer {
+    &::after {
+      color: $color-alert;
+      content: "\f057";
+    }
+  }
+  &.not-logged-in {
+    &::after {
+      color: $color-info;
+      content: "\f007";
+    }
+  }
+  &.unverified {
+    &::after {
+      color: $color-warning;
+      content: "\f059";
+    }
+  }
+  &.already-answer {
+    &::after {
+      color: $color-success;
+      content: "\f00c";
+    }
+  }
+}
+    
 .poll,
 .poll-question {
   border: 1px solid $border;
   margin-bottom: $line-height / 2;
   padding: $line-height / 2;
   position: relative;
-
-  .fa-vote-yes {
-    border-top: 0;
-    border-bottom: 60px solid transparent;
-    height: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 0;
-
-    &.can-answer {
-      border-right: 60px solid $info-bg;
-
-      &::after {
-        color: $color-info;
-        content: "\6c";
-      }
-    }
-
-    &.cant-answer {
-      border-right: 60px solid $alert-bg;
-
-      &::after {
-        color: $color-alert;
-        content: "\74";
-      }
-    }
-
-    &.not-logged-in {
-      border-right: 60px solid $info-bg;
-
-      &::after {
-        color: $color-info;
-        content: "\6f";
-      }
-    }
-
-    &.unverified {
-      border-right: 60px solid $warning-bg;
-
-      &::after {
-        color: $color-warning;
-        content: "\6f";
-      }
-    }
-
-    &.already-answer {
-      border-right: 60px solid $success-bg;
-
-      &::after {
-        color: $color-success;
-        content: "\59";
-      }
-    }
-  }
-
   .dates {
     color: $text-medium;
     font-size: $small-font-size;

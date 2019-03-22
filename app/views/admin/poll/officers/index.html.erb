@@ -16,7 +16,7 @@
       <tr>
         <th><%= t("admin.poll_officers.officer.name") %></th>
         <th><%= t("admin.poll_officers.officer.email") %></th>
-        <th class="small-3"><%= t("admin.actions.actions") %></th>
+        <th class="small-3 text-right"><%= t("admin.actions.actions") %></th>
       </tr>
     </thead>
     <tbody>
@@ -28,13 +28,11 @@
         <td>
           <%= officer.email %>
         </td>
-        <td>
+        <td class="text-right">
           <% if officer.persisted? %>
-            <%= link_to t("admin.poll_officers.officer.delete"),
-                        admin_officer_path(officer),
-                        method: :delete,
-                        class: "button hollow alert expanded"
-            %>
+            <%= link_to admin_officer_path(officer), method: :delete, class: "red" do %>
+              <i class="fas fa-trash-alt" title="<%= t("admin.poll_officers.officer.delete") %>"></i>
+            <% end %>
           <% else %>
             <%= link_to t("admin.poll_officers.officer.add"),
                         { controller: "admin/poll/officers", action: :create,

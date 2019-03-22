@@ -93,33 +93,36 @@
         </div>
       </div>
 
-      <aside class="small-12 medium-3 column">
+      <div id="sidebar" class="small-12 medium-3 column">
         <% if can_destroy_image?(investment) %>
-          <div class="sidebar-divider"></div>
-          <h2><%= t("budgets.investments.show.author") %></h2>
-          <div class="show-actions-menu">
-            <%= link_to image_path(investment.image, from: request.url),
-                        method: :delete,
-                        class: "button hollow alert expanded" do %>
-                <span class="fas fa-image fa-fw"></span>
-                <%= t("images.remove_image") %>
-            <% end %>
+          <div class="sidecar-block">
+            <div class="sidebar-divider"></div>
+            <h2><%= t("budgets.investments.show.author") %></h2>
+            <div class="show-actions-menu">
+              <%= link_to image_path(investment.image, from: request.url),
+                method: :delete,
+                class: 'button hollow alert expanded' do %>
+                  <span class="fas fa-image fa-fw"></span>
+                  <%= t("images.remove_image") %>
+              <% end %>
+            </div>
           </div>
         <% end %>
 
         <% if investment.should_show_aside? %>
-          <% if investment.should_show_votes? %>
-            <div class="sidebar-divider"></div>
-            <h2><%= t("budgets.investments.show.supports") %></h2>
-            <div class="text-center">
-              <div id="<%= dom_id(investment) %>_votes">
-                <%= render partial: "/budgets/investments/votes", locals: {
-                  investment: investment,
-                  investment_votes: investment_votes,
-                  vote_url: vote_budget_investment_path(investment.budget, investment, value: "yes")
-                } %>
+          <div class="sidecar-block">
+            <% if investment.should_show_votes? %>
+              <div class="sidebar-divider"></div>
+              <h2><%= t("budgets.investments.show.supports") %></h2>
+              <div class="text-center">
+                <div id="<%= dom_id(investment) %>_votes">
+                  <%= render partial: '/budgets/investments/votes', locals: {
+                    investment: investment,
+                    investment_votes: investment_votes,
+                    vote_url: vote_budget_investment_path(investment.budget, investment, value: 'yes')
+                  } %>
+                </div>
               </div>
-            </div>
           <% elsif investment.should_show_vote_count? %>
             <div class="sidebar-divider"></div>
             <h2><%= t("budgets.investments.show.supports") %></h2>
@@ -144,6 +147,7 @@
               </div>
             </div>
           <% end %>
+          </div>
         <% end %>
 
         <% if investment.unfeasible? && investment.valuation_finished? %>
@@ -172,19 +176,21 @@
           </div>
         <% end %>
         <% if investment.should_show_price? %>
-          <div class="sidebar-divider"></div>
-          <h2><%= t("budgets.investments.show.price") %></h2>
-          <div class="supports text-center">
-            <p class="investment-project-amount">
-              <%= investment.formatted_price %>
-            </p>
-          </div>
-          <% if investment.should_show_price_explanation? %>
-            <div class="text-center" data-magellan>
-              <%= link_to t("budgets.investments.show.see_price_explanation"),
-                            "#price_explanation", class: "small" %>
+          <div class="sidebar-block">
+            <div class="sidebar-divider"></div>
+            <h2><%= t("budgets.investments.show.price") %></h2>
+            <div class="supports text-center">
+              <p class="investment-project-amount">
+                <%= investment.formatted_price %>
+              </p>
             </div>
-          <% end %>
+            <% if investment.should_show_price_explanation? %>
+              <div class="text-center" data-magellan>
+                <%= link_to t("budgets.investments.show.see_price_explanation"),
+                  "#price_explanation", class: "small" %>
+              </div>
+            <% end %>
+          </div>
         <% end %>
 
         <%= render "shared/social_share",
@@ -208,7 +214,8 @@
 
         <%= render "communities/access_button", community: investment.community %>
 
-       </aside>
+       </div>
     </div>
   </section>
+
 <% end %>

@@ -18,11 +18,9 @@
   </head>
   <body class="<%= yield (:body_class) %>">
     <%= setting["html.per_page_code_body"].try(:html_safe) %>
-
-    <h1 class="show-for-sr"><%= setting["org_name"] %></h1>
-
-    <div class="wrapper <%= yield (:wrapper_class) %>">
-      <%= render "layouts/header" %>
+    <%= render "layouts/header" %>
+    <section>
+      <h1 class="show-for-sr"><%= setting["org_name"] %></h1>
 
       <!--[if lt IE 9]>
       <% if browser.ie? && cookies["ie_alert_closed"] != "true" %>
@@ -49,9 +47,8 @@
       <%= yield %>
       <div class="push"></div>
     </div>
-    <div class="footer">
-      <%= render "layouts/footer" %>
-    </div>
+    </section>
+    <%= render "layouts/footer" %>
   </body>
   <!--[if lt IE 9]>
     <%= javascript_include_tag "ie_lt9" %>

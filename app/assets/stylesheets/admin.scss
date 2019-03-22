@@ -194,11 +194,6 @@ $sidebar-active: #f4fcd0;
 
     &.with-button {
       line-height: $line-height * 2;
-
-      .button {
-        background: #fff;
-        color: $brand;
-      }
     }
   }
 
@@ -212,25 +207,6 @@ $sidebar-active: #f4fcd0;
   }
 
   table {
-
-    thead {
-      color: #fff;
-    }
-
-    th {
-      background: $brand;
-      color: #fff;
-
-      label {
-        color: #fff;
-      }
-
-      a {
-        color: inherit;
-        white-space: nowrap;
-      }
-    }
-
     .break {
       word-break: break-word;
     }

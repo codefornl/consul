@@ -5,35 +5,26 @@
   <%= booth.location || t("admin.booths.index.no_location") %>
 </td>
 <% if booth_assignment.present? %>
-  <td>
-    <span class="enabled">
-      <strong><i class="fas fa-link" title="<%= t("admin.booth_assignments.manage.status.assigned") %>"></i></strong>
-    </span>
-  </td>
-  <td>
+  <td class="text-right">
     <% if !@poll.expired?%>
       <%= link_to admin_poll_booth_assignment_path(@poll, booth_assignment, booth_id: booth.id),
         method: :delete,
         remote: true,
         title: t("admin.booth_assignments.manage.actions.unassign"),
-        class: "button alert",
         data: (booth_assignment.shifts? ? {confirm: "#{t("admin.poll_booth_assignments.alert.shifts")}"} : nil) do %>
-          <i class="fas fa-unlink"></i>
+          <i class="fas fa-link"></i>
         <% end %>
     <% end %>
   </td>
 <% else %>
-  <td>
-    <span class="disabled"><i class="fas fa-unlink" title="<%= t("admin.booth_assignments.manage.status.unassigned") %>"></i></span>
-  </td>
-  <td>
+  <td class="text-right">
     <% if !@poll.expired?%>
       <%= link_to admin_poll_booth_assignments_path(@poll, booth_id: booth.id),
         method: :post,
         remote: true,
         title: t("admin.booth_assignments.manage.actions.assign"),
-        class: "button" do %>
-          <i class="fas fa-link"></i>
+        class: "red" do %>
+          <i class="fas fa-unlink"></i>
         <% end %>
     <% end %>
   </td>

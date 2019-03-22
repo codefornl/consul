@@ -12,7 +12,7 @@
       <tr>
         <th><%= t("admin.questions.index.table_question") %></th>
         <th><%= t("admin.questions.index.table_poll") %></th>
-        <th class="small-4"><%= t("admin.actions.actions") %></th>
+        <th class="small-4 text-right"><%= t("admin.actions.actions") %></th>
       </tr>
     </thead>
     <tbody>
@@ -26,13 +26,13 @@
               <em><%= t("admin.questions.index.poll_not_assigned") %></em>
             <% end %>
           </td>
-          <td>
-            <div class="small-6 column">
-              <%= link_to t("shared.edit"), edit_admin_question_path(question), class: "button hollow expanded" %>
-            </div>
-            <div class="small-6 column">
-              <%= link_to t("shared.delete"), admin_question_path(question), class: "button hollow alert expanded", method: :delete %>
-            <div class="small-6 column">
+          <td class="text-right">
+            <%= link_to edit_admin_question_path(question) do %>
+              <i class="fas fa-pencil-alt" title="<%= t("shared.edit") %>"></i>
+            <% end %>
+            <%= link_to admin_question_path(question), method: :delete, class: "red" do %>
+              <i class="fas fa-trash-alt" title="<%= t("shared.delete") %>"></i>
+            <% end %>
           </td>
         </tr>
       <% end %>

@@ -82,10 +82,12 @@ a {
     color: $link-hover;
     outline: 3px solid #ffbf47;
   }
+  &.red {
+    color: #cc4b37;
+  }
 }
 
 .button {
-  background: $brand;
   font-size: $base-font-size;
 
   &:hover {
@@ -464,8 +466,8 @@ header {
       font-size: $small-font-size;
       pointer-events: none;
       position: absolute;
-      right: 6px;
-      top: 6px;
+      right: 0.5em;
+      top: 0.5em;
     }
   }
 
@@ -672,7 +674,6 @@ header {
   }
 
   a {
-    color: #fff;
     display: inline-block;
     line-height: $line-height * 2;
     position: relative;
@@ -687,14 +688,17 @@ header {
 
       &:hover {
         color: $link;
+        text-decoration: none;
+        border-bottom: 2px solid $brand;
       }
     }
 
     &.is-active {
-      color: #fff;
-
+      pointer-events: none;
+      cursor: default;
+      text-decoration: none;
       @include breakpoint(medium) {
-        border-bottom: 2px solid $brand;
+        border-bottom: 2px solid transparent;
         color: $brand;
       }
     }
@@ -880,7 +884,9 @@ footer {
     z-index: 0;
   }
 }
-
+.sidebar-block {
+  margin-bottom: 1em;
+}
 .sidebar-title {
   border-top: 2px solid $brand;
   display: inline-block;
@@ -2674,6 +2680,13 @@ table {
 // 24. Homepage
 // ------------
 
+.background-header {
+  clip-path: ellipse(60% 80% at 50% 0%);
+  height: $line-height * 2;
+  background: $highlight;
+  margin-top: rem-calc(-48);
+}
+
 .home-page,
 .custom-page {
 
@@ -2692,13 +2705,6 @@ table {
     h3 {
       color: #fff;
     }
-  }
-
-  .background-header {
-    clip-path: ellipse(60% 80% at 50% 0%);
-    height: $line-height * 2;
-    background: $highlight;
-    margin-top: rem-calc(-48);
   }
 
   .card {
