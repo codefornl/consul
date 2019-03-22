@@ -85,6 +85,9 @@ a {
   &.red {
     color: #cc4b37;
   }
+  &.green {
+    color: #3adb76;
+  }
 }
 
 .button {
@@ -666,6 +669,10 @@ header {
     margin: 0;
 
     li {
+      a {
+        border-bottom: 2px solid transparent;
+      }
+      
       @include breakpoint(medium) {
         display: inline-block;
         margin-right: rem-calc(20);
@@ -698,7 +705,7 @@ header {
       cursor: default;
       text-decoration: none;
       @include breakpoint(medium) {
-        border-bottom: 2px solid transparent;
+        border-bottom: 2px solid $brand;
         color: $brand;
       }
     }
