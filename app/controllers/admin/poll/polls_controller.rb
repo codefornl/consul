@@ -7,6 +7,7 @@ class Admin::Poll::PollsController < Admin::Poll::BaseController
   before_action :load_geozones, only: [:new, :create, :edit, :update]
 
   def index
+    @title = I18n.t("admin.menu.polls")
     @polls = Poll.order(starts_at: :desc)
   end
 

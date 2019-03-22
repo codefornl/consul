@@ -7,6 +7,7 @@ class Admin::Legislation::ProcessesController < Admin::Legislation::BaseControll
   load_and_authorize_resource :process, class: "Legislation::Process"
 
   def index
+    @title = I18n.t("admin.menu.legislation")
     @processes = ::Legislation::Process.send(@current_filter).order(start_date: :desc)
                  .page(params[:page])
   end

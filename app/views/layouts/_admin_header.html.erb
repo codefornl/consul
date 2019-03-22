@@ -2,10 +2,6 @@
   <div class="top-links">
     <div class="expanded row">
       <%= render "shared/locale_switcher" %>
-
-      <%= link_to root_path, class: "float-right" do %>
-        <%= t("admin.dashboard.index.back", org: setting["org_name"]) %>
-      <% end %>
     </div>
   </div>
 
@@ -16,17 +12,18 @@
     </div>
 
     <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="menu">
-          <li class="menu-text">
-            <h1>
-              <%= link_to namespaced_root_path do %>
-                <%= setting["org_name"] %>
-                <br><small><%= namespaced_header_title %></small>
-              <% end %>
-            </h1>
-          </li>
-        </ul>
+      <div class="top-bar-left" style="margin-bottom:-1em;">
+        <nav aria-label="You are here:" role="navigation">
+          <ul class="breadcrumbs" style="padding-left: 0.9375rem;padding-top: 0.75rem;">
+            <li><%= link_to setting["org_name"], root_path %></li>
+            <li><%= link_to t("layouts.header.administration"), admin_root_path %></li>
+            <% if @title.present? %>
+            <li>
+              <span class="show-for-sr">Current: </span> <%= @title %>
+            </li>
+            <% end %>
+          </ul>
+        </nav>
       </div>
 
       <div id="responsive_menu">
