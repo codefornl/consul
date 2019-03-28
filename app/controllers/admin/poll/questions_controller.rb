@@ -6,6 +6,7 @@ class Admin::Poll::QuestionsController < Admin::Poll::BaseController
   load_and_authorize_resource :question, class: "Poll::Question"
 
   def index
+    @title = I18n.t("admin.menu.poll_questions")
     @polls = Poll.all
     @search = search_params[:search]
 

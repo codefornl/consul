@@ -1,6 +1,4 @@
-<h2 class="inline-block"><%= t("admin.polls.index.title") %></h2>
-
-<%= link_to t("admin.active_polls.edit.title"),
+<%= link_to t("admin.polls.edit.title"),
             edit_admin_active_polls_path,
             class: "button hollow float-right" %>
 
@@ -14,7 +12,7 @@
       <th class="small-5"><%= t("admin.polls.index.name") %></th>
       <th class="text-center"><%= t("admin.polls.index.start_date") %></th>
       <th class="text-center"><%= t("admin.polls.index.closing_date") %></th>
-      <th><%= t("admin.actions.actions") %></th>
+      <th class="text-right"><%= t("admin.actions.actions") %></th>
     </thead>
     <tbody>
       <%= render @polls %>

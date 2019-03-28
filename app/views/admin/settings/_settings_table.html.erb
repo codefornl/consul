@@ -16,7 +16,7 @@
           </span>
         </td>
         <td class="small-6">
-          <%= form_for(setting, url: admin_setting_path(setting), html: { id: "edit_#{dom_id(setting)}"}) do |f| %>
+          <%= form_for(setting, remote: true, url: admin_setting_path(setting), html: { id: "edit_#{dom_id(setting)}"}) do |f| %>
             <div class="small-12 medium-6 large-8 column">
               <%= f.text_area :value, label: false, id: dom_id(setting), lines: 1 %>
             </div>

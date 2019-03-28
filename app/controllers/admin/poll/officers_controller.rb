@@ -2,6 +2,7 @@ class Admin::Poll::OfficersController < Admin::Poll::BaseController
   load_and_authorize_resource :officer, class: "Poll::Officer", except: [:edit, :show]
 
   def index
+    @title = I18n.t("admin.menu.poll_officers")
     @officers = @officers.page(params[:page])
   end
 

@@ -228,7 +228,6 @@ en:
       help: Help
       my_account_link: My account
       my_activity_link: My activity
-      open: open
       open_gov: Open government
       proposals: Proposals
       poll_questions: Voting
@@ -280,6 +279,10 @@ en:
       sign_in: Sign in with Google
       sign_up: Sign up with Google
       name: Google
+    wordpress_oauth2:
+      sign_in: Sign in with Wordpress
+      sign_up: Sign up with Wordpress
+      name: Wordpress
     twitter:
       sign_in: Sign in with Twitter
       sign_up: Sign up with Twitter
@@ -530,23 +533,22 @@ en:
     "no": "No"
     search_results: "Search results"
     advanced_search:
-      author_type: "By author category"
-      author_type_blank: "Select a category"
-      date: "By date"
-      date_placeholder: "DD/MM/YYYY"
-      date_range_blank: "Choose a date"
-      date_1: "Last 24 hours"
-      date_2: "Last week"
-      date_3: "Last month"
-      date_4: "Last year"
-      date_5: "Customized"
-      from: "From"
-      general: "With the text"
-      general_placeholder: "Write the text"
-      search: "Filter"
-      title: "Advanced search"
-      to: "To"
-    delete: Delete
+      author_type: 'By author category'
+      author_type_blank: 'Select a category'
+      date: 'By date'
+      date_placeholder: 'DD/MM/YYYY'
+      date_range_blank: 'Choose a date'
+      date_1: 'Last 24 hours'
+      date_2: 'Last week'
+      date_3: 'Last month'
+      date_4: 'Last year'
+      date_5: 'Customized'
+      from: 'From'
+      general: 'With the text'
+      general_placeholder: 'Write the text'
+      search: 'Filter'
+      title: 'Advanced search'
+      to: 'To'
     author_info:
       author_deleted: User deleted
     back: Go back

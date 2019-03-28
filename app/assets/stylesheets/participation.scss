@@ -26,11 +26,8 @@
     margin-top: 0;
   }
 
-  .icon-like,
-  .icon-unlike {
-    background: #fff;
-    border: 2px solid $text-light;
-    border-radius: rem-calc(3);
+  .fa-thumbs-up,
+  .fa-thumbs-down {
     color: $text-light;
     display: inline-block;
     font-size: rem-calc(30);
@@ -40,27 +37,24 @@
 
     &:hover,
     &:active {
-      color: #fff;
       cursor: pointer;
       opacity: 1 !important;
     }
   }
 
-  .icon-like {
+  .fa-thumbs-up {
 
     &:hover,
     &:active {
-      background: $like;
-      border: 2px solid $like;
+      color: $like;
     }
   }
 
-  .icon-unlike {
+  .fa-thumbs-down {
 
     &:hover,
     &:active {
-      background: $unlike;
-      border: 2px solid $unlike;
+      color: $unlike;
     }
   }
 
@@ -88,26 +82,24 @@
 
   .voted {
 
-    .icon-like,
-    .icon-unlike {
+    .fa-thumbs-up,
+    .fa-thumbs-down {
       color: #fff;
     }
 
-    .icon-like {
-      background: $like;
-      border: 2px solid $like;
+    .fa-thumbs-up {
+      color: $like;
     }
 
-    .icon-unlike {
-      background: $unlike;
-      border: 2px solid $unlike;
+    .fa-thumbs-down {
+      color: $unlike;
     }
   }
 
   .no-voted {
 
-    .icon-like,
-    .icon-unlike {
+    .fa-thumbs-up,
+    .fa-thumbs-down {
       opacity: 0.3;
     }
   }
@@ -254,25 +246,25 @@
 .topic-new,
 .topic-form {
 
-  .icon-debates,
-  .icon-proposals,
-  .icon-budget,
-  .icon-image {
+  .fa-comment-alt,
+  .fa-lightbulb,
+  .fa-hand-holding-heart,
+  .fa-image {
     font-size: rem-calc(50);
     line-height: $line-height;
     opacity: 0.5;
   }
 
-  .icon-debates {
+  .fa-comment-alt {
     color: $debates;
   }
 
-  .icon-proposals,
-  .icon-image {
+  .fa-lightbulb,
+  .fa-image {
     color: $proposals;
   }
 
-  .icon-budget {
+  .fa-hand-holding-heart {
     color: $budget;
   }
 }
@@ -285,11 +277,6 @@
   li {
     font-size: $small-font-size;
     margin: $line-height / 2 0;
-
-    &::before {
-      content: "l ";
-      font-family: "icons" !important;
-    }
   }
 }
 
@@ -437,18 +424,6 @@
     }
   }
 
-  aside {
-
-    h2 {
-      border-top: 2px solid $brand;
-      display: inline-block;
-      font-size: rem-calc(16);
-      margin: -1px 0 rem-calc(12);
-      padding-top: rem-calc(6);
-      text-transform: uppercase;
-    }
-  }
-
   blockquote {
     color: #4c4c4c;
     margin-top: rem-calc(12);
@@ -469,7 +444,7 @@
       word-wrap: break-word;
     }
 
-    .icon-video {
+    .fa-file-video {
       color: #cc181e;
       display: inline-block;
       font-size: rem-calc(24);
@@ -525,7 +500,7 @@
 
 .show-actions-menu {
 
-  [class^="icon-"] {
+  [class^="fa-"] {
     display: inline-block;
     vertical-align: middle;
   }
@@ -673,24 +648,24 @@
     }
   }
 
-  .icon-debates,
-  .icon-proposals,
-  .icon-budget {
+  .fa-comment-alt,
+  .fa-lightbulb,
+  .fa-hand-holding-heart {
     font-size: rem-calc(18);
     line-height: $line-height;
     margin-left: rem-calc(6);
     top: 0;
   }
 
-  .icon-debates {
+  .fa-comment-alt {
     color: $debates;
   }
 
-  .icon-proposals {
+  .fa-lightbulb {
     color: $proposals-dark;
   }
 
-  .icon-budget {
+  .fa-hand-holding-heart {
     color: $budget;
     font-size: $small-font-size;
   }
@@ -704,7 +679,7 @@
     font-size: $small-font-size;
     margin: rem-calc(6) 0 0;
 
-    .icon-comments {
+    .fa-comments {
       font-size: rem-calc(16);
       vertical-align: top;
     }
@@ -835,7 +810,7 @@
       font-weight: bold;
     }
 
-    .remove .icon-check-circle {
+    .remove .fa-check-circle {
       color: $budget;
       display: block;
       font-size: rem-calc(70);
@@ -893,7 +868,7 @@
     text-transform: uppercase;
   }
 
-  .icon-budget {
+  .fa-hand-holding-heart {
     color: $budget;
     font-size: $small-font-size;
     line-height: $line-height;
@@ -915,7 +890,6 @@
 }
 
 .view-mode {
-
   ul {
     margin-bottom: 0;
 
@@ -938,7 +912,8 @@
 
     &::before {
       color: $text;
-      font-family: "icons";
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free" !important;
     }
   }
 
@@ -947,7 +922,7 @@
     .button {
 
       &::before {
-        content: "\51";
+        content: "\f00a";
       }
     }
   }
@@ -957,7 +932,7 @@
     .button {
 
       &::before {
-        content: "\22";
+      content: "\f00b";
       }
     }
   }
@@ -966,8 +941,9 @@
     position: relative;
 
     &::before {
-      content: "\22";
-      font-family: "icons";
+      content: "\f00b";
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free" !important;
       left: 0;
       position: absolute;
       top: 6px;
@@ -978,8 +954,9 @@
     position: relative;
 
     &::before {
-      content: "\51";
-      font-family: "icons";
+      content: "\f00a";
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free" !important;
       left: 0;
       position: absolute;
       top: 6px;
@@ -990,8 +967,9 @@
     color: $brand;
 
     &::after {
-      content: "\6c";
-      font-family: "icons";
+      content: "\f00c";
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free" !important;
       font-size: $tiny-font-size;
     }
   }
@@ -1138,14 +1116,12 @@
 .expanded {
 
   &.budget {
-    background: $budget;
-
     h1,
     h2,
     p,
     a,
     .back,
-    .icon-angle-left,
+    .fa-caret-left,
     .description {
       color: #fff;
     }
@@ -1193,7 +1169,7 @@
   h2,
   h3,
   .back,
-  .icon-angle-left,
+  .fa-caret-left,
   p,
   a {
     color: #fff;
@@ -1303,16 +1279,6 @@
     text-align: right;
     top: 16px;
     width: 100%;
-
-    &::before {
-      color: #a5a1ff;
-      content: "\57";
-      font-family: "icons";
-      font-size: $small-font-size;
-      position: absolute;
-      right: -6px;
-      top: -17px;
-    }
   }
 
   .total-amount {
@@ -1404,7 +1370,7 @@
       display: block;
       height: 0;
 
-      .icon-x {
+      .fa-times {
         color: #9f9f9f;
         font-size: rem-calc(24);
         line-height: $line-height / 2;
@@ -1430,7 +1396,7 @@
         text-decoration: none;
       }
 
-      .remove-investment-project .icon-x {
+      .remove-investment-project .fa-times {
         color: #fff;
       }
     }
@@ -1448,20 +1414,6 @@
   border-radius: rem-calc(3);
   color: $budget;
   font-weight: bold;
-
-  &::after {
-    content: "\56";
-    font-family: "icons";
-    font-size: $small-font-size;
-    font-weight: normal;
-    line-height: $line-height;
-    padding-left: rem-calc(3);
-    vertical-align: baseline;
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
 }
 
 .progress-bar-nav {
@@ -1654,29 +1606,6 @@
   }
 }
 
-.successful .panel {
-
-  .icon-successful {
-    border-right: 60px solid #ffd200;
-    border-top: 0;
-    border-bottom: 60px solid transparent;
-    height: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 0;
-
-    &::after {
-      color: #1b254c;
-      content: "\59";
-      font-family: "icons" !important;
-      left: 34px;
-      position: absolute;
-      top: 5px;
-    }
-  }
-}
-
 .successful {
 
   .panel {
@@ -1829,79 +1758,110 @@
   }
 }
 
+.folded-corner-right {
+  right: 0;
+  border-bottom: 60px solid transparent;
+  &::after {
+    top: 6px;
+    margin-left: 36px;
+  }
+  &.can-answer {
+    border-right: 60px solid $info-bg;
+  }
+  &.cant-answer {
+    border-right: 60px solid $info-bg;
+  }
+  &.not-logged-in {
+    border-right: 60px solid $info-bg;
+  }
+  &.unverified {
+    border-right: 60px solid $warning-bg;
+  }
+  &.already-answer {
+    border-right: 60px solid $success-bg;
+  }
+}
+
+.folded-corner-left {
+  left: 0;
+  border-bottom: 60px solid transparent;
+  &::after {
+    top: 6px;
+    margin-left: -46px;
+  }
+  &.can-answer {
+    border-left: 60px solid $info-bg;
+  }
+  &.cant-answer {
+    border-left: 60px solid $alert-bg;
+  }
+  &.not-logged-in {
+    border-left: 60px solid $info-bg;
+  }
+  &.unverified {
+    border-left: 60px solid $warning-bg;
+  }
+
+  &.already-answer {
+    border-left: 60px solid $success-bg;
+  }
+}
+.poll {
+  .folded-corner {
+    position: absolute !important;  
+  }
+}
+.folded-corner {
+  height: 0;
+  position: inherit;
+  top: 0;
+  width: 0;
+  z-index: 900;
+  margin-bottom: -60px;
+  &::after {
+    position: relative;
+    font-style: normal;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free" !important;
+  }
+  &.can-answer {
+    &::after {
+      color: $color-info;
+      content: "\f058";
+    }
+  }
+  &.cant-answer {
+    &::after {
+      color: $color-alert;
+      content: "\f057";
+    }
+  }
+  &.not-logged-in {
+    &::after {
+      color: $color-info;
+      content: "\f007";
+    }
+  }
+  &.unverified {
+    &::after {
+      color: $color-warning;
+      content: "\f059";
+    }
+  }
+  &.already-answer {
+    &::after {
+      color: $color-success;
+      content: "\f00c";
+    }
+  }
+}
+    
 .poll,
 .poll-question {
   border: 1px solid $border;
   margin-bottom: $line-height / 2;
   padding: $line-height / 2;
   position: relative;
-
-  .icon-poll-answer {
-    border-top: 0;
-    border-bottom: 60px solid transparent;
-    height: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 0;
-
-    &.can-answer::after,
-    &.cant-answer::after,
-    &.not-logged-in::after,
-    &.already-answer::after,
-    &.unverified::after {
-      font-family: "icons" !important;
-      left: 34px;
-      position: absolute;
-      top: 5px;
-    }
-
-    &.can-answer {
-      border-right: 60px solid $info-bg;
-
-      &::after {
-        color: $color-info;
-        content: "\6c";
-      }
-    }
-
-    &.cant-answer {
-      border-right: 60px solid $alert-bg;
-
-      &::after {
-        color: $color-alert;
-        content: "\74";
-      }
-    }
-
-    &.not-logged-in {
-      border-right: 60px solid $info-bg;
-
-      &::after {
-        color: $color-info;
-        content: "\6f";
-      }
-    }
-
-    &.unverified {
-      border-right: 60px solid $warning-bg;
-
-      &::after {
-        color: $color-warning;
-        content: "\6f";
-      }
-    }
-
-    &.already-answer {
-      border-right: 60px solid $success-bg;
-
-      &::after {
-        color: $color-success;
-        content: "\59";
-      }
-    }
-  }
-
   .dates {
     color: $text-medium;
     font-size: $small-font-size;
@@ -1959,19 +1919,6 @@
       border: 2px solid #92ba48;
       color: $text;
       position: relative;
-
-      &::after {
-        background: #92ba48;
-        border-radius: rem-calc(20);
-        content: "\6c";
-        color: #fff;
-        font-family: "icons" !important;
-        font-size: rem-calc(12);
-        padding: $line-height / 4;
-        position: absolute;
-        right: -6px;
-        top: -6px;
-      }
     }
   }
 }

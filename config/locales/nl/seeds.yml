@@ -31,11 +31,11 @@ nl:
       security_emergencies: Veiligheid en noodgevallen
       environment: Omgeving
     budgets:
-      budget: Burgerbegroting
+      budget: Budget
       currency: '€'
       groups:
         all_city: Hele gemeente
-        districts: Regio's
+        districts: Gebieden
       valuator_groups:
         culture_and_sports: Cultuur & sport
         gender_and_diversity: Geslacht & diversiteitsbeleid

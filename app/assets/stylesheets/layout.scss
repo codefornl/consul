@@ -82,10 +82,15 @@ a {
     color: $link-hover;
     outline: 3px solid #ffbf47;
   }
+  &.red {
+    color: #cc4b37;
+  }
+  &.green {
+    color: #3adb76;
+  }
 }
 
 .button {
-  background: $brand;
   font-size: $base-font-size;
 
   &:hover {
@@ -205,7 +210,7 @@ a {
   background: $highlight;
 }
 
-.icon-check {
+.fa-check {
   color: $check;
 }
 
@@ -335,15 +340,13 @@ a {
   color: $text;
   top: $line-height / 2;
 }
-
-.back,
-.icon-angle-left {
-  clear: both;
-  color: $text-medium;
-  display: inline-block;
+.back {
+  i {
+    padding-right: 2em;
+  }
 }
 
-.back:not([class^="icon-"]) {
+.back:not([class^="fa-"]) {
   text-decoration: underline;
 }
 
@@ -459,13 +462,15 @@ header {
 
     &::after {
       color: #808080;
-      content: "\61";
-      font-family: "icons" !important;
+      font-style: normal;
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free" !important;
+      content: "\f0d7";
       font-size: $small-font-size;
       pointer-events: none;
       position: absolute;
-      right: 2px;
-      top: 9px;
+      right: 0.5em;
+      top: 0.5em;
     }
   }
 
@@ -588,10 +593,6 @@ header {
       height: rem-calc(48);
       margin: 0;
       width: auto;
-
-      @include breakpoint(medium up) {
-        height: auto;
-      }
     }
   }
 }
@@ -668,6 +669,10 @@ header {
     margin: 0;
 
     li {
+      a {
+        border-bottom: 2px solid transparent;
+      }
+      
       @include breakpoint(medium) {
         display: inline-block;
         margin-right: rem-calc(20);
@@ -676,7 +681,6 @@ header {
   }
 
   a {
-    color: #fff;
     display: inline-block;
     line-height: $line-height * 2;
     position: relative;
@@ -691,12 +695,15 @@ header {
 
       &:hover {
         color: $link;
+        text-decoration: none;
+        border-bottom: 2px solid $brand;
       }
     }
 
     &.is-active {
-      color: #fff;
-
+      pointer-events: none;
+      cursor: default;
+      text-decoration: none;
       @include breakpoint(medium) {
         border-bottom: 2px solid $brand;
         color: $brand;
@@ -884,7 +891,9 @@ footer {
     z-index: 0;
   }
 }
-
+.sidebar-block {
+  margin-bottom: 1em;
+}
 .sidebar-title {
   border-top: 2px solid $brand;
   display: inline-block;
@@ -1187,7 +1196,7 @@ form {
       margin: $line-height / 2 0;
     }
 
-    .icon-box {
+    .fa-person-booth {
       color: #d4a26d;
       font-size: rem-calc(120);
       line-height: rem-calc(120);
@@ -1238,11 +1247,11 @@ form {
       font-size: rem-calc(12);
     }
 
-    .icon-check {
+    .fa-check {
       color: $check;
     }
 
-    .icon-x {
+    .fa-times {
       color: $delete;
     }
   }
@@ -1255,12 +1264,12 @@ form {
     text-decoration: none;
   }
 
-  [class^="icon-"] {
+  [class^="fa-"] {
     font-size: rem-calc(19);
     vertical-align: middle;
   }
 
-  .icon-circle {
+  .fa-circle {
     color: #ecf00b;
     font-size: rem-calc(10);
     position: absolute;
@@ -1327,20 +1336,6 @@ form {
     &::before {
       content: "\43";
     }
-  }
-
-  &::before {
-    background: #fff;
-    color: $brand;
-    content: "\4d";
-    font-family: "icons" !important;
-    font-size: $small-font-size;
-    height: rem-calc(20);
-    left: -24px;
-    line-height: rem-calc(20);
-    position: absolute;
-    text-align: center;
-    width: rem-calc(20);
   }
 
   p {
@@ -1471,6 +1466,8 @@ table {
 .button.button-twitter,
 .button.button-facebook,
 .button.button-google,
+.button.button-google_oauth2,
+.button.button-wordpress_oauth2,
 .button.button-telegram {
   background: #fff;
   color: $text;
@@ -1487,10 +1484,12 @@ table {
 
   &::before {
     color: #45b0e3;
-    content: "f";
-    font-family: "icons" !important;
+    content: "\f099";
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Font Awesome 5 Brands" !important;
     font-size: rem-calc(24);
-    left: 0;
+    left: -12px;
     line-height: $line-height * 2;
     padding: 0 rem-calc(20);
     position: absolute;
@@ -1507,8 +1506,10 @@ table {
   width: $line-height * 2 !important;
 
   &::before {
-    content: "f";
-    font-family: "icons" !important;
+    content: "\f099";
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Font Awesome 5 Brands" !important;
     font-size: rem-calc(24);
     left: 50%;
     line-height: $line-height * 2;
@@ -1530,10 +1531,12 @@ table {
 
   &::before {
     color: #3b5998;
-    content: "A";
-    font-family: "icons" !important;
+    content: "\f39e";
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Font Awesome 5 Brands" !important;
     font-size: rem-calc(24);
-    left: 0;
+    left: -12px;
     line-height: $line-height * 2;
     padding: 0 rem-calc(20);
     position: absolute;
@@ -1550,8 +1553,10 @@ table {
   width: rem-calc(48) !important;
 
   &::before {
-    content: "A";
-    font-family: "icons" !important;
+    content: "\f39e";
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Font Awesome 5 Brands" !important;
     font-size: rem-calc(24);
     left: 50%;
     line-height: $line-height * 2;
@@ -1573,17 +1578,54 @@ table {
 
   &::before {
     color: #de4c34;
-    content: "B";
-    font-family: "icons" !important;
+    content: "\f1a0";
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Font Awesome 5 Brands" !important;
     font-size: rem-calc(24);
-    left: 0;
+    left: -12px;
     line-height: $line-height * 2;
     padding: 0 rem-calc(20);
     position: absolute;
     top: 0;
   }
 }
+.button.button-google_oauth2 {
+  background: #fcedea;
+  border-left: 3px solid #de4c34;
 
+  &::before {
+    color: #de4c34;
+    content: "\f1a0";
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Font Awesome 5 Brands" !important;
+    font-size: rem-calc(24);
+    left: -12px;
+    line-height: $line-height * 2;
+    padding: 0 rem-calc(20);
+    position: absolute;
+    top: 0;
+  }
+}
+.button.button-wordpress_oauth2 {
+  background: #afccf3;
+  border-left: 3px solid #3461de;
+
+  &::before {
+    color: #3461de;
+    content: "\f19a";
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Font Awesome 5 Brands" !important;
+    font-size: rem-calc(24);
+    left: -12px;
+    line-height: $line-height * 2;
+    padding: 0 rem-calc(20);
+    position: absolute;
+    top: 0;
+  }
+}
 [class^="ssb-icon ssb-google"] {
   background: #de4c34;
   background-image: none !important;
@@ -1593,8 +1635,10 @@ table {
   width: $line-height * 2 !important;
 
   &::before {
-    content: "B";
-    font-family: "icons" !important;
+    content: "\f1a0";
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Font Awesome 5 Brands" !important;
     font-size: rem-calc(24);
     left: 50%;
     line-height: $line-height * 2;
@@ -1616,8 +1660,10 @@ table {
 
   &::before {
     color: #08c;
-    content: "1";
-    font-family: "icons" !important;
+    content: "\f2c6";
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Font Awesome 5 Brands" !important;
     font-size: rem-calc(24);
     left: 0;
     line-height: $line-height * 2;
@@ -1636,8 +1682,10 @@ table {
   width: $line-height * 2 !important;
 
   &::before {
-    content: "1";
-    font-family: "icons" !important;
+    content: "\f2c6";
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Font Awesome 5 Brands" !important;
     font-size: rem-calc(24);
     left: 50%;
     line-height: $line-height * 2;
@@ -1689,8 +1737,10 @@ table {
     width: $line-height * 2;
 
     &::before {
-      content: "f";
-      font-family: "icons" !important;
+      content: "\f099";
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Font Awesome 5 Brands" !important;
       font-size: rem-calc(24);
       left: 50%;
       line-height: $line-height * 2;
@@ -1714,8 +1764,10 @@ table {
     width: rem-calc(48);
 
     &::before {
-      content: "A";
-      font-family: "icons" !important;
+      content: "\f39e";
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Font Awesome 5 Brands" !important;
       font-size: rem-calc(24);
       left: 50%;
       line-height: $line-height * 2;
@@ -1739,8 +1791,10 @@ table {
     width: rem-calc(48);
 
     &::before {
-      content: "B";
-      font-family: "icons" !important;
+      content: "\f1a0";
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Font Awesome 5 Brands" !important;
       font-size: rem-calc(24);
       left: 50%;
       line-height: $line-height * 2;
@@ -1764,8 +1818,10 @@ table {
     width: $line-height * 2;
 
     &::before {
-      content: "1";
-      font-family: "icons" !important;
+      content: "\f2c6";
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Font Awesome 5 Brands" !important;
       font-size: rem-calc(24);
       left: 50%;
       line-height: $line-height * 2;
@@ -1797,19 +1853,6 @@ table {
       color: $text;
       display: inline-block;
       font-weight: normal;
-    }
-
-    &::after {
-      content: none;
-      color: $text-medium;
-      font-family: "icons" !important;
-      position: absolute;
-      right: 0;
-      top: 24px;
-
-      @include breakpoint(medium) {
-        content: "c";
-      }
     }
   }
 
@@ -1938,7 +1981,7 @@ table {
     color: $check;
     line-height: $line-height * 2;
 
-    .icon-check {
+    .fa-check {
       font-size: rem-calc(24);
       line-height: rem-calc(45);
       vertical-align: middle;
@@ -1953,7 +1996,7 @@ table {
   h1 {
     color: $check;
 
-    .icon-check {
+    .fa-check {
       line-height: rem-calc(30);
       vertical-align: middle;
     }
@@ -1966,7 +2009,7 @@ table {
     margin: rem-calc(24) 0;
     position: relative;
 
-    .icon-letter {
+    .fa-envelope {
       background: #fff;
       color: $color-info;
       font-size: rem-calc(24);
@@ -2005,7 +2048,7 @@ table {
       margin-bottom: 0;
     }
 
-    [class^="icon-"] {
+    [class^="fa-"] {
       font-size: $base-font-size;
       text-decoration: none;
       vertical-align: sub;
@@ -2031,11 +2074,11 @@ table {
     position: relative;
 
     .relative,
-    [class^="icon-arrow"] {
+    [class^="fa-arrow"] {
       padding-left: $line-height / 2;
     }
 
-    [class^="icon-arrow"] {
+    [class^="fa-arrow"] {
       font-size: $base-font-size;
       left: -20px;
       position: absolute;
@@ -2118,11 +2161,11 @@ table {
     color: $text-medium;
     text-decoration: none;
 
-    .icon-like {
+    .fa-thumbs-up {
       color: $like;
     }
 
-    .icon-unlike {
+    .fa-thumbs-up {
       color: $unlike;
     }
   }
@@ -2468,7 +2511,7 @@ table {
     padding: $line-height / 2;
     position: relative;
 
-    .icon-document {
+    .fa-file-alt {
       color: #007bb7;
       display: inline-block;
       font-size: rem-calc(24);
@@ -2498,7 +2541,7 @@ table {
     word-wrap: break-word;
   }
 
-  .icon-document {
+  .fa-file-alt {
     color: #007bb7;
     display: inline-block;
     font-size: rem-calc(24);
@@ -2595,31 +2638,6 @@ table {
     padding-left: rem-calc(20);
     position: relative;
     text-decoration: none;
-
-    &.score-positive::before,
-    &.score-negative::before {
-      font-family: "icons";
-      left: 0;
-      position: absolute;
-    }
-
-    &.score-positive {
-      color: $color-success;
-
-      &::before {
-        color: $color-success;
-        content: "\6c";
-      }
-    }
-
-    &.score-negative {
-      color: $color-alert;
-
-      &::before {
-        color: $color-alert;
-        content: "\76";
-      }
-    }
   }
 }
 
@@ -2669,6 +2687,13 @@ table {
 // 24. Homepage
 // ------------
 
+.background-header {
+  clip-path: ellipse(60% 80% at 50% 0%);
+  height: $line-height * 2;
+  background: $highlight;
+  margin-top: rem-calc(-48);
+}
+
 .home-page,
 .custom-page {
 
@@ -2687,13 +2712,6 @@ table {
     h3 {
       color: #fff;
     }
-  }
-
-  .background-header {
-    clip-path: ellipse(60% 80% at 50% 0%);
-    height: $line-height * 2;
-    background: $highlight;
-    margin-top: rem-calc(-48);
   }
 
   .card {

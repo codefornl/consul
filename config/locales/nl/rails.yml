@@ -82,7 +82,7 @@ nl:
         one: 1 maand
         other: "%{count} maanden"
       x_years:
-        one: '%{count} jaar'
+        one: 1 jaar
         other: "%{count} jaar"
       x_seconds:
         one: 1 seconde
@@ -118,14 +118,14 @@ nl:
       required: moet bestaan
       taken: is al in gebruik
       too_long:
-        one: is te lang (maximaal %{count} teken)
-        other: is te lang (maximaal %{count} tekens)
+        one: is te lang (maximaal %{count} karakter)
+        other: is te lang (maximaal %{count} karakters)
       too_short:
-        one: is te kort (minimaal %{count} teken)
-        other: is te kort (minimaal %{count} tekens)
+        one: is te kort (minimaal %{count} karakter)
+        other: is te kort (minimaal %{count} karakters)
       wrong_length:
-        one: heeft onjuiste lengte (moet 1 teken lang zijn)
-        other: heeft onjuiste lengte (moet %{count} tekens lang zijn)
+        one: heeft onjuiste lengte (moet 1 karakter zijn)
+        other: heeft onjuiste lengte (moet %{count} karakters zijn)
       other_than: moet anders zijn dan %{count}
     template:
       body: 'Er zijn problemen met de volgende velden:'

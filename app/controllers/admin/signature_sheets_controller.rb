@@ -1,6 +1,7 @@
 class Admin::SignatureSheetsController < Admin::BaseController
 
   def index
+    @title = I18n.t("admin.menu.signature_sheets")
     @signature_sheets = SignatureSheet.all.order(created_at: :desc)
   end
 

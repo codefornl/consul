@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/jwickard/omniauth-wordpress-oauth2-plugin.git
+  revision: 6944e5a7f0cc99d7622099fd88ec5ea545ea2b22
+  specs:
+    omniauth-wordpress_hosted (0.0.5)
+      omniauth-oauth2
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -177,6 +184,8 @@ GEM
     faraday (0.12.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.25)
+    font-awesome-sass (5.6.1)
+      sassc (>= 1.11)
     foundation-rails (6.4.3.0)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
@@ -417,12 +426,15 @@ GEM
     safely_block (0.2.0)
       errbase
     sass (3.4.25)
-    sass-rails (5.0.7)
-      railties (>= 4.0.0, < 6)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (>= 1.1, < 3)
+    sassc (2.0.0)
+      ffi (~> 1.9.6)
+      rake
+    sassc-rails (2.1.0)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
     savon (2.12.0)
       akami (~> 1.2)
       builder (>= 2.1.2)
@@ -540,6 +552,7 @@ DEPENDENCIES
   erb_lint
   factory_bot_rails (~> 4.8.2)
   faker (~> 1.8.7)
+  font-awesome-sass (~> 5.6.1)
   foundation-rails (~> 6.4.3.0)
   foundation_rails_helper (~> 2.0.0)
   globalize (~> 5.0.0)
@@ -563,6 +576,7 @@ DEPENDENCIES
   omniauth-facebook (~> 4.0.0)
   omniauth-google-oauth2 (~> 0.4.0)
   omniauth-twitter (~> 1.4.0)
+  omniauth-wordpress_hosted!
   paperclip (~> 5.2.1)
   paranoia (~> 2.4.1)
   pg (~> 0.21.0)
@@ -580,7 +594,7 @@ DEPENDENCIES
   rubocop (~> 0.54.0)
   rubocop-rspec (~> 1.26.0)
   rvm1-capistrano3 (~> 1.4.0)
-  sass-rails (~> 5.0, >= 5.0.4)
+  sassc-rails
   savon (~> 2.12.0)
   scss_lint (~> 0.55.0)
   selenium-webdriver (~> 3.10)

@@ -22,8 +22,7 @@
 </td>
 <td class="small">
   <% no_valuation_groups = t("admin.budget_investments.index.no_valuation_groups") %>
-  <%= investment.assigned_valuation_groups || no_valuation_groups %>
-  <br>
+  <%= investment.assigned_valuation_groups || no_valuation_groups %>&nbsp;/&nbsp;
   <% no_valuators_assigned = t("admin.budget_investments.index.no_valuators_assigned") %>
   <%= investment.assigned_valuators || no_valuators_assigned %>
 </td>

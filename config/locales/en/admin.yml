@@ -471,7 +471,6 @@ en:
           title: Proposals
           back: Back
           id: Id
-          title: Title
           supports: Total supports
           select: Select
           selected: Selected
@@ -602,6 +601,7 @@ en:
       emails_download: Emails download
       valuators: Valuators
       poll_officers: Poll officers
+      poll_questions: Poll Questions
       polls: Polls
       poll_booths: Booths location
       poll_booth_assignments: Booths Assignments
@@ -633,6 +633,7 @@ en:
             update: "Update Block"
       title_moderated_content: Moderated content
       title_budgets: Budgets
+      title_polls: Polls
       title_profiles: Profiles
       title_settings: Settings
       title_site_customization: Site content
@@ -1321,7 +1322,7 @@ en:
       author: Author
       created_at: Creation date
       name: Name
-      no_signature_sheets: "There are not signature_sheets"
+      no_signature_sheets: "There are no signature sheets"
       index:
         title: Signature sheets
         new: New signature sheets

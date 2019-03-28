@@ -13,7 +13,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   if Rails.env.test? || !ActiveRecord::Base.connection.table_exists?("settings")
-    config.mailer_sender = "noreply@consul.dev"
+    config.mailer_sender = ENV['SMTP_FROM'] || "noreply@consul.dev"
   else
     config.mailer_sender = "'#{Setting["mailer_from_name"]}' <#{Setting["mailer_from_address"]}>"
   end
@@ -243,9 +243,22 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :twitter, Rails.application.secrets.twitter_key, Rails.application.secrets.twitter_secret
-  config.omniauth :facebook, Rails.application.secrets.facebook_key, Rails.application.secrets.facebook_secret, scope: "email", info_fields: "email,name,verified"
-  config.omniauth :google_oauth2, Rails.application.secrets.google_oauth2_key, Rails.application.secrets.google_oauth2_secret
+  if (Rails.application.secrets.twitter_key && Rails.application.secrets.twitter_key.length > 0)
+    config.omniauth :twitter, Rails.application.secrets.twitter_key, Rails.application.secrets.twitter_secret
+  end
+  if (Rails.application.secrets.facebook_key && Rails.application.secrets.facebook_key.length > 0)
+    config.omniauth :facebook, Rails.application.secrets.facebook_key, Rails.application.secrets.facebook_secret, scope: "email", info_fields: "email,name,verified"
+  end
+  if (Rails.application.secrets.google_oauth2_key && Rails.application.secrets.google_oauth2_key.length > 0)
+    config.omniauth :google_oauth2, Rails.application.secrets.google_oauth2_key, Rails.application.secrets.google_oauth2_secret
+  end
+  if (Rails.application.secrets.wordpress_oauth2_key && Rails.application.secrets.wordpress_oauth2_key.length > 0)
+    config.omniauth :wordpress_oauth2, Rails.application.secrets.wordpress_oauth2_key, Rails.application.secrets.wordpress_oauth2_secret, 
+    strategy_class: OmniAuth::Strategies::WordpressHosted, 
+    client_options: {
+      site: Rails.application.secrets.wordpress_oauth2_site
+    }
+  end
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

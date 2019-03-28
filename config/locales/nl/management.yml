@@ -1,52 +1,73 @@
+---
 nl:
   management:
     account:
-      menu:
-        reset_password_email: Reset wachtwoord via e-mail
-        reset_password_manually: Wachtwoord handmatig opnieuw instellen
       alert:
-        unverified_user: Geen geverifieerde gebruiker nog ingelogd
-      show:
-        title: Gebruikers account
+        unverified_user: Geen geverifieerde gebruikers aangemeld
       edit:
-        title: 'Gebruikersaccount bewerken: Reset wachtwoord'
         back: Terug
         password:
           password: Wachtwoord
-          send_email: Stuur een nieuw wachtwoord per mail
-          reset_email_send: E-mail correct verzonden.
-          reseted: Wachtwoord is succesvol hersteld
-          random: Genereer willekeurig wachtwoord
-          save: Sla wachtwoord op
           print: Wachtwoord afdrukken
           print_help: U kunt het wachtwoord afdrukken wanneer het is opgeslagen.
+          random: Genereer willekeurig wachtwoord
+          reset_email_send: E-mail verzonden.
+          reseted: Wachtwoord hersteld
+          save: Opslaan
+          send_email: Stuur een nieuw wachtwoord per mail
+        title: "Gebruikersaccount bewerken: wachtwoord herstellen"
+      menu:
+        reset_password_email: Wachtwoord herstellen
+        reset_password_manually: Wachtwoord instellen
+      show:
+        title: Gebruikers account
     account_info:
       change_user: Wijzig gebruiker
-      document_number_label: 'Document nummer:'
-      document_type_label: 'Document soort:'
-      email_label: 'E-mail:'
-      identified_label: 'Geïdentificeerd als:'
-      username_label: 'Gebruikersnaam:'
-    check: Kies bestand
+      document_number_label: "Documentnummer:"
+      document_type_label: "Documentsoort:"
+      email_label: "E-mail:"
+      identified_label: "Geïdentificeerd als:"
+      username_label: "Gebruikersnaam:"
+    budget_investments:
+      alert:
+        unverified_user: Gebruiker is niet geverifieerd
+      create: Nieuwe investering
+      filters:
+        heading: Concept
+        unfeasible: Onhaalbare investering
+      print:
+        print_button: Afdrukken
+      search_results:
+        one: " bevat de term'%{search_term}'"
+        other: " bevat de term'%{search_term}'"
+    budgets:
+      create_new_investment: Nieuwe investering
+      no_budgets: Geen actieve budgetten.
+      print_investments: Druk investering af
+      support_investments: Investeringen
+      table_actions: Acties
+      table_name: Naam
+      table_phase: Fase
+    check: Selecteer
     dashboard:
       index:
-        title: Beheer
         info: Hier kunt u gebruikers beheren via alle acties die in het linkermenu zijn vermeld.
-    document_number: Document nummer
+        title: Beheer
+    date_of_birth: Geboortedatum
+    document_number: Documentnummer
     document_type_label: Documentsoort
     document_verifications:
       already_verified: Dit gebruikersaccount is al geverifieerd.
       has_no_account_html: In order to create an account, go to %{link} and click in <b>'Register'</b> in the upper-left part of the screen.
-      link: Consul
       in_census_has_following_permissions: 'Deze gebruiker kan deelnemen aan de website met de volgende permissies:'
+      link: Consul
       not_in_census: Dit document is niet geregistreerd.
       not_in_census_info: 'Burgers niet in de volkstelling kunnen deelnemen aan de website met de volgende permissies:'
       please_check_account_data: Controleer alstublieft of de bovenstaande accountgegevens correct zijn.
       title: Gebruikersbeheer
-      under_age: "You don't have the required age to verify your account."
+      under_age: You don't have the required age to verify your account.
       verify: Verifieer
     email_label: E-mail
-    date_of_birth: Date of birth
     email_verifications:
       already_verified: Dit gebruikersaccount is al geverifieerd.
       choose_options: 'Please choose one of the following options:'
@@ -59,92 +80,72 @@ nl:
       introduce_email: 'Please introduce the email used on the account:'
       send_email: Send verification email
     menu:
-      create_proposal: Maak voorstel
-      print_proposals: Print proposals
-      support_proposals: Support proposals
-      create_spending_proposal: Maak een begrotingsvoorstel
-      print_spending_proposals: Print spending proposals
+      create_budget_investment: Nieuwe investering
+      create_proposal: Nieuw voorstel
+      create_spending_proposal: Maak een investering
+      print_budget_investments: Budget afdrukken
+      print_proposals: Voorstel afdrukken
+      print_spending_proposals: Investering afdrukken
+      select_user: Gebruiker
+      support_budget_investments: Investeringoverzicht
+      support_proposals: Voorsteloverzicht
       support_spending_proposals: Support spending proposals
-      create_budget_investment: Nieuw begrotingsvoorstel
-      print_budget_investments: Druk begrotinginvestering af
-      support_budget_investments: Steun budgetinvestering
+      user_invites: Gebruikers uitnodigen
       users: Gebruikersbeheer
-      user_invites: Verstuur uitnodigingen
-      select_user: Selecteer gebruiker
     permissions:
-      create_proposals: Create proposals
-      debates: Engage in debates
-      support_proposals: Support proposals
-      vote_proposals: Vote proposals
+      create_proposals: Dien voorstellen in
+      debates: Neem deel in discussies
+      support_proposals: Stem op investeringen
+      vote_proposals: Stem
     print:
-      proposals_info: Maak je eigen voorstel op http://url.consul
-      proposals_title: 'Proposals:'
-      spending_proposals_info: Participate at http://url.consul
       budget_investments_info: Neem deel op http://url.consul
+      proposals_info: Maak je eigen voorstel op http://url.consul
+      proposals_title: 'Voorstellen:'
+      spending_proposals_info: Neem deel op http://url.consul
     print_info: Print deze informatie
     proposals:
       alert:
         unverified_user: User is not verified
-      create_proposal: Maak voorstel
-      print:
-        print_button: Print
+      create_proposal: Nieuw voorstel
       index:
-        title: Support proposals
-    budgets:
-      create_new_investment: Maak budgetinvestering
-      print_investments: Druk begrotinginvestering af
-      support_investments: Steun budgetinvestering
-      table_name: Name
-      table_phase: Phase
-      table_actions: Activiteiten
-      no_budgets: Er zijn geen actieve participatieve budgetten.
-    budget_investments:
-      alert:
-        unverified_user: Gebruiker is niet geverifieerd
-      create: Nieuw begrotingsvoorstel maken
-      filters:
-        heading: Concept
-        unfeasible: Unfeasible investment
+        title: Voorstellen
       print:
         print_button: Afdrukken
-      search_results:
-        one: " bevat de term'%{search_term}'"
-        other: " bevat de term'%{search_term}'"
+    sessions:
+      signed_out: Signed out successfully.
+      signed_out_managed_user: User session signed out successfully.
     spending_proposals:
       alert:
         unverified_user: Gebruiker is niet geverifieerd
       create: Maak een begrotingsvoorstel
       filters:
+        by_geozone: 'Investment projects with scope: %{geozone}'
         unfeasible: Unfeasible investment projects
-        by_geozone: "Investment projects with scope: %{geozone}"
       print:
         print_button: Afdrukken
       search_results:
         one: " bevat de term'%{search_term}'"
         other: " bevat de term'%{search_term}'"
-    sessions:
-      signed_out: Signed out successfully.
-      signed_out_managed_user: User session signed out successfully.
-    username_label: Username
+    user_invites:
+      create:
+        success_html: "<strong>%{count} invitations</strong> have been sent."
+        title: Verstuur uitnodigingen
+      new:
+        info: Enter the emails separated by commas (',')
+        label: Emails
+        submit: Verstuur uitnodigingen
+        title: Verstuur uitnodigingen
+    username_label: Gebruikersnaam
     users:
+      autogenerated_password_html: Automatisch gegenereerde wachtwoord is <b>%{password}</b>, u kunt dit wijzigen in het gedeelte 'Mijn account' van de site
       create_user: Create a new account
       create_user_info: We zullen een account aanmaken met de volgende gegevens
       create_user_submit: Create user
-      create_user_success_html: We have sent an email to the email address <b>%{email}</b> in order to verify that it belongs to this user. It contains a link they have to click. Then they will have to set their access password before being able to log in to the website
-      autogenerated_password_html: "Automatisch gegenereerde wachtwoord is <b>%{password}</b>, u kunt dit wijzigen in het gedeelte 'Mijn account' van de site"
+      create_user_success_html: Er is een bericht gestuurd naar <b>%{email}</b> ter controle. In het bericht bevindt zich een link waarmee deelname kan worden bevestigd.
       email_optional_label: Email (optioneel)
-      erased_notice: User account deleted.
-      erased_by_manager: "Deleted by manager: %{manager}"
-      erase_account_link: Delete user
       erase_account_confirm: Are you sure you want to erase the account? This action can not be undone
+      erase_account_link: Account verwijderen
+      erase_submit: Account verwijderen
       erase_warning: This action can not be undone. Please make sure you want to erase this account.
-      erase_submit: Delete account
-    user_invites:
-      new:
-        label: Emails
-        info: "Enter the emails separated by commas (',')"
-        submit: Verstuur uitnodigingen
-        title: Verstuur uitnodigingen
-      create:
-        success_html: <strong>%{count} invitations</strong> have been sent.
-        title: Verstuur uitnodigingen
+      erased_by_manager: 'Verwijderd door %{manager}'
+      erased_notice: Account verwijderd.

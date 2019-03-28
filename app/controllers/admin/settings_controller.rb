@@ -2,10 +2,24 @@ class Admin::SettingsController < Admin::BaseController
 
   def index
     all_settings = Setting.all.group_by { |setting| setting.type }
-    @configuration_settings = all_settings["configuration"]
-    @feature_settings = all_settings["feature"]
-    @participation_processes_settings = all_settings["process"]
-    @map_configuration_settings = all_settings["map"]
+    @configuration_settings = []
+    @feature_settings = []
+    @participation_processes_settings = []
+    @map_configuration_settings =[]
+    unless all_settings.nil?
+      unless all_settings["configuration"].nil?
+        @configuration_settings = all_settings["configuration"]
+      end
+      unless all_settings["feature"].nil?
+        @feature_settings = all_settings["feature"]
+      end
+      unless all_settings["process"].nil?
+        @participation_processes_settings = all_settings["process"]
+      end
+      unless all_settings["map"].nil?
+        @map_configuration_settings = all_settings["map"]
+      end
+    end
   end
 
   def update

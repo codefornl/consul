@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
   before_action :track_email_campaign
   before_action :set_return_url
+  before_filter :make_action_mailer_use_request_host_and_protocol
 
   check_authorization unless: :devise_controller?
   self.responder = ApplicationResponder
@@ -28,6 +29,11 @@ class ApplicationController < ActionController::Base
   helper_method :current_budget
 
   private
+    def make_action_mailer_use_request_host_and_protocol
+      ApplicationMailer.default_url_options[:protocol] = request.protocol
+      ApplicationMailer.default_url_options[:host] = request.host_with_port
+      ApplicationMailer.asset_host = request.protocol + request.host_with_port
+    end
 
     def authenticate_http_basic
       authenticate_or_request_with_http_basic do |username, password|
