@@ -2150,6 +2150,18 @@ table {
 }
 
 .comment-votes {
+  .votes {
+    top: -10px;
+  }
+  .fas:before {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    margin: -1rem;
+  }
+  .fas {
+    font-size: 0.875rem !important;
+    line-height: 0.875rem !important;
+  }
 
   a {
     color: $text-light;
