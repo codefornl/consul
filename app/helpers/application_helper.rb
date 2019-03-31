@@ -40,8 +40,8 @@ module ApplicationHelper
   end
 
   def back_link_to(destination = :back, text = t("shared.back"))
-    link_to destination, class: "back" do
-      content_tag(:i, nil, class: ["fas", "fa-fw", "fa-caret-left"]) + text
+    link_to destination, class: "consul-back-link" do
+      text
     end
   end
 
