@@ -1,6 +1,6 @@
 class ApplicationMailer < ActionMailer::Base
   helper :settings
-  if !ActiveRecord::Base.connection.table_exists?("settings")
+  if !ActiveRecord::Base.connection.data_source_exists?("settings")
     default from: ENV["SMTP_FROM"] || "noreply@consul.dev"
   else
     default from: ENV["SMTP_FROM"] || "#{Setting["mailer_from_name"]} <#{Setting["mailer_from_address"]}>"
