@@ -3,6 +3,7 @@ class Admin::SystemEmailsController < Admin::BaseController
   before_action :load_system_email, only: [:view, :preview_pending, :moderate_pending]
 
   def index
+    @title = I18n.t("admin.menu.system_emails")
     @system_emails = {
       proposal_notification_digest: %w[view preview_pending],
       budget_investment_created:    %w[view edit_info],

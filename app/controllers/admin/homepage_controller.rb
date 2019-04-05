@@ -1,6 +1,7 @@
 class Admin::HomepageController < Admin::BaseController
 
   def show
+    @title = I18n.t("admin.menu.site_customization.homepage")
     load_header
     load_feeds
     load_recommendations

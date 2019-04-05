@@ -56,6 +56,7 @@ class Admin::Poll::BoothAssignmentsController < Admin::Poll::BaseController
   end
 
   def manage
+    @title = I18n.t("admin.menu.poll_booth_assignments")
     @booths = ::Poll::Booth.all.order(name: :asc).page(params[:page]).per(300)
     @poll = Poll.find(params[:poll_id])
   end

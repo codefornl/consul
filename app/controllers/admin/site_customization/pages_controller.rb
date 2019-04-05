@@ -3,6 +3,7 @@ class Admin::SiteCustomization::PagesController < Admin::SiteCustomization::Base
   load_and_authorize_resource :page, class: "SiteCustomization::Page"
 
   def index
+    @title = I18n.t("admin.menu.site_customization.pages")
     @pages = SiteCustomization::Page.order("slug").page(params[:page])
   end
 

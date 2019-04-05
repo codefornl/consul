@@ -1,6 +1,7 @@
 class Admin::NewslettersController < Admin::BaseController
 
   def index
+    @title = I18n.t("admin.menu.newsletters")
     @newsletters = Newsletter.all
   end
 

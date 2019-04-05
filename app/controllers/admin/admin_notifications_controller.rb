@@ -2,6 +2,7 @@ class Admin::AdminNotificationsController < Admin::BaseController
   include Translatable
 
   def index
+    @title = I18n.t("admin.menu.admin_notifications")
     @admin_notifications = AdminNotification.all
   end
 

@@ -53,6 +53,7 @@ class Admin::Poll::PollsController < Admin::Poll::BaseController
   end
 
   def booth_assignments
+    @title = I18n.t("admin.menu.poll_booth_assignments")
     @polls = Poll.current
   end
 

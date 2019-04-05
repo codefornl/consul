@@ -32,6 +32,7 @@ class Admin::Poll::BoothsController < Admin::Poll::BaseController
   end
 
   def available
+    @title = I18n.t("admin.menu.poll_shifts")
     @booths = Poll::Booth.available.order(name: :asc).page(params[:page])
     render :index
   end

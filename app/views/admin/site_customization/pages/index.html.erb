@@ -3,7 +3,6 @@
 <% end %>
 
 <%= link_to t("admin.site_customization.pages.index.create"), new_admin_site_customization_page_path, class: "button float-right" %>
-<h2 class="inline-block"><%= t("admin.site_customization.pages.index.title") %></h2>
 
 <% if @pages.any? %>
   <h3><%= page_entries_info @pages %></h3>

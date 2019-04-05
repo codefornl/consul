@@ -1,5 +1,6 @@
 class Admin::EmailsDownloadController < Admin::BaseController
   def index
+    @title = I18n.t("admin.menu.emails_download")
   end
 
   def generate_csv
