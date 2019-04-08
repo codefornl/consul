@@ -651,9 +651,9 @@ nl:
     unflag: Hef markering op
     unfollow_entity: Ontvolg %{entity}
     view_mode:
-      cards: Kaarten
+      cards: Overzicht
       list: Lijst
-      title: Weergavemodus
+      title: Weergave
     "yes": Ja
     you_are_in: U bent in
   social:
