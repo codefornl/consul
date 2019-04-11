@@ -8,7 +8,7 @@ class Admin::Poll::PollsController < Admin::Poll::BaseController
 
   def index
     @title = I18n.t("admin.menu.polls")
-    @polls = Poll.order(starts_at: :desc)
+    @polls = Poll.not_budget.order(starts_at: :desc)
   end
 
   def show
@@ -23,7 +23,12 @@ class Admin::Poll::PollsController < Admin::Poll::BaseController
   def create
     @poll = Poll.new(poll_params.merge(author: current_user))
     if @poll.save
-      redirect_to [:admin, @poll], notice: t("flash.actions.create.poll")
+      notice = t("flash.actions.create.poll")
+      if @poll.budget.present?
+        redirect_to admin_poll_booth_assignments_path(@poll), notice: notice
+      else
+        redirect_to [:admin, @poll], notice: notice
+      end
     else
       render :new
     end
@@ -65,7 +70,7 @@ class Admin::Poll::PollsController < Admin::Poll::BaseController
 
     def poll_params
       attributes = [:name, :starts_at, :ends_at, :geozone_restricted, :results_enabled,
-                    :stats_enabled, geozone_ids: [],
+                    :stats_enabled, :budget_id, geozone_ids: [],
                     image_attributes: image_attributes]
       params.require(:poll).permit(*attributes, translation_params(Poll))
     end

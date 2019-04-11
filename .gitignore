@@ -27,6 +27,10 @@
 
 # Mac finder artifacts
 .DS_Store
+
+# Intellij IDE project settings
+/.idea
+
 .ruby-gemset
 
 public/sitemap.xml

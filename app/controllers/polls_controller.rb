@@ -11,11 +11,7 @@ class PollsController < ApplicationController
   ::Poll::Answer # trigger autoload
 
   def index
-    #if request.format.json?
-    #  render json: @polls
-    #else
-      @polls = @polls.send(@current_filter).includes(:geozones).sort_for_list.page(params[:page])
-    #end
+    @polls = @polls.not_budget.send(@current_filter).includes(:geozones).sort_for_list.page(params[:page])
   end
 
   def show

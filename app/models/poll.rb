@@ -20,9 +20,11 @@ class Poll < ActiveRecord::Base
   has_many :officers, through: :officer_assignments
   has_many :questions
   has_many :comments, as: :commentable
+  has_many :ballot_sheets
 
   has_and_belongs_to_many :geozones
   belongs_to :author, -> { with_hidden }, class_name: "User", foreign_key: "author_id"
+  belongs_to :budget
 
   validates_translation :name, presence: true
   validate :date_range
@@ -33,6 +35,7 @@ class Poll < ActiveRecord::Base
   scope :published, -> { where("published = ?", true) }
   scope :by_geozone_id, ->(geozone_id) { where(geozones: {id: geozone_id}.joins(:geozones)) }
   scope :public_for_api, -> { all }
+  scope :not_budget,    -> { where(budget_id: nil) }
 
   scope :sort_for_list, -> { order(:geozone_restricted, :starts_at, :name) }
 
@@ -71,8 +74,13 @@ class Poll < ActiveRecord::Base
   end
 
   def votable_by?(user)
+    return false if user_has_an_online_ballot(user)
     answerable_by?(user) &&
     not_voted_by?(user)
+  end
+
+  def user_has_an_online_ballot(user)
+    budget.present? && budget.ballots.find_by(user: user)&.lines.present?
   end
 
   def self.not_voted_by(user)
@@ -107,4 +115,7 @@ class Poll < ActiveRecord::Base
     end
   end
 
+  def budget_poll?
+    budget.present?
+  end
 end

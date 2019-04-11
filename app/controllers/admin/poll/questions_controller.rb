@@ -7,7 +7,7 @@ class Admin::Poll::QuestionsController < Admin::Poll::BaseController
 
   def index
     @title = I18n.t("admin.menu.poll_questions")
-    @polls = Poll.all
+    @polls = Poll.not_budget
     @search = search_params[:search]
 
     @questions = @questions.search(search_params).page(params[:page]).order("created_at DESC")

@@ -140,8 +140,10 @@ ActiveRecord::Schema.define(version: 20190205131722) do
   create_table "budget_ballots", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "budget_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.boolean  "physical",       default: false
+    t.integer  "poll_ballot_id"
   end
 
   create_table "budget_content_blocks", force: :cascade do |t|
@@ -927,6 +929,25 @@ ActiveRecord::Schema.define(version: 20190205131722) do
   add_index "poll_answers", ["question_id", "answer"], name: "index_poll_answers_on_question_id_and_answer", using: :btree
   add_index "poll_answers", ["question_id"], name: "index_poll_answers_on_question_id", using: :btree
 
+  create_table "poll_ballot_sheets", force: :cascade do |t|
+    t.text     "data"
+    t.integer  "poll_id"
+    t.integer  "officer_assignment_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  add_index "poll_ballot_sheets", ["officer_assignment_id"], name: "index_poll_ballot_sheets_on_officer_assignment_id", using: :btree
+  add_index "poll_ballot_sheets", ["poll_id"], name: "index_poll_ballot_sheets_on_poll_id", using: :btree
+
+  create_table "poll_ballots", force: :cascade do |t|
+    t.integer  "ballot_sheet_id"
+    t.text     "data"
+    t.integer  "external_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "poll_booth_assignments", force: :cascade do |t|
     t.integer  "booth_id"
     t.integer  "poll_id"
@@ -1129,8 +1150,10 @@ ActiveRecord::Schema.define(version: 20190205131722) do
     t.boolean  "stats_enabled",      default: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "budget_id"
   end
 
+  add_index "polls", ["budget_id"], name: "index_polls_on_budget_id", unique: true, using: :btree
   add_index "polls", ["starts_at", "ends_at"], name: "index_polls_on_starts_at_and_ends_at", using: :btree
 
   create_table "progress_bar_translations", force: :cascade do |t|
@@ -1443,6 +1466,7 @@ ActiveRecord::Schema.define(version: 20190205131722) do
     t.boolean  "created_from_signature",                    default: false
     t.integer  "failed_email_digests_count",                default: 0
     t.text     "former_users_data_log",                     default: ""
+    t.integer  "balloted_heading_id"
     t.boolean  "public_interests",                          default: false
     t.boolean  "recommended_debates",                       default: true
     t.boolean  "recommended_proposals",                     default: true
@@ -1614,6 +1638,7 @@ ActiveRecord::Schema.define(version: 20190205131722) do
   add_foreign_key "poll_recounts", "poll_booth_assignments", column: "booth_assignment_id"
   add_foreign_key "poll_recounts", "poll_officer_assignments", column: "officer_assignment_id"
   add_foreign_key "poll_voters", "polls"
+  add_foreign_key "polls", "budgets"
   add_foreign_key "proposals", "communities"
   add_foreign_key "related_content_scores", "related_contents"
   add_foreign_key "related_content_scores", "users"

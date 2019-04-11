@@ -2,6 +2,7 @@ class Budget
   class Ballot < ActiveRecord::Base
     belongs_to :user
     belongs_to :budget
+    belongs_to :poll_ballot, class_name: "Poll::Ballot"
 
     has_many :lines, dependent: :destroy
     has_many :investments, through: :lines
@@ -68,6 +69,10 @@ class Budget
     def heading_for_group(group)
       return nil unless has_lines_in_group?(group)
       investments.where(group: group).first.heading
+    end
+
+    def casted_offline?
+      budget.poll&.voted_by?(user)
     end
 
   end
