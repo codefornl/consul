@@ -1,7 +1,7 @@
 <% if header.present? %>
   <div class="jumbo highlight">
-    <div class="row">
-      <div class="small-12 medium-6 column <%= "medium-9 small-centered text-center" unless header.image.present? %>">
+    <div class="row" data-equalizer>
+      <div class="small-12 medium-6 column <%= "medium-9 small-centered text-center" unless header.image.present? %>" data-equalizer-watch>
         <span><%= header.label %></span>
         <h1><%= header.title %></h1>
         <p class="lead"><%= header.description %></p>
@@ -11,10 +11,7 @@
       </div>
 
       <% if header.image.present? %>
-        <div class="small-12 medium-6 column">
-          <%= image_tag(header.image_url(:large),
-                        class: "margin",
-                        alt: header.image.title)  %>
+        <div class="small-12 medium-6 column" style="background-image:url('<%= header.image_url(:large)%>');background-size:cover;" title="<%=header.image.title%>" data-equalizer-watch>
         </div>
       <% end %>
     </div>

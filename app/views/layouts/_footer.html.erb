@@ -1,36 +1,7 @@
 <footer class="footer">
-  <div class="row">
-    <div class="small-12 large-4 column">
-      <%= t("layouts.header.open_gov") %>
-      <p class="info">
-        <%= t("layouts.footer.description",
-          open_source: link_to(t("layouts.footer.open_source"), t("layouts.footer.open_source_url"), target: "blank", rel: "nofollow"),
-          consul:  link_to(t("layouts.footer.consul"), t("layouts.footer.consul_url"), target: "blank", rel: "nofollow")).html_safe
-        %> 
-        <%= t("layouts.footer.contact_us") %>
-      </p>
-    </div>
-
-    <div class="footer-sections small-12 large-8 column">
-      <div class="small-12 medium-4 column">
-        <%= t("layouts.footer.participation_title") %>
-        <p><%= t("layouts.footer.participation_text") %></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="subfooter row">
-    <div class="small-12 medium-6 column">
-      &#169;&nbsp;<%= t("layouts.footer.copyright", year: Time.current.year) %> | <i><%= Rails.application.secrets.version || "unknown" %></i>&nbsp;<% if !Rails.env.production? then %>- <i><%= Rails.env %></i><% end %>&nbsp;
-      <ul class="no-bullet inline-block">
-        <li class="inline-block"><%= link_to t("layouts.footer.privacy"), page_path("privacy") %>&nbsp;|</li>
-        <li class="inline-block"><%= link_to t("layouts.footer.conditions"), page_path("conditions") %>&nbsp;|</li>
-        <li class="inline-block"><%= link_to t("layouts.footer.accessibility"), page_path("accessibility") %></li>
-      </ul>
-    </div>
-
-    <div class="small-12 medium-6 column social">
-      <div class="text-right">
+<div class="row">
+<div class="small-12 medium-12 column social">
+      <div class="text-center">
         <ul>
           <% if setting["twitter_handle"] %>
             <li class="inline-block">
@@ -86,9 +57,38 @@
               <% end %>
             </li>
           <% end %>
-          <%= raw content_block("footer", I18n.locale) %>
         </ul>
       </div>
     </div>
+</div>
+
+  <div class="row">
+    <div class="small-12 medium-4 column">
+      <%= t("layouts.header.open_gov") %>
+      <p class="info">
+        <%= t("layouts.footer.description",
+          open_source: link_to(t("layouts.footer.open_source"), t("layouts.footer.open_source_url"), target: "blank", rel: "nofollow"),
+          consul:  link_to(t("layouts.footer.consul"), t("layouts.footer.consul_url"), target: "blank", rel: "nofollow")).html_safe %> 
+        <%= t("layouts.footer.contact_us").html_safe %>
+      </p>
+    </div>
+    <div class="small-12 medium-4 column">
+      <%= t("layouts.footer.participation_title") %>
+      <p><%= t("layouts.footer.participation_text") %></p>
+    </div>
+    <div class="small-12 medium-4 column">
+      <%= raw content_block("footer", I18n.locale) %>
+    </div>
+  </div>
+  <div class="subfooter row">
+    <div class="small-12 medium-12 column">
+      &#169;&nbsp;<%= t("layouts.footer.copyright", year: Time.current.year) %> | <i><%= Rails.application.secrets.version || "unknown" %></i>&nbsp;<% if !Rails.env.production? then %>- <i><%= Rails.env %></i><% end %>&nbsp;
+      <ul class="no-bullet inline-block">
+        <li class="inline-block"><%= link_to t("layouts.footer.privacy"), page_path("privacy") %>&nbsp;|</li>
+        <li class="inline-block"><%= link_to t("layouts.footer.conditions"), page_path("conditions") %>&nbsp;|</li>
+        <li class="inline-block"><%= link_to t("layouts.footer.accessibility"), page_path("accessibility") %></li>
+      </ul>
+    </div>
+  </div>
   </div>
 </footer>
