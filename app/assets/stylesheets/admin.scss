@@ -641,7 +641,7 @@ code {
 }
 
 .extra-info {
-  background: #fafafa;
+  background: $brand-secondary-background;
   border-bottom-left-radius: rem-calc(6);
   border-bottom-right-radius: rem-calc(6);
   border-top: 2px solid #000;

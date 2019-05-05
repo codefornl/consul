@@ -68,7 +68,7 @@
     }
 
     @include breakpoint(large) {
-      background: #fafafa;
+      background: $brand-secondary-background;
       display: inline-block;
       border-bottom: 0;
       border-top-left-radius: rem-calc(6);
@@ -565,7 +565,7 @@
 
       .show-comments {
         width: 105%;
-        background: #fafafa;
+        background: $brand-secondary-background;
         padding: rem-calc(4) rem-calc(40) rem-calc(4) rem-calc(4);
         border: 1px solid $border;
         margin-bottom: rem-calc(16);
@@ -842,7 +842,7 @@
 .legislation-comments {
 
   .comment-section {
-    background: #fafafa;
+    background: $brand-secondary-background;
     padding: rem-calc(16);
     border: 1px solid #dee0e3;
     margin-top: rem-calc(4);
@@ -891,7 +891,7 @@
   }
 
   .comment-section {
-    background: #fafafa;
+    background: $brand-secondary-background;
     padding: rem-calc(16);
     border: 1px solid #dee0e3;
     margin-top: rem-calc(4);

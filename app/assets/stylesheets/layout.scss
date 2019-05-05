@@ -208,6 +208,7 @@ a {
 
 .highlight {
   background: $highlight;
+  color: invert($highlight);
 }
 
 .fa-check {
@@ -224,7 +225,6 @@ a {
 .footer,
 .push {
   clear: both;
-  min-height: $line-height * 12;
 }
 
 .ie-callout {
@@ -269,8 +269,8 @@ a {
     }
 
     &.is-active {
-      border-bottom: 2px solid $brand;
-      color: $brand;
+      border-bottom: 2px solid $brand-border;
+      color: $brand-secondary;
       padding-bottom: rem-calc(1);
 
       h2 a {
@@ -310,8 +310,8 @@ a {
     }
 
     &.is-active {
-      border-bottom: 2px solid $brand;
-      color: $brand;
+      border-bottom: 2px solid $brand-border;
+      color: $brand-secondary;
     }
   }
 
@@ -407,12 +407,12 @@ a {
     &[aria-selected="true"],
     &.is-active {
       border-bottom: 0;
-      color: $brand;
+      color: $brand-secondary;
       font-weight: bold;
 
       &::after {
         background: $brand;
-        border-bottom: 2px solid $brand;
+        border-bottom: 2px solid $brand-border;
         bottom: 0;
         content: "";
         left: 0;
@@ -516,7 +516,7 @@ header {
 
 .top-bar {
   background: $brand !important;
-  color: #fff;
+  color: $brand-text;
   padding-bottom: 0;
   padding-top: 0;
 
@@ -533,7 +533,7 @@ header {
     padding: 0;
 
     a {
-      color: #fff;
+      color: $brand-text;
       display: inline-block;
       font-family: "Lato" !important;
       font-size: rem-calc(24);
@@ -565,7 +565,7 @@ header {
     }
 
     a {
-      color: #fff;
+      color: $brand-text;
       padding-left: 0;
 
       @include breakpoint(medium) {
@@ -579,8 +579,8 @@ header {
       text-align: left;
 
       @include breakpoint(medium) {
-        background: #fff;
-        color: $brand;
+        background: $brand-text;
+        color: invert($brand-text);
         text-align: center;
       }
     }
@@ -589,7 +589,7 @@ header {
   .has-submenu {
 
     &.is-active a {
-      color: #fff;
+      color: $brand-text;
       font-weight: bold;
     }
   }
@@ -597,7 +597,7 @@ header {
   .menu {
 
     &.is-dropdown-submenu {
-      background: #fff;
+      background: $brand-text;
       margin: 0;
       margin-top: rem-calc(-12);
       padding: 0;
@@ -610,7 +610,7 @@ header {
       margin-bottom: 0;
 
       a {
-        color: $text;
+        color: invert($brand-text);
       }
     }
   }
@@ -632,8 +632,8 @@ header {
 
     &:hover::after,
     &::after {
-      background: #fff;
-      box-shadow: 0 7px 0 #fff, 0 14px 0 #fff;
+      background: $brand-text;
+      box-shadow: 0 7px 0 $brand-text, 0 14px 0 $brand-text;
     }
   }
 }
@@ -689,7 +689,7 @@ header {
 .subnavigation {
 
   @include breakpoint(medium) {
-    background: #fff;
+    background: $white;
     padding-bottom: 0;
   }
 
@@ -734,8 +734,8 @@ header {
       cursor: default;
       text-decoration: none;
       @include breakpoint(medium) {
-        border-bottom: 2px solid $brand;
-        color: $brand;
+        border-bottom: 2px solid $brand-border;
+        color: $brand-secondary;
       }
     }
   }
@@ -849,11 +849,11 @@ footer {
   a,
   a:active,
   a:focus {
-    color: $text;
+    color: invert($footer-background);
     text-decoration: underline;
 
     &:hover {
-      color: $text-medium;
+      color: lighten(invert($footer-background),20);
     }
   }
 
@@ -868,7 +868,8 @@ footer {
 }
 
 .footer {
-  background: #f1f1f1;
+  background: $footer-background;
+  color: invert($footer-background);
   margin-top: $line-height * 2;
   padding-top: $line-height;
 }
@@ -924,7 +925,7 @@ footer {
   margin-bottom: 1em;
 }
 .sidebar-title {
-  border-top: 2px solid $brand;
+  border-top: 2px solid $brand-border;
   display: inline-block;
   font-size: rem-calc(16);
   font-weight: bold;
@@ -2334,7 +2335,7 @@ table {
 // -------------------
 
 .section-recommended {
-  background: #fafafa;
+  background: $brand-secondary-background;
   border-top: 1px solid $border;
   margin-bottom: rem-calc(-48);
   padding: $line-height 0;
@@ -2474,7 +2475,7 @@ table {
 }
 
 .recommended-index {
-  background: #fafafa;
+  background: $brand-secondary-background;
   border-bottom: 1px solid #eee;
   margin-bottom: $line-height;
   margin-top: rem-calc(-25);
@@ -2592,7 +2593,7 @@ table {
 }
 
 .document-divider {
-  background: #fafafa;
+  background: $brand-secondary-background;
   border-bottom: 1px solid #eee;
 }
 
@@ -2785,7 +2786,7 @@ table {
 
     &.title {
       display: inline-block;
-      border-top: 4px solid $brand;
+      border-top: 4px solid $brand-border;
       margin-bottom: 0;
       min-width: rem-calc(240);
       padding: $line-height / 2 0;

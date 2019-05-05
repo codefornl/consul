@@ -17,8 +17,13 @@ $line-height:         rem-calc(24);
 $tiny-font-size:      rem-calc(12);
 
 $brand:             #004a83;
+$brand-border:      $brand;
+$brand-secondary:   $brand;
+$brand-secondary-background: #fafafa;
+$primary-color: #1779ba;
+$brand-text:        #fff;
 $dark:              darken($brand, 10%);
-
+$footer-background: #f1f1f1;
 $text:              #222;
 $text-medium:       #515151;
 $text-light:        #bfbfbf;
@@ -78,7 +83,7 @@ $header-font-family: $body-font-family;
 $global-radius: rem-calc(3);
 
 $button-radius: $global-radius;
-
+$button-background: $primary-color;
 $font-family-serif: Georgia, "Times New Roman", Times, serif;
 
 $header-styles: (

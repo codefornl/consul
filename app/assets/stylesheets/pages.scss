@@ -10,12 +10,24 @@
 // ----------------------
 
 .jumbo {
-  background: $highlight;
   margin-bottom: $line-height;
   margin-top: rem-calc(-24);
   padding-bottom: $line-height;
   padding-top: $line-height;
-
+  h1 {
+    color: $brand;
+    
+  }
+  h1:after{
+    content: " ";
+    border-bottom: 4px solid $brand-border;
+    display:table-cell;
+    width:rem-calc(256);
+  }
+  
+  .lead {
+    padding-top: $line-height;
+  }
   @include breakpoint(medium) {
     padding: rem-calc(24) 0;
   }

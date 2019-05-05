@@ -878,7 +878,7 @@
 }
 
 .help-header {
-  background: #fafafa;
+  background: $brand-secondary-background;
   border-bottom: 1px solid #eee;
   padding-bottom: $line-height / 2;
   padding-top: $line-height;
@@ -1637,7 +1637,7 @@
 // ----------------------
 
 .polls-show-header {
-  background: #fafafa;
+  background: $brand-secondary-background;
 
   .callout {
 
@@ -1661,7 +1661,7 @@
 }
 
 .poll-more-info-answers {
-  background: #fafafa;
+  background: $brand-secondary-background;
   border-bottom: 1px solid #eee;
 
   .column:nth-child(odd) {
@@ -1742,7 +1742,7 @@
 }
 
 .image-container {
-  background: #fafafa;
+  background: $brand-secondary-background;
   overflow: hidden;
   position: relative;
 }
