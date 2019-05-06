@@ -1244,7 +1244,7 @@
       padding: $line-height / 2;
 
       &:hover {
-        background: $highlight;
+        border: 1px solid invert($border);
         text-decoration: none;
       }
     }
