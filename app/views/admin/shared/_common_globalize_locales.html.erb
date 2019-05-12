@@ -1,3 +1,5 @@
+<!-- only apply when there is more then one locale available -->
+<% if I18n.available_locales.length > 1 %>
 <div id="globalize_locales">
   <% I18n.available_locales.each do |locale| %>
     <div class="text-right">
@@ -18,3 +20,4 @@
                    class: "js-globalize-locale" %>
   </div>
 </div>
+<% end %>

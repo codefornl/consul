@@ -1,3 +1,6 @@
+<!-- only apply when there is more then one locale available -->
+<% if I18n.available_locales.length > 1 %>
 <%= render "admin/shared/common_globalize_locales",
   resource: resource,
   display_style: lambda { |locale| enable_translation_style(resource, locale) } %>
+<% end %>

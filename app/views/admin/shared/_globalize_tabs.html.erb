@@ -1,3 +1,5 @@
+<!-- only apply when there is more then one locale available -->
+<% if I18n.available_locales.length > 1 %>
 <ul class="tabs" data-tabs>
   <% I18n.available_locales.each do |locale| %>
     <li class="tabs-title">
@@ -9,3 +11,4 @@
     </li>
   <% end %>
 </ul>
+<% end %>
