@@ -135,6 +135,17 @@ $sidebar-active: #f4fcd0;
       height: auto !important;
       padding-top: $line-height / 2;
     }
+
+    a {
+      color: $text;
+      background-color: transparent;
+      padding-left: 0;
+
+      @include breakpoint(medium) {
+        font-size: $small-font-size;
+        padding: rem-calc(11) rem-calc(16);
+      }
+    }
   }
 
   .title-bar {

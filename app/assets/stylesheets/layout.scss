@@ -566,6 +566,7 @@ header {
 
     a {
       color: $brand-text;
+      background-color: $brand;
       padding-left: 0;
 
       @include breakpoint(medium) {
