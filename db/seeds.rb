@@ -294,10 +294,5 @@ if !WebSection.exists?(:name => "help_page")
   WebSection.create(name: "help_page")
 end
 
-# Allow for a mandatory check 'I accept' option
-if !Setting["signup_accept_check"]
-  Setting["signup_accept_check"] = ''
-end
-
 # Default custom pages
 load Rails.root.join("db", "pages.rb")
