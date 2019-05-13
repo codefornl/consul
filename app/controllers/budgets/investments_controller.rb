@@ -53,6 +53,7 @@ module Budgets
     end
 
     def show
+      @banners = Banner.in_section("budgets").with_active
       @commentable = @investment
       @comment_tree = CommentTree.new(@commentable, params[:page], @current_order)
       @related_contents = Kaminari.paginate_array(@investment.relationed_contents).page(params[:page]).per(5)

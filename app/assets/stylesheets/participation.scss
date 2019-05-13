@@ -878,10 +878,12 @@
 }
 
 .help-header {
-  background: $brand-secondary-background;
-  border-bottom: 1px solid $border;
-  padding-bottom: $line-height / 2;
-  padding-top: $line-height;
+  .row {
+    background: $brand-secondary-background;
+    border-bottom: 1px solid $border;
+    padding-bottom: $line-height / 2;
+    padding-top: $line-height;
+  }
 
   h1 {
     font-size: rem-calc(24);
@@ -1114,7 +1116,10 @@
 // -----------
 .expanded {
   &.budget {
-    background-color: $budget;
+    .row {
+      background-color: $budget;
+    }
+    
   }
 }
 

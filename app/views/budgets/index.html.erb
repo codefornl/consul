@@ -1,6 +1,4 @@
-<% if has_banners? %>
-  <%= render "shared/banner" %>
-<% end %>
+
 
 <% provide :title do %><%= t("budgets.index.title") %><% end %>
 
@@ -8,6 +6,9 @@
   <%= render "shared/canonical", href: budgets_url %>
 <% end %>
 <%= render "shared/section_header", i18n_namespace: "budgets.index.section_header", image: "budgets" %>
+<% if has_banners? %>
+  <%= render "shared/banner" %>
+<% end %>
 <% if current_budget.present? %>
   <div id="budget_heading" class="expanded budget no-margin-top">
     <div class="row" data-equalizer data-equalizer-on="medium">

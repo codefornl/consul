@@ -475,8 +475,8 @@ a {
 // ----------
 
 header {
-  background: $brand;
   border-bottom: 1px solid $border;
+  background: $brand;
   margin-bottom: $line-height;
 
   .selected {
@@ -559,14 +559,13 @@ header {
   .menu > li {
     display: block;
     width: 100%;
-
     @include breakpoint(medium) {
       width: auto;
     }
 
     a {
       color: $brand-text;
-      background-color: $brand;
+      
       padding-left: 0;
 
       @include breakpoint(medium) {
@@ -652,10 +651,9 @@ header {
 }
 
 .top-links {
-  background: $dark;
+  background-color: $dark;
   color: #fff;
   font-size: $small-font-size;
-  padding-right: $line-height / 2;
 
   a {
     color: #fff;
