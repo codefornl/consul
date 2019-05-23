@@ -74,7 +74,7 @@
     </div>
     <div class="small-12 medium-4 column">
       <%= t("layouts.footer.participation_title") %>
-      <p><%= t("layouts.footer.participation_text") %></p>
+      <p><%= t("layouts.footer.participation_text").html_safe %></p>
     </div>
     <div class="small-12 medium-4 column">
       <%= raw content_block("footer", I18n.locale) %>

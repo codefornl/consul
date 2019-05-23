@@ -24,6 +24,7 @@ $primary-color: #1779ba;
 $brand-text:        #fff;
 $dark:              darken($brand, 10%);
 $footer-background: #f1f1f1;
+$footer-text: invert($footer-background);
 $text:              #222;
 $text-medium:       #515151;
 $text-light:        #bfbfbf;

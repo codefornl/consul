@@ -868,7 +868,7 @@ footer {
 
 .footer {
   background: $footer-background;
-  color: invert($footer-background);
+  color: $footer-text;
   margin-top: $line-height * 2;
   padding-top: $line-height;
 }
