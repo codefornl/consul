@@ -475,27 +475,27 @@ nl:
     notice:
       retired: Voorstel gearchiveerd
     proposal:
-      already_supported: Je hebt al gestemd op dit voorstel al. Deel het!
-      archived: Dit voorstel is gearchiveerd. Er kan niet meer worden gestemd.
+      already_supported: Je hebt dit voorstel gesteund. Vertel het anderen!
+      archived: Dit voorstel is gearchiveerd.
       comments:
         one: 1 reactie
         other: "%{count} reacties"
         zero: Geen reacties
       created: Je hebt een voorstel gedaan!
-      improve_info: Verbeter je campagne en krijg meer stemmen
+      improve_info: Verbeter je campagne en krijg steun
       improve_info_link: Bekijk meer informatie
       share:
         edit: Voordat het gedeeld gaat worden, kun je de tekst nog wijzigen.
-        guide: Nu kun je jouw voorstel delen zodat mensen kunnen stemmen.
+        guide: Nu kun je jouw voorstel delen zodat mensen hun steun kunnen betuigen.
         view_proposal: Niet nu, door naar mijn voorstel
-      successful: Dit voorstel heeft de benodigde stemmen gekregen.
-      support: Stem
-      support_title: Stem op dit voorstel
+      successful: Dit voorstel heeft de benodigde steun.
+      support: Steun
+      support_title: Steun op dit voorstel
       supports:
-        one: 1 stem
-        other: "%{count} stemmen"
-        zero: Geen stemmen
-      supports_necessary: "%{number} stemmen nodig"
+        one: 1 steunbetuiging
+        other: "%{count} steunbetuigingen"
+        zero: Geen steun
+      supports_necessary: "%{number} steunbetuigingen nodig"
       total_percent: 100%
       votes:
         one: 1 stem
