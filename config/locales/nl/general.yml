@@ -502,19 +502,19 @@ nl:
         other: "%{count} stemmen"
         zero: Geen stemmen
     retire_form:
-      retired_explanation_label: Uitleg
-      retired_explanation_placeholder: Leg kort uit waarom u denkt dat op dit voorstel niet meer gestemd moet worden
-      retired_reason_blank: Kies één van de mogelijkheden
-      retired_reason_label: Reden het voorstel terug te trekken
-      submit_button: Trek voorstel terug
-      title: Trek voorstel terug
-      warning: Als u het voorstel terugtrekt kan er nog steeds gestemd worden. Het wordt verwijderd van de hoofdlijst en er wordt een bericht zichtbaar voor alle gebruikers waarin wordt verklaard dat de auteur van mening is dat op het voorstel niet meer gestemd zou moeten worden
+      retired_explanation_label: Reden
+      retired_explanation_placeholder: Geef een reden waarom dit voorstel kan worden ingetrokken
+      retired_reason_blank: Kies één van de redenen
+      retired_reason_label: Reden om het voorstel in te trekken
+      submit_button: Voorstel intrekken
+      title: Voorstel intrekken
+      warning: Als een voorstel is ingetrokken kan het nog wel gesteund worden, maar het wordt niet meer getoond in de overzichten en er wordt een melding getoond waarin wordt aangegeven dat het voorstel is ingetrokken met een verwijzing naar de reden.
     retire_options:
       done: Gereed
-      duplicated: Dubbele
+      duplicated: Dubbel
       other: Anders
       started: Gestart
-      unfeasible: Unfeasible
+      unfeasible: Niet haalbaar
     share:
       message: Ik heb op het voorstel %{title} in %{handle} gestemd. Stem ook!
     show:
@@ -533,9 +533,9 @@ nl:
       milestones_tab: Mijlpalen
       no_notifications: Dit voorstel heeft geen meldingen.
       notifications_tab: Notificaties
-      retired: Voorstel teruggetrokken door de auteur
-      retired_warning: De auteur vind dat op dit voorstel niet langer moet worden gestemd.
-      retired_warning_link_to_explanation: Lees de uitleg vóór u er voor stemt.
+      retired: Voorstel ingetrokken
+      retired_warning: Dit voorstel is ingetrokken.
+      retired_warning_link_to_explanation: Lees waarom.
       send_notification: Stuur melding
       share: Deel
       title_external_url: Aanvullende documentatie
