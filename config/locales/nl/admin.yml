@@ -1415,7 +1415,7 @@ nl:
         preview_detail: Gebruikers ontvangen alleen meldingen uit de voorstellen die ze volgen
         title: Voorgestelde melding verwerken
     tags:
-      create: Creeer onderwerp
+      create: "Creëer onderwerp"
       destroy: Verwijder onderwerp
       index:
         add_tag: Add a new proposal topic
