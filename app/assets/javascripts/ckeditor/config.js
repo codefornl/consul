@@ -5,6 +5,8 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 
 CKEDITOR.editorConfig = function( config )
 {
+  config.forcePasteAsPlainText = true;
+
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files";
   config.filebrowserFlashBrowseUrl = "/ckeditor/attachment_files";
   config.filebrowserFlashUploadUrl = "/ckeditor/attachment_files";
@@ -79,8 +81,8 @@ CKEDITOR.editorConfig = function( config )
   config.toolbar = [
     { name: "document", groups: [ "mode", "document", "doctools" ], items: [ "Source"] },
     { name: "clipboard", groups: [ "clipboard", "undo" ], items: [ "Cut", "Copy", "Paste", "PasteText", "PasteFromWord", "-", "Undo", "Redo" ] },
-    // { name: "editing", groups: [ "find", "selection", "spellchecker" ], items: [ "Find", "Replace", "-", "SelectAll", "-", "Scayt" ] },
-    // { name: "forms", items: [ "Form", "Checkbox", "Radio", "TextField", "Textarea", "Select", "Button", "ImageButton", "HiddenField" ] },
+    { name: "editing", groups: [ "find", "selection", "spellchecker" ], items: [ "Find", "Replace", "-", "SelectAll", "-", "Scayt" ] },
+    { name: "forms", items: [ "Form", "Checkbox", "Radio", "TextField", "Textarea", "Select", "Button", "ImageButton", "HiddenField" ] },
     { name: "links", items: [ "Link", "Unlink", "Anchor" ] },
     { name: "insert", items: [ "Image", "Flash", "Table", "HorizontalRule", "SpecialChar" ] },
     { name: "paragraph", groups: [ "list", "indent", "blocks", "align", "bidi" ], items: [ "NumberedList", "BulletedList", "-", "Outdent", "Indent", "-", "Blockquote", "CreateDiv", "-", "JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock" ] },
@@ -91,6 +93,7 @@ CKEDITOR.editorConfig = function( config )
   ];
 
   config.toolbar_mini = [
+    { name: "document", groups: [ "mode", "document", "doctools" ], items: [ "Source"] },
     { name: "paragraph", groups: [ "list" ], items: [ "NumberedList", "BulletedList" ] },
     { name: "links", items: [ "Link", "Unlink" ] },
     { name: "styles", items: [ "Format" ] },
@@ -98,8 +101,9 @@ CKEDITOR.editorConfig = function( config )
   ];
 
   config.toolbar_admin = config.toolbar_mini.concat([
-    { name: "insert", items: [ "Image", "Table" ] }
+    
+    { name: "insert", items: [ "Image", "Table", "Iframe"] }
+    
   ]);
-
-  config.toolbar = "mini";
+  
 };
