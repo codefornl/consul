@@ -105,5 +105,5 @@ CKEDITOR.editorConfig = function( config )
     { name: "insert", items: [ "Image", "Table", "Iframe"] }
     
   ]);
-  
+  config.toolbar = "mini";
 };

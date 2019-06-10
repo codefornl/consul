@@ -63,8 +63,13 @@ class ApplicationController < ActionController::Base
       if current_user && current_user.locale != locale.to_s
         current_user.update(locale: locale)
       end
-
-      I18n.locale = locale
+      # Can throw a set_locale error when the language set in a cookie is not/no longer available.
+      begin
+        I18n.locale = "pt" #locale
+      rescue => exception
+        session[:locale] ||= I18n.default_locale
+        I18n.locale = locale
+      end
       Globalize.locale = I18n.locale
     end
 
