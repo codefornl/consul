@@ -91,19 +91,21 @@ CKEDITOR.editorConfig = function( config )
     { name: "colors", items: [ "TextColor", "BGColor" ] },
     { name: "basicstyles", groups: [ "basicstyles", "cleanup" ], items: [ "Bold", "Italic", "Underline", "Strike", "Subscript", "Superscript", "-", "RemoveFormat" ] }
   ];
-
-  config.toolbar_mini = [
+  config.toolbar_base = [
     { name: "document", groups: [ "mode", "document", "doctools" ], items: [ "Source"] },
     { name: "paragraph", groups: [ "list" ], items: [ "NumberedList", "BulletedList" ] },
     { name: "links", items: [ "Link", "Unlink" ] },
     { name: "styles", items: [ "Format" ] },
     { name: "basicstyles", groups: [ "basicstyles", "cleanup" ], items: [ "Bold", "Italic", "Underline", "Strike" ] }
-  ];
+  ]
 
-  config.toolbar_admin = config.toolbar_mini.concat([
+  config.toolbar_mini = config.toolbar_base.concat([
+    { name: "insert", items: [ "Image", "Table"] }
     
+  ]);
+
+  config.toolbar_admin = config.toolbar_base.concat([
     { name: "insert", items: [ "Image", "Table", "Iframe"] }
-    
   ]);
   config.toolbar = "mini";
 };
