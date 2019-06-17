@@ -29,11 +29,6 @@
 // 01. Global styles
 // -----------------
 
-::selection {
-  color: invert($brand);
-  background-color: $brand;
-}
-
 html,
 body {
   height: 100%;
@@ -515,7 +510,7 @@ header {
 }
 
 .top-bar {
-  background: $brand !important;
+  background: $brand;
   color: $brand-text;
   padding-bottom: 0;
   padding-top: 0;
