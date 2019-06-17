@@ -30,7 +30,7 @@
 // -----------------
 
 ::selection {
-  color: #fff;
+  color: invert($brand);
   background-color: $brand;
 }
 
