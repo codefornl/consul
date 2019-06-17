@@ -1259,17 +1259,17 @@ nl:
         form:
           options: Opties
         index:
-          create: Create new page
-          delete: Delete page
-          see_page: See page
+          create: Nieuwe aanmaken
+          delete: Verwijderen
+          see_page: Bekijken
           title: Aangepaste pagina's
         new:
-          title: Create new custom page
+          title: Nieuwe aangepaste pagina maken
         page:
           cards_title: Tegels
           created_at: Gemaakt op
           see_cards: Tegels tonen
-          slug: Bullet
+          slug: Url
           status: Status
           status_draft: Concept
           status_published: Gepubliceerd
