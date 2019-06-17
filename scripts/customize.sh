@@ -1,5 +1,5 @@
 #!/bin/sh
-if [ -z "$CUSTOM_SET_NAME"]; then
+if [ -z "$CUSTOM_SET_NAME" ]; then
     echo "CUSTOM_SET_NAME is not set"
 else
     bin/rake db:migrate
