@@ -37,6 +37,11 @@ Rails.application.routes.draw do
   get "/welcome", to: "welcome#welcome"
   get "/consul.json", to: "installation#details"
 
+  # api routes
+  get "/api/consul.json", to: "installation#details", defaults: { format: :json}
+  get "/api/index.json", to: "welcome#index", defaults: { format: :json}
+  get "/api/welcome.json", to: "welcome#welcome", defaults: { format: :json}
+
   resources :stats, only: [:index]
   resources :images, only: [:destroy]
   resources :documents, only: [:destroy]

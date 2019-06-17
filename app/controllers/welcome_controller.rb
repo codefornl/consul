@@ -10,6 +10,10 @@ class WelcomeController < ApplicationController
     @feeds = Widget::Feed.active
     @cards = Widget::Card.body
     @banners = Banner.in_section("homepage").with_active
+    respond_to do |format|
+      format.json { render json: {header: @header, feeds: @feeds, cards: @cards, banners: @banners }, content_type: "application/json" }
+      format.html
+    end
   end
 
   def welcome

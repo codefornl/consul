@@ -1,7 +1,9 @@
 version: "3"
 services:
   database:
-    image: postgres:9.4.5
+    image: postgres:10-alpine
+    environment:
+      - POSTGERS_PASSWORD=postgres
     volumes:
       - docker-example-postgres:/var/lib/postgresql/data
     ports:
