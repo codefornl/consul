@@ -1,4 +1,5 @@
-class RelatedContent < ActiveRecord::Base
+class RelatedContent < ApplicationRecord
+  RELATED_CONTENT_SCORE_THRESHOLD = Setting["related_content_score_threshold"].to_f
   RELATIONABLE_MODELS = %w{proposals debates budgets investments}.freeze
 
   acts_as_paranoid column: :hidden_at
@@ -43,7 +44,7 @@ class RelatedContent < ActiveRecord::Base
 
   def score(value, user)
     score_with_opposite(value, user)
-    hide_with_opposite if (related_content_scores.sum(:value) / related_content_scores_count) < Setting["related_content_score_threshold"].to_f
+    hide_with_opposite if (related_content_scores.sum(:value) / related_content_scores_count) < RELATED_CONTENT_SCORE_THRESHOLD
   end
 
   def hide_with_opposite

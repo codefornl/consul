@@ -1,8 +1,8 @@
 require "rails_helper"
 
-feature "Admin tags" do
+describe "Admin tags" do
 
-  background do
+  before do
     @tag1 = create(:tag, :category)
     login_as(create(:administrator).user)
   end
@@ -40,7 +40,7 @@ feature "Admin tags" do
     expect(page).to have_content tag2.name
 
     within("#tag_#{tag2.id}") do
-      click_link "Destroy topic"
+      click_link "Delete topic"
     end
 
     visit admin_tags_path
@@ -59,7 +59,7 @@ feature "Admin tags" do
     expect(page).to have_content tag2.name
 
     within("#tag_#{tag2.id}") do
-      click_link "Destroy topic"
+      click_link "Delete topic"
     end
 
     visit admin_tags_path
@@ -86,19 +86,6 @@ feature "Admin tags" do
 
       expect(ActsAsTaggableOn::Tag.category.where(name: "wow_category")).to exist
     end
-  end
-
-  scenario "Upgrade tag to category" do
-    not_category_tag = create(:tag, name: "Soon a category")
-
-    visit admin_tags_path
-
-    within("form.new_tag") do
-      fill_in "tag_name", with: "Soon a category"
-      click_button "Create topic"
-    end
-
-    expect(page).to have_content "Soon a category"
   end
 
 end

@@ -10,6 +10,17 @@
   <%= render "shared/canonical", href: legislation_process_proposal_url(process_id: @process) %>
 <% end %>
 
+<div class="row process-proposal">
+  <div class="small-12 column">
+    <div class="header">
+      <p class="process-title">
+        <strong><%= t("legislation.proposals.process_title") %></strong>
+      </p>
+      <%= link_to @process.title, @process, class: "process-link" %>
+    </div>
+  </div>
+</div>
+
 <% cache [locale_and_user_status(@proposal), @proposal, @proposal.author, Flag.flagged?(current_user, @proposal), @legislation_proposal_votes] do %>
   <div class="proposal-show legislation-proposal-show">
     <div id="<%= dom_id(@proposal) %>" class="row">
@@ -29,7 +40,7 @@
           <span class="bullet">&nbsp;&bull;&nbsp;</span>
           <%= l @proposal.created_at.to_date %>
           <span class="bullet">&nbsp;&bull;&nbsp;</span>
-          <span class="far fa-comments fa-fw"></span>&nbsp;
+          <span class="icon-comments"></span>&nbsp;
           <%= link_to t("proposals.show.comments", count: @proposal.comments_count), "#comments" %>
 
           <% if current_user %>
@@ -59,28 +70,16 @@
 
         <%= safe_html_with_links @proposal.description %>
 
-        <% if @proposal.external_url.present? %>
-          <div class="document-link">
-            <p>
-              <span class="fas fa-file fa-fw"></span>&nbsp;
-              <strong><%= t("proposals.show.title_external_url") %></strong>
-            </p>
-              <%= text_with_links @proposal.external_url %>
-          </div>
-        <% end %>
-
         <% if @proposal.video_url.present? %>
           <div class="video-link">
             <p>
-              <span class="fas fa-file-video fa-fw"></span>&nbsp;
+              <span class="icon-video"></span>&nbsp;
               <strong><%= t("proposals.show.title_video_url") %></strong>
             </p>
             <%= text_with_links @proposal.video_url %>
           </div>
 
         <% end %>
-
-        <h4><%= @proposal.question %></h4>
 
         <% if feature?(:allow_attached_documents) %>
           <%= render "documents/documents",

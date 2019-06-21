@@ -1,10 +1,11 @@
-class Legislation::Proposal < ActiveRecord::Base
+class Legislation::Proposal < ApplicationRecord
   include ActsAsParanoidAliases
   include Flaggable
   include Taggable
   include Conflictable
   include Measurable
   include Sanitizable
+  include Searchable
   include Filterable
   include Followable
   include Communitable
@@ -13,9 +14,6 @@ class Legislation::Proposal < ActiveRecord::Base
   include Imageable
   include Randomizable
 
-  documentable max_documents_allowed: 3,
-               max_file_size: 3.megabytes,
-               accepted_content_types: [ "application/pdf" ]
   accepts_nested_attributes_for :documents, allow_destroy: true
 
   acts_as_votable
@@ -59,7 +57,6 @@ class Legislation::Proposal < ActiveRecord::Base
 
   def searchable_values
     { title              => "A",
-      question           => "B",
       author.username    => "B",
       tag_list.join(" ") => "B",
       geozone.try(:name) => "B",
@@ -68,7 +65,6 @@ class Legislation::Proposal < ActiveRecord::Base
   end
 
   def self.search(terms)
-    include Searchable
     by_code = search_by_code(terms.strip)
     by_code.present? ? by_code : pg_search(terms)
   end

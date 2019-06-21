@@ -11,6 +11,7 @@
         <th scope="col" class="text-center"><%= t("admin.administrators.index.id") %></th>
         <th scope="col"><%= t("admin.administrators.index.name") %></th>
         <th scope="col"><%= t("admin.administrators.index.email") %></th>
+        <th scope="col"><%= t("admin.administrators.index.description") %></th>
         <th scope="col" class="small-3"><%= t("admin.shared.actions") %></th>
       </thead>
       <% @administrators.each do |administrator| %>
@@ -25,8 +26,11 @@
             <%= administrator.email %>
           </td>
           <td>
+            <%= administrator.description %>
+          </td>
+          <td>
             <% if administrator.persisted? %>
-              <%= link_to icon("fas", "trash", class: "fa-fw"),
+              <%= link_to icon("icon-trash"),
                           admin_administrator_path(administrator),
                           method: :delete,
                           class: "button hollow alert"

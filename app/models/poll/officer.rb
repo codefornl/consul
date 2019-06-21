@@ -1,5 +1,5 @@
 class Poll
-  class Officer < ActiveRecord::Base
+  class Officer < ApplicationRecord
     belongs_to :user
     has_many :officer_assignments, class_name: "Poll::OfficerAssignment"
     has_many :shifts, class_name: "Poll::Shift"
@@ -7,7 +7,13 @@ class Poll
 
     validates :user_id, presence: true, uniqueness: true
 
-    delegate :name, :email, to: :user
+    def name
+      user&.name || I18n.t("shared.author_info.author_deleted")
+    end
+
+    def email
+      user&.email || I18n.t("shared.author_info.email_deleted")
+    end
 
     def voting_days_assigned_polls
       officer_assignments.voting_days.includes(booth_assignment: :poll).

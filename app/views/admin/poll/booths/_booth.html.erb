@@ -8,11 +8,11 @@
   <td class="text-right">
     <% if controller_name == "shifts" || controller_name == "booths" && action_name == "available" %>
       <%= link_to new_admin_booth_shift_path(booth) do %>
-        <i class="fas fa-cog" title="<%= t("admin.booths.booth.shifts") %>"></i>
+        <i class="icon-settings" title="<%= t("admin.booths.booth.shifts") %>"></i>
       <% end %>
     <% else %>
       <%= link_to edit_admin_booth_path(booth) do %>
-        <i class="fas fa-pencil-alt" title="<%= t("admin.booths.booth.edit") %>"></i>
+        <i class="icon-edit" title="<%= t("admin.booths.booth.edit") %>"></i>
       <% end %>
     <% end %>
   </td>

@@ -17,7 +17,7 @@
       <td>
         <% if officer.persisted? %>
           <%= link_to admin_officer_path(officer), method: :delete, class: "alert" do %>
-            <i class="fas fa-pencil-alt" title="<%= link_to t("admin.poll_officers.officer.delete") %>"></i>
+            <i class="icon-edit" title="<%= link_to t("admin.poll_officers.officer.delete") %>"></i>
           <% end %>
           
         <% else %>

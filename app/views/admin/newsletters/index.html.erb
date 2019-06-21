@@ -9,7 +9,7 @@
         <th class="small-2"><%= t("admin.newsletters.index.subject") %></th>
         <th><%= t("admin.newsletters.index.segment_recipient") %></th>
         <th><%= t("admin.newsletters.index.sent") %></th>
-        <th class="small-5 text-right"><%= t("admin.newsletters.index.actions") %></th>
+        <th class="small-5"><%= t("admin.newsletters.index.actions") %></th>
       </tr>
     </thead>
     <tbody>
@@ -30,13 +30,13 @@
         </td>
         <td class="text-right">
           <%= link_to edit_admin_newsletter_path(newsletter), method: :get do %>
-            <i class="fas fa-pencil-alt" title="<%= t("shared.edit") %>"></i>
+            <i class="icon-edit" title="<%= t("shared.edit") %>"></i>
           <% end %>
           <%= link_to admin_newsletter_path(newsletter), method: :delete, class: "red" do %>
-            <i class="fas fa-trash-alt" title="<%= t("shared.delete") %>"></i>
+            <i class="icon-delete" title="<%= t("shared.delete") %>"></i>
           <% end %>
           <%= link_to admin_newsletter_path(newsletter) do %>
-            <i class="fas fa-eye" title="<%= t("admin.newsletters.index.preview") %>"></i>
+            <i class="icon-eye" title="<%= t("admin.newsletters.index.preview") %>"></i>
           <% end %>
         </td>
       </tr>

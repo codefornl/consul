@@ -96,6 +96,8 @@
     <div class="sidebar-block small-12 medium-3 column">
       <%= link_to t("debates.index.start_debate"), new_debate_path, class: "button expanded" %>
       <%= render "shared/tag_cloud", taggable: "debate" %>
+      <%= render "shared/download_links", downloadable: 'debate' %>
     </div>
+
   </div>
 </main>

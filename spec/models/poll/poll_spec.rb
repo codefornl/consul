@@ -6,6 +6,7 @@ describe Poll do
 
   describe "Concerns" do
     it_behaves_like "notifiable"
+    it_behaves_like "reportable"
   end
 
   describe "validations" do
@@ -31,6 +32,58 @@ describe Poll do
     it "is not valid without a proper start/end date range" do
       poll.starts_at = 1.week.ago
       poll.ends_at = 2.months.ago
+      expect(poll).not_to be_valid
+    end
+
+    it "no overlapping polls for proposal polls are allowed" do
+    end
+  end
+
+  describe "proposal polls specific validations" do
+    let(:proposal) { create(:proposal) }
+    let(:poll) { build(:poll, related: proposal) }
+
+    it "is valid when overlapping but different proposals" do
+      other_proposal = create(:proposal)
+      _other_poll = create(:poll, related: other_proposal, starts_at: poll.starts_at,
+                                                           ends_at: poll.ends_at)
+
+      expect(poll).to be_valid
+    end
+
+    it "is valid when same proposal but not overlapping" do
+      _other_poll = create(:poll, related: proposal, starts_at: poll.ends_at + 1.day,
+                                                     ends_at: poll.ends_at + 8.days)
+      expect(poll).to be_valid
+    end
+
+    it "is not valid when overlaps from the beginning" do
+      _other_poll = create(:poll, related: proposal, starts_at: poll.starts_at - 8.days,
+                                                     ends_at: poll.starts_at)
+      expect(poll).not_to be_valid
+    end
+
+    it "is not valid when overlaps from the end" do
+      _other_poll = create(:poll, related: proposal, starts_at: poll.ends_at,
+                                                     ends_at: poll.ends_at + 8.days)
+      expect(poll).not_to be_valid
+    end
+
+    it "is not valid when overlaps with same interval" do
+      _other_poll = create(:poll, related: proposal, starts_at: poll.starts_at,
+                                                     ends_at: poll.ends_at)
+      expect(poll).not_to be_valid
+    end
+
+    it "is not valid when overlaps with interval contained" do
+      _other_poll = create(:poll, related: proposal, starts_at: poll.starts_at + 1.day,
+                                                     ends_at: poll.ends_at - 1.day)
+      expect(poll).not_to be_valid
+    end
+
+    it "is not valid when overlaps with interval containing" do
+      _other_poll = create(:poll, related: proposal, starts_at: poll.starts_at - 8.days,
+                                                     ends_at: poll.ends_at + 8.days)
       expect(poll).not_to be_valid
     end
   end
@@ -91,7 +144,8 @@ describe Poll do
     let!(:expired_poll) { create(:poll, :expired) }
 
     let!(:current_restricted_poll) { create(:poll, geozone_restricted: true, geozones: [geozone]) }
-    let!(:expired_restricted_poll) { create(:poll, :expired, geozone_restricted: true, geozones: [geozone]) }
+    let!(:expired_restricted_poll) { create(:poll, :expired, geozone_restricted: true,
+                                                             geozones: [geozone]) }
 
     let!(:all_polls) { [current_poll, expired_poll, current_poll, expired_restricted_poll] }
     let(:non_current_polls) { [expired_poll, expired_restricted_poll] }
@@ -223,14 +277,13 @@ describe Poll do
       user = create(:user, :level_two)
       poll = create(:poll)
 
-      voter = create(:poll_voter, user: user, poll: poll)
+      create(:poll_voter, user: user, poll: poll)
 
       expect(poll.voted_by?(user)).to eq(true)
     end
   end
 
   describe "#voted_in_booth?" do
-
     it "returns true if the user has already voted in booth" do
       user = create(:user, :level_two)
       poll = create(:poll)
@@ -255,7 +308,35 @@ describe Poll do
 
       expect(poll.voted_in_booth?(user)).not_to be
     end
+  end
 
+  describe ".overlaping_with" do
+    let(:proposal) { create :proposal }
+    let(:other_proposal) { create :proposal }
+    let(:poll) { create(:poll, related: proposal) }
+    let(:overlaping_poll) { build(:poll, related: proposal, starts_at: poll.starts_at + 1.day,
+                                                            ends_at: poll.ends_at - 1.day) }
+    let(:non_overlaping_poll) { create(:poll, related: proposal, starts_at: poll.ends_at + 1.day,
+                                                                 ends_at: poll.ends_at + 31.days) }
+    let(:overlaping_poll_2) { create(:poll, related: other_proposal,
+                                            starts_at: poll.starts_at + 1.day,
+                                            ends_at: poll.ends_at - 1.day) }
+
+    it "a poll can not overlap itself" do
+      expect(Poll.overlaping_with(poll)).not_to include(poll)
+    end
+
+    it "returns overlaping polls for the same proposal" do
+      expect(Poll.overlaping_with(overlaping_poll)).to include(poll)
+    end
+
+    it "do not returs non overlaping polls for the same proposal" do
+      expect(Poll.overlaping_with(poll)).not_to include(non_overlaping_poll)
+    end
+
+    it "do not returns overlaping polls for other proposal" do
+      expect(Poll.overlaping_with(poll)).not_to include(overlaping_poll_2)
+    end
   end
 
   context "scopes" do
@@ -278,4 +359,58 @@ describe Poll do
 
   end
 
+  describe "#sort_for_list" do
+    it "returns polls sorted by name ASC" do
+      starts_at = Time.current + 1.day
+      poll1 = create(:poll, geozone_restricted: true, starts_at: starts_at, name: "Zzz...")
+      poll2 = create(:poll, geozone_restricted: true, starts_at: starts_at, name: "Mmmm...")
+      poll3 = create(:poll, geozone_restricted: true, starts_at: starts_at, name: "Aaaaah!")
+
+      expect(Poll.sort_for_list).to eq [poll3, poll2, poll1]
+    end
+
+    it "returns not geozone restricted polls first" do
+      starts_at = Time.current + 1.day
+      poll1 = create(:poll, geozone_restricted: false, starts_at: starts_at, name: "Zzz...")
+      poll2 = create(:poll, geozone_restricted: true, starts_at: starts_at, name: "Aaaaaah!")
+
+      expect(Poll.sort_for_list).to eq [poll1, poll2]
+    end
+
+    it "returns polls earlier to start first" do
+      starts_at = Time.current + 1.day
+      poll1 = create(:poll, geozone_restricted: false, starts_at: starts_at - 1.hour, name: "Zzz...")
+      poll2 = create(:poll, geozone_restricted: false, starts_at: starts_at, name: "Aaaaah!")
+
+      expect(Poll.sort_for_list).to eq [poll1, poll2]
+    end
+
+    it "returns polls with multiple translations only once" do
+      create(:poll, name_en: "English", name_es: "Spanish")
+
+      expect(Poll.sort_for_list.count).to eq 1
+    end
+
+    context "fallback locales" do
+      before do
+        allow(I18n.fallbacks).to receive(:[]).and_return([:es])
+        Globalize.set_fallbacks_to_all_available_locales
+      end
+
+      it "orders by name considering fallback locales" do
+        starts_at = Time.current + 1.day
+        poll1 = create(:poll, starts_at: starts_at, name: "Charlie")
+        poll2 = create(:poll, starts_at: starts_at, name: "Delta")
+        poll3 = Globalize.with_locale(:es) do
+          create(:poll, starts_at: starts_at, name: "Zzz...", name_fr: "Aaaah!")
+        end
+        poll4 = Globalize.with_locale(:es) do
+          create(:poll, starts_at: starts_at, name: "Bravo")
+        end
+
+        expect(Poll.sort_for_list.count).to eq 4
+        expect(Poll.sort_for_list).to eq [poll4, poll1, poll2, poll3]
+      end
+    end
+  end
 end

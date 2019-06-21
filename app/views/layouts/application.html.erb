@@ -18,9 +18,12 @@
   </head>
   <body class="<%= yield (:body_class) %>">
     <%= setting["html.per_page_code_body"].try(:html_safe) %>
-    <%= render "layouts/header" %>
+
+    <h1 class="show-for-sr"><%= setting["org_name"] %></h1>
+
+    <%= render partial: "layouts/header", locals: { with_subnavigation: true } %>
     <section>
-      <h1 class="show-for-sr"><%= setting["org_name"] %></h1>
+
 
       <!--[if lt IE 9]>
       <% if browser.ie? && cookies["ie_alert_closed"] != "true" %>

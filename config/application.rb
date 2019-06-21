@@ -1,4 +1,4 @@
-require File.expand_path("../boot", __FILE__)
+require_relative "boot"
 
 require "rails/all"
 
@@ -21,13 +21,18 @@ module Consul
     config.i18n.default_locale = :en
     available_locales = [
       "ar",
+      "bs",
+      "cs",
+      "da",
       "de",
+      "el",
       "en",
       "es",
       "fa",
       "fr",
       "gl",
       "he",
+      "hr",
       "id",
       "it",
       "nl",
@@ -38,6 +43,7 @@ module Consul
       "sq",
       "so",
       "sv",
+      "tr",
       "val",
       "zh-CN",
       "zh-TW"]
@@ -54,6 +60,7 @@ module Consul
     config.after_initialize { Globalize.set_fallbacks_to_all_available_locales }
 
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.assets.paths << Rails.root.join("vendor", "assets", "fonts")
 
     # Fix for CKEditor assets not being compiled in production mode
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
@@ -76,7 +83,6 @@ module Consul
     config.autoload_paths << "#{Rails.root}/app/controllers/custom"
     config.autoload_paths << "#{Rails.root}/app/models/custom"
     config.paths["app/views"].unshift(Rails.root.join("app", "views", "custom"))
-
     # We want to set up a custom logger which logs to STDOUT.
     # Docker expects your application to log to STDOUT/STDERR and to be ran
     # in the foreground.
@@ -86,6 +92,16 @@ module Consul
   end
 end
 
+class Rails::Engine
+  initializer :prepend_custom_assets_path, group: :all do |app|
+    if self.class.name == "Consul::Application"
+      %w[images fonts javascripts].each do |asset|
+        app.config.assets.paths.unshift(Rails.root.join("app", "assets", asset, "custom").to_s)
+      end
+    end
+  end
+end
+
 if(File.exist?("./config/custom/application_custom.rb"))
   require "./config/custom/application_custom.rb"
-end
+

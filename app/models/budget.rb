@@ -1,10 +1,24 @@
-class Budget < ActiveRecord::Base
+class Budget < ApplicationRecord
 
   include Measurable
   include Sluggable
+  include StatsVersionable
+  include Reportable
 
   translates :name, touch: true
   include Globalizable
+
+  class Translation
+    validate :name_uniqueness_by_budget
+
+    def name_uniqueness_by_budget
+      if Budget.joins(:translations)
+               .where(name: name)
+               .where.not("budget_translations.budget_id": budget_id).any?
+        errors.add(:name, I18n.t("errors.messages.taken"))
+      end
+    end
+  end
 
   CURRENCY_SYMBOLS = %w(€ $ £ ¥).freeze
 
@@ -19,7 +33,14 @@ class Budget < ActiveRecord::Base
   has_many :ballots, dependent: :destroy
   has_many :groups, dependent: :destroy
   has_many :headings, through: :groups
-  has_many :phases, class_name: Budget::Phase
+  has_many :lines, through: :ballots, class_name: "Budget::Ballot::Line"
+  has_many :phases, class_name: "Budget::Phase"
+  has_many :budget_trackers
+  has_many :trackers, through: :budget_trackers
+  has_many :budget_administrators
+  has_many :administrators, through: :budget_administrators
+  has_many :budget_valuators
+  has_many :valuators, through: :budget_valuators
 
   has_one :poll
 
@@ -112,8 +133,12 @@ class Budget < ActiveRecord::Base
     Budget::Phase::PUBLISHED_PRICES_PHASES.include?(phase)
   end
 
+  def valuating_or_later?
+    current_phase&.valuating_or_later?
+  end
+
   def publishing_prices_or_later?
-    publishing_prices? || balloting_or_later?
+    current_phase&.publishing_prices_or_later?
   end
 
   def balloting_process?
@@ -121,7 +146,7 @@ class Budget < ActiveRecord::Base
   end
 
   def balloting_or_later?
-    balloting_process? || finished?
+    current_phase&.balloting_or_later?
   end
 
   def heading_price(heading)
@@ -176,6 +201,10 @@ class Budget < ActiveRecord::Base
     investments.winners.any?
   end
 
+  def milestone_tags
+    investments.winners.map(&:milestone_tag_list).flatten.uniq.sort
+  end
+
   private
 
   def sanitize_descriptions
@@ -201,4 +230,5 @@ class Budget < ActiveRecord::Base
   def generate_slug?
     slug.nil? || drafting?
   end
+
 end

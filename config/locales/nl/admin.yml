@@ -1017,11 +1017,13 @@ nl:
         title: Verborgen meldingen
     proposals:
       index:
-        author: Auteur
-        id: ID
-        milestones: Mijlpalen
-        no_proposals: Geen voorstellen aanwezig
         title: Voorstellen
+        id: ID
+        author: Auteur
+        milestones: Mijlpalen
+        no_proposals: Geen voorstellen aanwezig.
+      show:
+        create_question: Aan peiling koppelen
     questions:
       answers:
         images:
@@ -1232,17 +1234,17 @@ nl:
           notice: Image updated successfully
       pages:
         cards:
-          cards_title: cards
+          cards_title: tegels
           columns_help: Width of the card in number of columns. On mobile screens it's always a width of 100%.
           create:
             notice: Aanmaken
-          create_card: Kaart aanmaken
+          create_card: Tegel aanmaken
           description: Omschrijving
           destroy:
             notice: Verwijderen
           link_text: Tekst link
           link_url: URL link
-          no_cards: There are no cards.
+          no_cards: Er zijn geen tegels.
           title: Titel
           update:
             notice: Bewerken

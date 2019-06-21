@@ -26,8 +26,8 @@
     margin-top: 0;
   }
 
-  .fa-thumbs-up,
-  .fa-thumbs-down {
+  .icon-like,
+  .icon-unlike {
     color: $text-light;
     display: inline-block;
     font-size: rem-calc(30);
@@ -42,7 +42,7 @@
     }
   }
 
-  .fa-thumbs-up {
+  .icon-like {
 
     &:hover,
     &:active {
@@ -50,7 +50,7 @@
     }
   }
 
-  .fa-thumbs-down {
+  .icon-unlike {
 
     &:hover,
     &:active {
@@ -82,24 +82,24 @@
 
   .voted {
 
-    .fa-thumbs-up,
-    .fa-thumbs-down {
+    .icon-like,
+    .icon-unlike {
       color: $budget-text;
     }
 
-    .fa-thumbs-up {
+    .icon-like {
       color: $like;
     }
 
-    .fa-thumbs-down {
+    .icon-unlike {
       color: $unlike;
     }
   }
 
   .no-voted {
 
-    .fa-thumbs-up,
-    .fa-thumbs-down {
+    .icon-like,
+    .icon-unlike {
       opacity: 0.3;
     }
   }
@@ -241,30 +241,29 @@
 .debate-form,
 .proposal-form,
 .budget-investment-form,
-.spending-proposal-form,
 .document-form,
 .topic-new,
 .topic-form {
 
-  .fa-comment-alt,
-  .fa-lightbulb,
-  .fa-hand-holding-heart,
-  .fa-image {
+  .icon-debates,
+  .icon-proposals,
+  .icon-budget,
+  .icon-image {
     font-size: rem-calc(50);
     line-height: $line-height;
     opacity: 0.5;
   }
 
-  .fa-comment-alt {
+  .icon-debates {
     color: $debates;
   }
 
-  .fa-lightbulb,
-  .fa-image {
+  .icon-proposals,
+  .icon-image {
     color: $proposals;
   }
 
-  .fa-hand-holding-heart {
+  .icon-budget {
     color: $budget;
   }
 }
@@ -306,7 +305,8 @@
 .legislation-process-edit,
 .milestone-new,
 .milestone-edit,
-.image-form {
+.image-form,
+.dashboard-action-form {
   @include direct-uploads;
 }
 
@@ -444,7 +444,7 @@
       word-wrap: break-word;
     }
 
-    .fa-file-video {
+    .icon-video {
       color: $file-video;
       display: inline-block;
       font-size: rem-calc(24);
@@ -500,7 +500,7 @@
 
 .show-actions-menu {
 
-  [class^="fa-"] {
+  [class^="icon-"] {
     display: inline-block;
     vertical-align: middle;
   }
@@ -648,24 +648,24 @@
     }
   }
 
-  .fa-comment-alt,
-  .fa-lightbulb,
-  .fa-hand-holding-heart {
+  .icon-debates,
+  .icon-proposals,
+  .icon-budget {
     font-size: rem-calc(18);
     line-height: $line-height;
     margin-left: rem-calc(6);
     top: 0;
   }
 
-  .fa-comment-alt {
+  .icon-debates {
     color: $debates;
   }
 
-  .fa-lightbulb {
+  .icon-proposals {
     color: $proposals-dark;
   }
 
-  .fa-hand-holding-heart {
+  .icon-budget {
     color: $budget;
     font-size: $small-font-size;
   }
@@ -679,7 +679,7 @@
     font-size: $small-font-size;
     margin: rem-calc(6) 0 0;
 
-    .fa-comments {
+    .icon-comments {
       font-size: rem-calc(16);
       vertical-align: top;
     }
@@ -810,7 +810,7 @@
       font-weight: bold;
     }
 
-    .remove .fa-check-circle {
+    .remove .icon-check-circle {
       color: $budget;
       display: block;
       font-size: rem-calc(70);
@@ -868,7 +868,7 @@
     text-transform: uppercase;
   }
 
-  .fa-hand-holding-heart {
+  .icon-budget {
     color: $budget;
     font-size: $small-font-size;
     line-height: $line-height;
@@ -892,6 +892,7 @@
 }
 
 .view-mode {
+
   ul {
     margin-bottom: 0;
 
@@ -1114,10 +1115,12 @@
 
 // 06. Budgets
 // -----------
+
 .expanded {
+
   &.budget {
     .row {
-      background-color: $budget;
+      background: $budget;
     }
     
   }
@@ -1130,7 +1133,7 @@
     p,
     a,
     .back,
-    .fa-caret-left,
+    .icon-angle-left,
     .description {
       color: $budget-text;
     }
@@ -1184,7 +1187,7 @@
   h2,
   h3,
   .back,
-  .fa-caret-left,
+  .icon-angle-left,
   p,
   a {
     color: $budget-text;
@@ -1385,7 +1388,7 @@
       display: block;
       height: 0;
 
-      .fa-times {
+      .icon-x {
         color: #9f9f9f;
         font-size: rem-calc(24);
         line-height: $line-height / 2;
@@ -1411,7 +1414,7 @@
         text-decoration: none;
       }
 
-      .remove-investment-project .fa-times {
+      .remove-investment-project .icon-x {
         color: #fff;
       }
     }

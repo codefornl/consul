@@ -2,6 +2,8 @@
   <%= t("admin.header.title") %> - <%= t("admin.menu.legislation") %> - <%= t("admin.legislation.processes.index.filters.#{@current_filter}") %>
 <% end %>
 
+<h2 class="inline-block"><%= t("admin.legislation.processes.index.title") %></h2>
+
 <%= link_to t("admin.legislation.processes.index.create"), new_admin_legislation_process_path,
             class: "button float-right" %>
 
@@ -9,6 +11,8 @@
 
 <% if @processes.any? %>
   <h3><%= page_entries_info @processes %></h3>
+
+  <a class="small float-right clear" data-open="download-modal"><%= t("admin.legislation.processes.index.link") %></a>
 
   <table class="stack">
     <thead>

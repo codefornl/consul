@@ -62,6 +62,7 @@
     margin: rem-calc(-1) 0;
     min-height: $line-height * 3;
     position: relative;
+    vertical-align: top;
 
     @include breakpoint(large down) {
 
@@ -154,7 +155,7 @@
       font-weight: 700;
       font-size: $small-font-size;
 
-      .fa-comment-alt {
+      .icon-debates {
         margin-left: rem-calc(3);
       }
     }
@@ -169,7 +170,7 @@
     font-size: $small-font-size;
     color: #6d6d6d;
 
-    .fa-comments {
+    .icon-comments {
       margin-right: rem-calc(3);
     }
   }
@@ -238,7 +239,7 @@
       text-transform: uppercase;
       transition: background 0.25s ease-out, background 0.25s ease-out;
 
-      .fa-caret-right {
+      .icon-angle-right {
         vertical-align: middle;
       }
 
@@ -427,11 +428,11 @@
       background: #f2f2f2;
       font-size: $small-font-size;
 
-      .fa-comments {
+      .icon-comments {
         margin-right: rem-calc(4);
       }
 
-      .fa-bookmark {
+      .icon-banner {
         line-height: 0;
         color: $text-medium;
         vertical-align: sub;
@@ -449,6 +450,7 @@
 
       ul {
         list-style: none;
+
         li {
           margin-bottom: rem-calc(16);
         }
@@ -623,11 +625,11 @@
             display: inline-block;
           }
 
-          .fa-comment {
+          .icon-comment {
             margin-right: rem-calc(8);
           }
 
-          a .fa-expand {
+          a .icon-expand {
             color: #838383;
             font-size: $small-font-size;
             float: right;
@@ -669,7 +671,7 @@
             font-size: $small-font-size;
             background: #dfdfdf;
 
-            .fa-lightbulb {
+            .icon-proposals {
               color: #838383;
             }
 
@@ -753,8 +755,8 @@
                 }
               }
 
-              .fa-thumbs-up,
-              .fa-thumbs-down {
+              .icon-like,
+              .icon-unlike {
                 cursor: pointer;
                 color: #c7c7c7;
 
@@ -765,7 +767,7 @@
                 }
               }
 
-              .fa-thumbs-up {
+              .icon-like {
                 margin-right: rem-calc(4);
               }
             }
@@ -819,7 +821,7 @@
         text-decoration: underline;
       }
 
-      .fa-external-link-alt {
+      .icon-external {
         text-decoration: none;
         color: #999;
         line-height: 0;
@@ -857,18 +859,18 @@
         text-decoration: underline;
       }
 
-      .fa-expand,
-      .fa-comments {
+      .icon-expand,
+      .icon-comments {
         text-decoration: none;
         color: #999;
         line-height: 0;
       }
 
-      .fa-expand {
+      .icon-expand {
         margin-left: rem-calc(4);
       }
 
-      .fa-comments {
+      .icon-comments {
         margin-right: rem-calc(4);
       }
 
@@ -905,18 +907,18 @@
         text-decoration: underline;
       }
 
-      .fa-expand,
-      .fa-comments {
+      .icon-expand,
+      .icon-comments {
         text-decoration: none;
         color: #999;
         line-height: 0;
       }
 
-      .fa-expand {
+      .icon-expand {
         margin-left: rem-calc(4);
       }
 
-      .fa-comments {
+      .icon-comments {
         margin-right: rem-calc(4);
       }
 
@@ -950,4 +952,64 @@
     font-size: rem-calc(20);
     margin-top: 0;
   }
+}
+
+.process-proposal {
+  margin-bottom: $line-height;
+
+  .header {
+    background: $highlight;
+    padding: $line-height;
+
+    @include breakpoint(medium) {
+      height: $line-height * 4;
+    }
+  }
+
+  .process-title {
+    font-size: $small-font-size;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  .process-link {
+    font-size: rem-calc(19);
+    font-weight: bold;
+  }
+}
+
+// 10. Legislation resumes
+// -------------------------
+.resume_title {
+  padding-left: 0;
+}
+
+.panel_resume {
+  margin-left: rem-calc(16);
+}
+
+.question_title {
+  margin-bottom: 1.5%;
+}
+
+.comment_box {
+  border-radius: rem-calc(10);
+  padding: 1.5%;
+  background-color: rgba(217, 216, 243, 0.2);
+  margin-bottom: 1%;
+}
+
+.centered_votes {
+  padding: rem-calc(10);
+}
+
+.annotation_text {
+  border: 1px solid $black;
+  padding: rem-calc(10);
+}
+
+.download-button {
+  position: absolute;
+  margin-top: rem-calc(25);
+  margin-left: 85%;
 }

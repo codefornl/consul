@@ -5,15 +5,15 @@
 
     <span class="in_favor">
       <% if can?(:vote, comment) %>
-        <%= link_to vote_comment_path(comment, value: 'yes'),
-            method: "post", remote: true, title: t('votes.agree') do %>
-            <span class="fas fa-thumbs-up fa-fw">
-              <span class="show-for-sr"><%= t('votes.agree') %></span>
+        <%= link_to vote_comment_path(comment, value: "yes"),
+            method: "post", remote: true, title: t("votes.agree") do %>
+            <span class="icon-like">
+              <span class="show-for-sr"><%= t("votes.agree") %></span>
             </span>
         <% end %>
       <% else %>
         <%= link_to new_user_session_path do %>
-          <span class="fas fa-thumbs-up fa-fw">
+          <span class="icon-like">
             <span class="show-for-sr"><%= t("votes.agree") %></span>
           </span>
         <% end %>
@@ -25,13 +25,13 @@
       <% if can?(:vote, comment) %>
         <%= link_to vote_comment_path(comment, value: "no"),
             method: "post", remote: true, title: t("votes.disagree") do %>
-            <span class="fas fa-thumbs-down fa-fw">
+            <span class="icon-unlike">
               <span class="show-for-sr"><%= t("votes.disagree") %></span>
             </span>
         <% end %>
       <% else %>
-        <span class="fas fa-thumbs-down fa-fw">
-          <span class="show-for-sr"><%= t('votes.disagree') %></span>
+        <span class="icon-unlike">
+          <span class="show-for-sr"><%= t("votes.disagree") %></span>
         </span>
       <% end %>
       <%= comment.total_dislikes %>
@@ -47,13 +47,13 @@
         <% if can?(:vote, comment) %>
           <%= link_to vote_comment_path(comment, value: "yes"),
               method: "post", remote: true, title: t("votes.agree") do %>
-              <span class="fas fa-thumbs-up fa-fw">
+              <span class="icon-like">
                 <span class="show-for-sr"><%= t("votes.agree") %></span>
               </span>
           <% end %>
         <% else %>
           <%= link_to new_user_session_path do %>
-            <span class="fas fa-thumbs-up fa-fw">
+            <span class="icon-like">
               <span class="show-for-sr"><%= t("votes.agree") %></span>
             </span>
           <% end %>
@@ -65,13 +65,13 @@
         <% if can?(:vote, comment) %>
           <%= link_to vote_comment_path(comment, value: "no"),
               method: "post", remote: true, title: t("votes.disagree") do %>
-              <span class="fas fa-thumbs-down fa-fw">
+              <span class="icon-unlike">
                 <span class="show-for-sr"><%= t("votes.disagree") %></span>
               </span>
           <% end %>
         <% else %>
           <%= link_to new_user_session_path do %>
-            <span class="fas fa-thumbs-down fa-fw">
+            <span class="icon-unlike">
               <span class="show-for-sr"><%= t("votes.disagree") %></span>
             </span>
           <% end %>

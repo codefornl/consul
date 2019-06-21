@@ -1,4 +1,4 @@
-class Legislation::Question < ActiveRecord::Base
+class Legislation::Question < ApplicationRecord
   acts_as_paranoid column: :hidden_at
   include ActsAsParanoidAliases
   include Notifiable
@@ -43,5 +43,12 @@ class Legislation::Question < ActiveRecord::Base
 
   def comments_open?
     process.debate_phase.open?
+  end
+
+  def best_comments(number)
+    Comment.where(commentable_id: id)
+      .where(commentable_type: "Legislation::Question")
+      .order("cached_votes_up - cached_votes_down DESC")
+      .take(number)
   end
 end

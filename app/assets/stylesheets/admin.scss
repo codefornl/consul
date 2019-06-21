@@ -36,6 +36,10 @@ $sidebar-active: #f4fcd0;
     }
   }
 
+  .back {
+    float: none;
+  }
+
   .header {
     border: 0;
   }
@@ -92,12 +96,12 @@ $sidebar-active: #f4fcd0;
         }
       }
 
-      [class^="fa-"] {
+      [class^="icon-"] {
         display: none;
       }
     }
 
-    [class^="fa-"]:not(.fa-circle) {
+    [class^="icon-"]:not(.icon-circle) {
       font-size: $base-font-size;
     }
   }
@@ -162,7 +166,7 @@ $sidebar-active: #f4fcd0;
     }
   }
 
-  .notifications .fa-circle {
+  .notifications .icon-circle {
     color: $admin-color;
   }
 
@@ -291,7 +295,7 @@ $sidebar-active: #f4fcd0;
 }
 
 .admin-content {
-  overflow: auto;
+  overflow: scroll;
   padding: $line-height !important;
 }
 
@@ -396,6 +400,15 @@ code {
   word-break: break-all;
 }
 
+.content-type {
+  white-space: nowrap;
+  padding-right: $line-height;
+
+  label {
+    margin-left: 0 !important;
+  }
+}
+
 // 02. Sidebar
 // -----------
 
@@ -414,7 +427,7 @@ code {
     margin-left: 0;
     padding: 0;
 
-    [class^="fa-"] {
+    [class^="icon-"] {
       color: #fff;
       display: inline-block;
       font-size: rem-calc(24);
@@ -447,6 +460,7 @@ code {
     display: block;
     line-height: rem-calc(48);
     padding-left: rem-calc(12);
+    vertical-align: top;
 
     &:hover {
       background: $sidebar-hover;
@@ -456,6 +470,7 @@ code {
   }
 
   .is-accordion-submenu-parent {
+
     > a::after {
       border: 0;
       font-style: normal;
@@ -515,7 +530,7 @@ code {
   }
 }
 
-[class^="fa-"].delete {
+[class^="icon-"].delete {
   border: 0;
   font-size: $base-font-size;
 }
@@ -576,6 +591,17 @@ code {
   }
 }
 
+.log-value {
+  max-height: rem-calc(65);
+  overflow: hidden;
+  max-width: rem-calc(200);
+
+  &:hover {
+    max-height: rem-calc(1000);
+    transition: max-height 0.9s;
+  }
+}
+
 // 04. Stats
 // ---------
 
@@ -623,11 +649,11 @@ code {
       font-size: rem-calc(12);
     }
 
-    .fa-check {
+    .icon-check {
       color: $check;
     }
 
-    .fa-times {
+    .icon-x {
       color: $delete;
     }
   }
@@ -756,6 +782,10 @@ code {
   font-weight: bold;
 }
 
+.hidden {
+  display: none;
+}
+
 table {
 
   .callout {
@@ -829,7 +859,7 @@ table {
 // --------------
 .cms-page-list {
 
-  [class^="fa-"] {
+  [class^="icon-"] {
     padding-right: $menu-icon-spacing;
     vertical-align: middle;
   }
@@ -911,7 +941,7 @@ table {
       text-decoration: underline;
     }
 
-    .fa-times {
+    .icon-x {
       vertical-align: sub;
       text-decoration: none;
       line-height: 0;
@@ -1040,7 +1070,7 @@ table {
       font-size: $small-font-size;
     }
 
-    .fa-expand {
+    .icon-expand {
       margin-left: 0.25rem;
       vertical-align: sub;
       text-decoration: none;
@@ -1235,6 +1265,44 @@ table {
       color: #000;
       content: "\76";
     }
+  }
+}
+
+.columns-selector {
+
+  span[class^="icon-"] {
+    vertical-align: middle;
+  }
+}
+
+.columns-selector-wrapper {
+  background: $light-gray;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+
+  &.hidden {
+    display: none;
+  }
+
+  .column-selector-item {
+    display: inline-block;
+
+    &.hidden {
+      display: none;
+    }
+
+    label {
+      font-size: 17px;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+.column-selecteable {
+
+  .hidden {
+    display: none;
   }
 }
 

@@ -12,10 +12,13 @@
   </td>
   <td class="text-right">
     <%= link_to edit_admin_poll_path(poll) do %>
-      <i class="fas fa-pencil-alt" title="<%= t("admin.actions.edit") %>"></i>
+      <i class="icon-edit" title="<%= t("admin.actions.edit") %>"></i>
+    <% end %>
+    <%= link_to admin_poll_path(poll), method: delete, "data-confirm": t("admin.polls.destroy.alert") do %>
+      <i class="icon-edit" title="<%= t("admin.actions.delete") %>"></i>
     <% end %>
     <%= link_to admin_poll_path(poll) do %>
-      <i class="fas fa-cog" title="<%= t("admin.actions.configure") %>"></i>
+      <i class="icon-settings" title="<%= t("admin.actions.configure") %>"></i>
     <% end %>
   </td>
 </tr>

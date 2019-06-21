@@ -37,13 +37,13 @@
       <td><%= organization.responsible_name %></td>
       <td>
         <% if organization.verified? %>
-          <span class="fas fa-check"></span>
+          <span class="icon-check"></span>
           <%= t("admin.organizations.index.verified") %>
         <% elsif organization.rejected? %>
-          <span class="fas fa-times rejected"></span>
+          <span class="icon-x rejected"></span>
           <%= t("admin.organizations.index.rejected") %>
         <% else %>
-          <span class="fas fa-eye"></span>
+          <span class="icon-eye"></span>
           <%= t("admin.organizations.index.pending") %>
         <% end %>
       </td>

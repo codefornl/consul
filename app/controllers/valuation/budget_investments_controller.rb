@@ -61,11 +61,11 @@ class Valuation::BudgetInvestmentsController < Valuation::BaseController
     end
 
     def resource_name
-      resource_model.parameterize("_")
+      resource_model.parameterize(separator: "_")
     end
 
     def load_budget
-      @budget = Budget.find(params[:budget_id])
+      @budget = Budget.find_by_slug_or_id! params[:budget_id]
     end
 
     def load_investment
@@ -75,9 +75,7 @@ class Valuation::BudgetInvestmentsController < Valuation::BaseController
     def heading_filters
       investments = @budget.investments.by_valuator(current_user.valuator.try(:id))
                                        .visible_to_valuators.distinct
-      investment_headings = Budget::Heading.joins(:translations)
-                                           .where(id: investments.pluck(:heading_id).uniq)
-                                           .order(name: :asc)
+      investment_headings = Budget::Heading.where(id: investments.pluck(:heading_id)).sort_by(&:name)
 
       all_headings_filter = [
                               {
@@ -97,8 +95,8 @@ class Valuation::BudgetInvestmentsController < Valuation::BaseController
     end
 
     def params_for_current_valuator
-      Budget::Investment.filter_params(params).merge(valuator_id: current_user.valuator.id,
-                                                     budget_id: @budget.id)
+      Budget::Investment.filter_params(params).to_h.merge({ valuator_id: current_user.valuator.id,
+                                                            budget_id: @budget.id })
     end
 
     def valuation_params

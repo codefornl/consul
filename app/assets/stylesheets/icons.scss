@@ -1,0 +1,307 @@
+.icon-angle-down {
+  @extend .fas, .fa-fw, .fa-caret-down !optional;
+}
+.icon-angle-left {
+  @extend .fas, .fa-fw, .fa-caret-left !optional;
+}
+
+.icon-angle-right {
+  @extend .fas, .fa-fw, .fa-caret-right !optional;
+}
+
+.icon-angle-up {
+  @extend .fas, .fa-fw, .fa-caret-up !optional;
+}
+
+.icon-trash {
+  @extend .fas, .fa-fw, .fa-trash !optional;
+}
+.icon-comments {
+  @extend .far, .fa-fw, .fa-comments !optional;
+}
+
+.icon-twitter {
+  @extend .fab, .fa-fw, .fa-twitter !optional;
+}
+
+.icon-calendar::before {
+  content: "\67";
+}
+
+.icon-debates {
+  @extend .fas, .fa-fw, .fa-comment-alt !optional;
+}
+
+.icon-unlike {
+  @extend .fas, .fa-fw, .fa-thumbs-down !optional;
+}
+
+.icon-like {
+  @extend .fas, .fa-fw, .fa-thumbs-up !optional;
+}
+
+.icon-check {
+  @extend .fas, .fa-fw, .fa-check !optional;
+}
+
+.icon-edit {
+  @extend .fas, .fa-fw, .fa-pencil-alt !optional;
+}
+
+.icon-user {
+  @extend .fas, .fa-fw, .fa-user !optional;
+}
+
+.icon-settings {
+  @extend .fas, .fa-fw, .fa-cog !optional;
+}
+
+.icon-stats {
+  @extend .fas, .fa-fw, .fa-chart-line !optional;
+}
+
+.icon-proposals {
+  @extend .fas, .fa-fw, .fa-lightbulb !optional;
+}
+
+.icon-proposal-notifications {
+  @extend .fas, .fa-fw, .fa-sticky-note !optional;
+}
+
+.icon-delete {
+  @extend .fas, .fa-fw, .fa-trash-alt !optional;
+}
+
+.icon-organizations {
+  @extend .fas, .fa-fw, .fa-users !optional;
+}
+
+.icon-deleted {
+  @extend .fas, .fa-fw, .fa-user-times !optional;
+}
+
+.icon-tag::before {
+  content: "\75";
+}
+
+.icon-eye {
+  @extend .fas, .fa-fw, .fa-eye !optional;
+}
+
+.icon-x::before {
+  @extend .fas, .fa-fw, .fa-times !optional;
+}
+
+.icon-flag {
+  @extend .fas, .fa-fw, .fa-flag !optional;
+}
+
+.icon-comment {
+  @extend .fas, .fa-fw, .fa-comment !optional;
+}
+
+.icon-reply::before {
+  content: "\7a";
+}
+
+.icon-facebook {
+  @extend .fab, .fa-fw, .fa-facebook !optional;
+}
+
+.icon-wordpress {
+  @extend .fab, .fa-fw, .fa-wordpress !optional;
+}
+
+.icon-google-plus::before {
+  content: "\42";
+}
+
+.icon-search::before {
+  content: "\45";
+}
+
+.icon-link {
+  @extend .fas, .fa-fw, .fa-link !optional;
+}
+
+.icon-unlink {
+  @extend .fas, .fa-fw, .fa-unlink !optional;
+}
+
+.icon-external {
+  @extend .fas, .fa-fw, .fa-external-link-alt !optional;
+}
+
+.icon-video {
+  @extend .fas, .fa-fw, .fa-file-video !optional;
+}
+
+.icon-document {
+  @extend .fas, .fa-fw, .fa-file !optional;
+}
+
+.icon-print {
+  @extend .fas, .fa-fw, .fa-print !optional;
+}
+
+.icon-blog::before {
+  content: "\4a";
+}
+
+.icon-box {
+  @extend .fas, .fa-fw, .fa-person-booth !optional;
+}
+
+.icon-youtube {
+  @extend .fab, .fa-fw, .fa-youtube !optional;
+}
+
+.icon-letter {
+  @extend .fas, .fa-fw, .fa-envelope !optional;
+}
+
+.icon-circle {
+  @extend .fas, .fa-fw, .fa-circle !optional;
+}
+
+.icon-circle-o::before {
+  content: "\4d";
+}
+
+.icon-help {
+  @extend .fas, .fa-fw, .fa-question !optional;
+}
+
+.icon-budget {
+  @extend .fas, .fa-fw, .fa-hand-holding-heart !optional;
+}
+
+.icon-notification {
+  @extend .fas, .fa-fw, .fa-bell !optional;
+}
+
+.icon-no-notification {
+  @extend .far, .fa-fw, .fa-bell !optional;
+}
+
+.icon-whatsapp {
+  @extend .fab, .fa-fw, .fa-whatsapp !optional;
+}
+
+.icon-zip {
+  @extend .fas, .fa-fw, .fa-comment !optional;
+}
+
+.icon-banner {
+  @extend .fas, .fa-fw, .fa-bookmark !optional;
+}
+
+.icon-arrow-down {
+  @extend .fas, .fa-fw, .fa-arrow-down !optional;
+}
+
+.icon-arrow-left::before {
+  content: "\54";
+}
+
+.icon-arrow-right::before {
+  content: "\55";
+}
+
+.icon-check-circle {
+  @extend .fas, .fa-fw, .fa-check-circle !optional;
+}
+
+.icon-arrow-top::before {
+  content: "\57";
+}
+
+.icon-checkmark-circle {
+  @extend .fas, .fa-fw, .fa-check-square !optional;
+}
+
+.icon-minus-square::before {
+  content: "\58";
+}
+
+.icon-plus-square::before {
+  content: "\5a";
+}
+
+.icon-expand {
+  @extend .fas, .fa-fw, .fa-expand !optional;
+}
+
+.icon-telegram {
+  @extend .fab, .fa-fw, .fa-telegram !optional;
+}
+
+.icon-instagram {
+  @extend .fab, .fa-fw, .fa-instagram !optional;
+}
+
+.icon-image {
+  @extend .fas, .fa-fw, .fa-image !optional;
+}
+
+.icon-search-plus {
+  @extend .fas, .fa-fw, .fa-search-plus !optional;
+}
+
+.icon-search-minus {
+  @extend .fas, .fa-fw, .fa-search-minus !optional;
+}
+
+.icon-calculator::before {
+  content: "\36";
+}
+
+.icon-map-marker::before {
+  content: "\37";
+}
+
+.icon-user-plus::before {
+  content: "\38";
+}
+
+.icon-file-text-o {
+  @extend .far, .fa-fw, .fa-file-alt !optional;
+}
+
+.icon-file-text {
+  @extend .fas, .fa-fw, .fa-file-alt !optional;
+}
+
+.icon-bars::before {
+  content: "\22";
+}
+
+.icon-quote-before::before {
+  content: "";
+  background-size: cover;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-image: url("quote_before_blue.png");
+  background-repeat: no-repeat;
+}
+
+.icon-quote-after::before {
+  content: "";
+  background-size: cover;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-image: url("quote_after_blue.png");
+  background-repeat: no-repeat;
+}
+
+.icon-finger::before {
+  content: "";
+  background-size: cover;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("finger.png");
+  background-repeat: no-repeat;
+}

@@ -3,6 +3,9 @@ require "application_responder"
 class ApplicationController < ActionController::Base
   include HasFilters
   include HasOrders
+  include AccessDeniedHandler
+
+  protect_from_forgery with: :exception
 
   before_action :authenticate_http_basic, if: :http_basic_auth_site?
 
@@ -10,30 +13,17 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
   before_action :track_email_campaign
   before_action :set_return_url
-  before_filter :make_action_mailer_use_request_host_and_protocol
+  before_action :set_current_user
+  before_action :set_fallbacks_to_all_available_locales
 
   check_authorization unless: :devise_controller?
   self.responder = ApplicationResponder
-
-  protect_from_forgery with: :exception
-
-  rescue_from CanCan::AccessDenied do |exception|
-    respond_to do |format|
-      format.html { redirect_to main_app.root_url, alert: exception.message }
-      format.json { render json: {error: exception.message}, status: :forbidden }
-    end
-  end
 
   layout :set_layout
   respond_to :html
   helper_method :current_budget
 
   private
-    def make_action_mailer_use_request_host_and_protocol
-      ApplicationMailer.default_url_options[:protocol] = request.protocol
-      ApplicationMailer.default_url_options[:host] = request.host_with_port
-      ApplicationMailer.asset_host = request.protocol + request.host_with_port
-    end
 
     def authenticate_http_basic
       authenticate_or_request_with_http_basic do |username, password|
@@ -65,7 +55,7 @@ class ApplicationController < ActionController::Base
       end
       # Can throw a set_locale error when the language set in a cookie is not/no longer available.
       begin
-        I18n.locale = "pt" #locale
+        I18n.locale = locale
       rescue => exception
         session[:locale] ||= I18n.default_locale
         I18n.locale = locale
@@ -87,10 +77,6 @@ class ApplicationController < ActionController::Base
 
     def set_proposal_votes(proposals)
       @proposal_votes = current_user ? current_user.proposal_votes(proposals) : {}
-    end
-
-    def set_spending_proposal_votes(spending_proposals)
-      @spending_proposal_votes = current_user ? current_user.spending_proposal_votes(spending_proposals) : {}
     end
 
     def set_comment_flags(comments)
@@ -138,5 +124,13 @@ class ApplicationController < ActionController::Base
 
     def current_budget
       Budget.current
+    end
+
+    def set_current_user
+      User.current_user = current_user
+    end
+
+    def set_fallbacks_to_all_available_locales
+      Globalize.set_fallbacks_to_all_available_locales
     end
 end

@@ -1,22 +1,26 @@
 require "rails_helper"
 
-feature "Proposal Notifications" do
+describe "Proposal Notifications" do
 
   scenario "Send a notification" do
     author = create(:user)
-    proposal = create(:proposal, author: author)
+    create(:proposal, author: author)
 
     login_as(author)
     visit root_path
 
-    click_link "My activity"
+    click_link "My content"
+    click_link "Dashboard"
 
-    within("#proposal_#{proposal.id}") do
-      click_link "Send notification"
+    within("#side_menu") do
+      click_link "Message to users"
     end
 
+    click_link "Send message to proposal supporters"
+
     fill_in "proposal_notification_title", with: "Thank you for supporting my proposal"
-    fill_in "proposal_notification_body", with: "Please share it with others so we can make it happen!"
+    fill_in "proposal_notification_body", with: "Please share it with "\
+                                                "others so we can make it happen!"
     click_button "Send message"
 
     expect(page).to have_content "Your message has been sent correctly."
@@ -91,9 +95,12 @@ feature "Proposal Notifications" do
 
   scenario "Show notifications" do
     proposal = create(:proposal)
-    notification1 = create(:proposal_notification, proposal: proposal, title: "Hey guys", body: "Just wanted to let you know that...")
-    notification2 = create(:proposal_notification, proposal: proposal, title: "Another update",
-                                                   body: "We are almost there please share with your peoples!")
+    _notification1 = create(:proposal_notification,
+                             proposal: proposal, title: "Hey guys",
+                             body: "Just wanted to let you know that...")
+    _notification2 = create(:proposal_notification,
+                             proposal: proposal, title: "Another update",
+                             body: "We are almost there please share with your peoples!")
 
     visit proposal_path(proposal)
 
@@ -170,23 +177,24 @@ feature "Proposal Notifications" do
   context "Permissions" do
 
     scenario "Link to send the message" do
-      user = create(:user)
+      _user = create(:user)
       author = create(:user)
       proposal = create(:proposal, author: author)
 
       login_as(author)
-      visit user_path(author)
+      visit root_path
+
+      click_link "My content"
 
       within("#proposal_#{proposal.id}") do
-        expect(page).to have_link "Send notification"
+        click_link "Dashboard"
       end
 
-      login_as(user)
-      visit user_path(author)
-
-      within("#proposal_#{proposal.id}") do
-        expect(page).not_to have_link "Send message"
+      within("#side_menu") do
+        click_link "Message to users"
       end
+
+      expect(page).to have_link "Send message to proposal supporters"
     end
 
     scenario "Accessing form directly" do
@@ -223,7 +231,8 @@ feature "Proposal Notifications" do
       visit new_proposal_notification_path(proposal_id: proposal.id)
 
       fill_in "proposal_notification_title", with: "Thank you for supporting my proposal"
-      fill_in "proposal_notification_body", with: "Please share it with others so we can make it happen!"
+      fill_in "proposal_notification_body", with: "Please share it with "\
+                                                  "others so we can make it happen!"
       click_button "Send message"
 
       expect(page).to have_content "Your message has been sent correctly."
@@ -233,7 +242,7 @@ feature "Proposal Notifications" do
       visit root_path
       visit root_path
 
-      find(".fa-bell").click
+      find(".icon-notification").click
 
       notification_for_user1 = Notification.where(user: user1).first
       expect(page).to have_css ".notification", count: 1
@@ -245,7 +254,7 @@ feature "Proposal Notifications" do
       visit root_path
       visit root_path
 
-      find(".fa-bell").click
+      find(".icon-notification").click
 
       notification_for_user2 = Notification.where(user: user2).first
       expect(page).to have_css ".notification", count: 1
@@ -257,7 +266,7 @@ feature "Proposal Notifications" do
       visit root_path
       visit root_path
 
-      find(".fa-bell-slash").click
+      find(".icon-no-notification").click
 
       expect(page).to have_css ".notification", count: 0
     end
@@ -280,7 +289,8 @@ feature "Proposal Notifications" do
       visit new_proposal_notification_path(proposal_id: proposal.id)
 
       fill_in "proposal_notification_title", with: "Thank you for supporting my proposal"
-      fill_in "proposal_notification_body", with: "Please share it with others so we can make it happen!"
+      fill_in "proposal_notification_body", with: "Please share it with "\
+                                                  "others so we can make it happen!"
       click_button "Send message"
 
       expect(page).to have_content "Your message has been sent correctly."
@@ -289,7 +299,7 @@ feature "Proposal Notifications" do
       login_as user1.reload
       visit root_path
 
-      find(".fa-bell").click
+      find(".icon-notification").click
 
       notification_for_user1 = Notification.where(user: user1).first
       expect(page).to have_css ".notification", count: 1
@@ -300,7 +310,7 @@ feature "Proposal Notifications" do
       login_as user2.reload
       visit root_path
 
-      find(".fa-bell").click
+      find(".icon-notification").click
 
       notification_for_user2 = Notification.where(user: user2).first
       expect(page).to have_css ".notification", count: 1
@@ -311,7 +321,7 @@ feature "Proposal Notifications" do
       login_as user3.reload
       visit root_path
 
-      find(".fa-bell-slash").click
+      find(".icon-no-notification").click
 
       expect(page).to have_css ".notification", count: 0
     end
@@ -330,7 +340,8 @@ feature "Proposal Notifications" do
       visit new_proposal_notification_path(proposal_id: proposal.id)
 
       fill_in "proposal_notification_title", with: "Thank you for supporting my proposal"
-      fill_in "proposal_notification_body", with: "Please share it with others so we can make it happen!"
+      fill_in "proposal_notification_body", with: "Please share it with "\
+                                                  "others so we can make it happen!"
       click_button "Send message"
 
       expect(page).to have_content "Your message has been sent correctly."
@@ -342,7 +353,7 @@ feature "Proposal Notifications" do
       visit root_path
       visit root_path
 
-      find(".fa-bell").click
+      find(".icon-notification").click
 
       notification_for_user = Notification.where(user: user).first
       expect(page).to have_css ".notification", count: 1
@@ -366,7 +377,7 @@ feature "Proposal Notifications" do
 
     context "Group notifications" do
 
-      background do
+      before do
         Setting[:proposal_notification_minimum_interval_in_days] = 0
       end
 
@@ -398,8 +409,10 @@ feature "Proposal Notifications" do
         login_as user.reload
         visit root_path
 
-        within("#notifications") { expect(page).to have_content :all, "You have 3 new notifications" }
-        find(".fa-bell").click
+        within("#notifications") {
+          expect(page).to have_content :all, "You have 3 new notifications"
+        }
+        find(".icon-notification").click
 
         expect(page).to have_css ".notification", count: 3
         expect(page).to have_content "There is one new notification on #{proposal.title}", count: 3

@@ -1,11 +1,14 @@
 require "numeric"
-class Debate < ActiveRecord::Base
+require "csv"
+
+class Debate < ApplicationRecord
   include Rails.application.routes.url_helpers
   include Flaggable
   include Taggable
   include Conflictable
   include Measurable
   include Sanitizable
+  include Searchable
   include Filterable
   include HasPublicAuthor
   include Graphqlable
@@ -20,6 +23,9 @@ class Debate < ActiveRecord::Base
   belongs_to :author, -> { with_hidden }, class_name: "User", foreign_key: "author_id"
   belongs_to :geozone
   has_many :comments, as: :commentable
+
+  extend DownloadSettings::DebateCsv
+  delegate :name, :email, to: :author, prefix: true
 
   validates :title, presence: true
   validates :description, presence: true
@@ -68,7 +74,6 @@ class Debate < ActiveRecord::Base
   end
 
   def self.search(terms)
-    include Searchable
     pg_search(terms)
   end
 

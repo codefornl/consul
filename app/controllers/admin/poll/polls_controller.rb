@@ -1,6 +1,7 @@
 class Admin::Poll::PollsController < Admin::Poll::BaseController
   include Translatable
   include ImageAttributes
+  include ReportAttributes
   load_and_authorize_resource
 
   before_action :load_search, only: [:search_booths, :search_officers]
@@ -8,13 +9,11 @@ class Admin::Poll::PollsController < Admin::Poll::BaseController
 
   def index
     @title = I18n.t("admin.menu.polls")
-    @polls = Poll.not_budget.order(starts_at: :desc)
+    @polls = Poll.not_budget.created_by_admin.order(starts_at: :desc)
   end
 
   def show
-    @poll = Poll.includes(:questions).
-                          order("poll_questions.title").
-                          find(params[:id])
+    @poll = Poll.find(params[:id])
   end
 
   def new
@@ -62,6 +61,16 @@ class Admin::Poll::PollsController < Admin::Poll::BaseController
     @polls = Poll.current
   end
 
+  def destroy
+    if ::Poll::Voter.where(poll: @poll).any?
+      redirect_to admin_poll_path(@poll), alert: t("admin.polls.destroy.unable_notice")
+    else
+      @poll.destroy
+
+      redirect_to admin_polls_path, notice: t("admin.polls.destroy.success_notice")
+    end
+  end
+
   private
 
     def load_geozones
@@ -69,10 +78,10 @@ class Admin::Poll::PollsController < Admin::Poll::BaseController
     end
 
     def poll_params
-      attributes = [:name, :starts_at, :ends_at, :geozone_restricted, :results_enabled,
-                    :stats_enabled, :budget_id, geozone_ids: [],
-                    image_attributes: image_attributes]
-      params.require(:poll).permit(*attributes, translation_params(Poll))
+      attributes = [:name, :starts_at, :ends_at, :geozone_restricted, :budget_id,
+                    geozone_ids: [], image_attributes: image_attributes]
+
+      params.require(:poll).permit(*attributes, *report_attributes, translation_params(Poll))
     end
 
     def search_params
