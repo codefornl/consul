@@ -36,6 +36,10 @@ $sidebar-active: #f4fcd0;
     }
   }
 
+  .back {
+    float: none;
+  }
+
   .header {
     border: 0;
   }
@@ -92,12 +96,12 @@ $sidebar-active: #f4fcd0;
         }
       }
 
-      [class^="fa-"] {
+      [class^="icon-"] {
         display: none;
       }
     }
 
-    [class^="fa-"]:not(.fa-circle) {
+    [class^="icon-"]:not(.icon-circle) {
       font-size: $base-font-size;
     }
   }
@@ -162,7 +166,7 @@ $sidebar-active: #f4fcd0;
     }
   }
 
-  .notifications .fa-circle {
+  .notifications .icon-circle {
     color: $admin-color;
   }
 
@@ -414,7 +418,7 @@ code {
     margin-left: 0;
     padding: 0;
 
-    [class^="fa-"] {
+    [class^="icon-"] {
       color: #fff;
       display: inline-block;
       font-size: rem-calc(24);
@@ -515,7 +519,7 @@ code {
   }
 }
 
-[class^="fa-"].delete {
+[class^="icon-"].delete {
   border: 0;
   font-size: $base-font-size;
 }
@@ -623,11 +627,11 @@ code {
       font-size: rem-calc(12);
     }
 
-    .fa-check {
+    .icon-check {
       color: $check;
     }
 
-    .fa-times {
+    .icon-x {
       color: $delete;
     }
   }
@@ -829,7 +833,7 @@ table {
 // --------------
 .cms-page-list {
 
-  [class^="fa-"] {
+  [class^="icon-"] {
     padding-right: $menu-icon-spacing;
     vertical-align: middle;
   }
@@ -911,7 +915,7 @@ table {
       text-decoration: underline;
     }
 
-    .fa-times {
+    .icon-x {
       vertical-align: sub;
       text-decoration: none;
       line-height: 0;
@@ -1040,7 +1044,7 @@ table {
       font-size: $small-font-size;
     }
 
-    .fa-expand {
+    .icon-expand {
       margin-left: 0.25rem;
       vertical-align: sub;
       text-decoration: none;

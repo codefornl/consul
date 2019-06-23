@@ -3,7 +3,7 @@
     <% if feature?(:proposals) %>
       <li class="section-title">
         <%= link_to admin_proposals_path do %>
-          <i class="fas fa-lightbulb fa-fw"></i>
+          <span class="icon-proposals"></span>
           <strong><%= t("admin.menu.proposals") %></strong>
         <% end %>
       </li>
@@ -12,7 +12,7 @@
     <% if feature?(:polls) %>
       <li class="section-title <%= "is-active" if menu_polls? %>">
         <%= link_to admin_polls_path do %>
-          <i class="fas fa-check-square fa-fw"></i>
+          <i class="icon-checkmark-circle"></i>
           <strong><%= t("admin.menu.polls") %></strong>
         <% end %>
       </li>
@@ -21,7 +21,7 @@
     <% if feature?(:legislation) %>
       <li class="section-title <%= "is-active" if controller.class.parent == Admin::Legislation %>">
         <%= link_to admin_legislation_processes_path do %>
-          <i class="fas fa-file-alt fa-fw"></i>
+          <span class="icon-file-text"></span>
           <strong><%= t("admin.menu.legislation") %></strong>
         <% end %>
       </li>
@@ -30,7 +30,7 @@
     <% if feature?(:budgets) %>
       <li class="section-title <%= "is-active" if menu_budgets? %>">
         <%= link_to admin_budgets_path do %>
-          <i class="fas fa-chart-pie fa-fw"></i>
+          <span class="icon-budget"></span>
           <strong><%= t("admin.menu.budgets") %></strong>
         <% end %>
       </li>
@@ -38,7 +38,7 @@
 
     <li class="section-title">
       <a href="#">
-        <i class="fas fa-person-booth fa-fw"></i> 
+        <span class="icon-box"></span>
         <strong><%= t("admin.menu.title_booths") %></strong>
       </a>
       <ul id="booths_menu" <%= "class=is-active" if menu_booths? || controller_name == "polls" && action_name == "booth_assignments" %>>
@@ -65,19 +65,10 @@
       </ul>
     </li>
 
-    <% if feature?(:signature_sheets) %>
-      <li class="section-title <%= "is-active" if controller_name == "signature_sheets" %>">
-        <%= link_to admin_signature_sheets_path do %>
-          <i class="far fa-file-alt fa-fw"></i>
-          <strong><%= t("admin.menu.signature_sheets") %></strong>
-        <% end %>
-      </li>
-    <% end %>
-
     <% if feature?(:spending_proposals) %>
       <li class="section-title">
         <a href="#">
-          <i class="fas fa-credit-card fa-fw"></i>
+          <span class="icon-budget"></span>
           <strong><%= t("admin.menu.title_budgets") %></strong>
         </a>
         <ul <%= "class=is-active" if menu_budget? %>>
@@ -92,7 +83,8 @@
     <% messages_menu_active = messages_sections.include?(controller_name) %>
     <li class="section-title" <%= "class=is-active" if messages_menu_active %>>
       <a href="#">
-        <i class="fas fa-comment fa-fw"></i> <strong><%= t("admin.menu.messaging_users") %></strong>
+        <span class="icon-zip"></span>
+        <strong><%= t("admin.menu.messaging_users") %></strong>
       </a>
       <ul id="messaging_users_menu" <%= "class=is-active" if messages_menu_active %>>
         <li <%= "class=is-active" if controller_name == "newsletters" %>>
@@ -112,7 +104,8 @@
 
     <li class="section-title">
       <a href="#">
-        <i class="fas fa-marker fa-fw"></i> <strong><%= t("admin.menu.title_site_customization") %></strong>
+        <span class="icon-edit"></span>
+        <strong><%= t("admin.menu.title_site_customization") %></strong>
       </a>
       <ul <%= "class=is-active" if menu_customization? &&
                                    controller.class.parent != Admin::Poll::Questions::Answers %>>
@@ -135,11 +128,19 @@
       </ul>
     </li>
 
-    
+    <% if feature?(:signature_sheets) %>
+      <li class="section-title <%= "is-active" if controller_name == "signature_sheets" %>">
+        <%= link_to admin_signature_sheets_path do %>
+          <span class="icon-file-text-o"></span>
+          <strong><%= t("admin.menu.signature_sheets") %></strong>
+        <% end %>
+      </li>
+    <% end %>
 
     <li class="section-title">
       <a href="#">
-        <i class="fas fa-eye fa-fw"></i> <strong><%= t("admin.menu.title_moderated_content") %></strong>
+        <span class="icon-eye"></span>
+        <strong><%= t("admin.menu.title_moderated_content") %></strong>
       </a>
       <ul <%= "class=is-active" if menu_moderated_content? %>>
         <% if feature?(:proposals) %>
@@ -180,7 +181,8 @@
 
     <li class="section-title">
       <a href="#">
-        <i class="fas fa-users fa-fw"></i> <strong><%= t("admin.menu.title_profiles") %></strong>
+        <span class="icon-organizations"></span>
+        <strong><%= t("admin.menu.title_profiles") %></strong>
       </a>
       <ul <%= "class=is-active" if menu_profiles? %>>
         <li <%= "class=is-active" if controller_name == "administrators" %>>
@@ -215,13 +217,14 @@
 
     <li class="section-title" <%= "class=is-active" if controller_name == "stats" %>>
       <%= link_to admin_stats_path do %>
-        <i class="fas fa-chart-line fa-fw"></i> <%= t("admin.menu.stats") %>
+        <span class="icon-stats"></span><%= t("admin.menu.stats") %>
       <% end %>
     </li>
 
     <li class="section-title">
       <a href="#">
-        <i class="fas fa-cog fa-fw"></i> <strong><%= t("admin.menu.title_settings") %></strong>
+        <span class="icon-settings"></span>
+        <strong><%= t("admin.menu.title_settings") %></strong>
       </a>
       <ul <%="class=is-active" if menu_settings? %>>
         <li <%= "class=is-active" if controller_name == "settings" %>>

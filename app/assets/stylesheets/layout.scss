@@ -206,7 +206,7 @@ a {
   color: invert($highlight);
 }
 
-.fa-check {
+.icon-check {
   color: $check;
 }
 
@@ -336,42 +336,15 @@ a {
   top: $line-height / 2;
 }
 
-
-.consul-back-link {
-  font-size: 14px;
-  font-size: .875rem;
-  line-height: 1.14286;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.back,
+.icon-angle-left {
+  clear: both;
+  color: $text-medium;
   display: inline-block;
-  position: relative;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding-left: 14px;
-  border-bottom: 1px solid $brand;
-  text-decoration: none;
-}
-.consul-back-link::before {
-  display: block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-color: transparent;
-  border-right-color: transparent;
-  -webkit-clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
-  clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
-  border-width: 5px 6px 5px 0;
-  border-right-color: inherit;
-  content: "";
-  position: absolute;
-  top: -1px;
-  bottom: 1px;
-  left: 0;
-  margin: auto;
 }
 
-.consul-back-link:hover {
-  text-decoration: none;
+.back:not([class^="icon-"]) {
+  text-decoration: underline;
 }
 
 .tabs-content {
@@ -646,7 +619,7 @@ header {
 }
 
 .top-links {
-  background-color: $dark;
+  background: $dark;
   color: #fff;
   font-size: $small-font-size;
 
@@ -1220,7 +1193,7 @@ form {
       margin: $line-height / 2 0;
     }
 
-    .fa-person-booth {
+    .icon-box {
       color: #d4a26d;
       font-size: rem-calc(120);
       line-height: rem-calc(120);
@@ -1271,11 +1244,11 @@ form {
       font-size: rem-calc(12);
     }
 
-    .fa-check {
+    .icon-check {
       color: $check;
     }
 
-    .fa-times {
+    .icon-x {
       color: $delete;
     }
   }
@@ -1288,12 +1261,12 @@ form {
     text-decoration: none;
   }
 
-  [class^="fa-"] {
+  [class^="icon-"] {
     font-size: rem-calc(19);
     vertical-align: middle;
   }
 
-  .fa-circle {
+  .icon-circle {
     color: #ecf00b;
     font-size: rem-calc(10);
     position: absolute;
@@ -2005,7 +1978,7 @@ table {
     color: $check;
     line-height: $line-height * 2;
 
-    .fa-check {
+    .icon-check {
       font-size: rem-calc(24);
       line-height: rem-calc(45);
       vertical-align: middle;
@@ -2020,7 +1993,7 @@ table {
   h1 {
     color: $check;
 
-    .fa-check {
+    .icon-check {
       line-height: rem-calc(30);
       vertical-align: middle;
     }
@@ -2033,7 +2006,7 @@ table {
     margin: rem-calc(24) 0;
     position: relative;
 
-    .fa-envelope {
+    .icon-letter {
       background: #fff;
       color: $color-info;
       font-size: rem-calc(24);
@@ -2072,7 +2045,7 @@ table {
       margin-bottom: 0;
     }
 
-    [class^="fa-"] {
+    [class^="icon-"] {
       font-size: $base-font-size;
       text-decoration: none;
       vertical-align: sub;
@@ -2098,11 +2071,11 @@ table {
     position: relative;
 
     .relative,
-    [class^="fa-arrow"] {
+    [class^="icon-arrow"] {
       padding-left: $line-height / 2;
     }
 
-    [class^="fa-arrow"] {
+    [class^="icon-arrow"] {
       font-size: $base-font-size;
       left: -20px;
       position: absolute;
@@ -2197,11 +2170,11 @@ table {
     color: $text-medium;
     text-decoration: none;
 
-    .fa-thumbs-up {
+    .icon-like {
       color: $like;
     }
 
-    .fa-thumbs-up {
+    .icon-unlike {
       color: $unlike;
     }
   }
@@ -2547,7 +2520,7 @@ table {
     padding: $line-height / 2;
     position: relative;
 
-    .fa-file-alt {
+    .icon-document {
       color: #007bb7;
       display: inline-block;
       font-size: rem-calc(24);
@@ -2577,7 +2550,7 @@ table {
     word-wrap: break-word;
   }
 
-  .fa-file-alt {
+  .icon-document {
     color: #007bb7;
     display: inline-block;
     font-size: rem-calc(24);

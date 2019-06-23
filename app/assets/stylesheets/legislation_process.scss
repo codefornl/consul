@@ -154,7 +154,7 @@
       font-weight: 700;
       font-size: $small-font-size;
 
-      .fa-comment-alt {
+      .icon-debates {
         margin-left: rem-calc(3);
       }
     }
@@ -169,7 +169,7 @@
     font-size: $small-font-size;
     color: #6d6d6d;
 
-    .fa-comments {
+    .icon-comments {
       margin-right: rem-calc(3);
     }
   }
@@ -238,7 +238,7 @@
       text-transform: uppercase;
       transition: background 0.25s ease-out, background 0.25s ease-out;
 
-      .fa-caret-right {
+      .icon-angle-right {
         vertical-align: middle;
       }
 
@@ -427,11 +427,11 @@
       background: #f2f2f2;
       font-size: $small-font-size;
 
-      .fa-comments {
+      .icon-comments {
         margin-right: rem-calc(4);
       }
 
-      .fa-bookmark {
+      .icon-banner {
         line-height: 0;
         color: $text-medium;
         vertical-align: sub;
@@ -449,6 +449,7 @@
 
       ul {
         list-style: none;
+
         li {
           margin-bottom: rem-calc(16);
         }
@@ -623,11 +624,11 @@
             display: inline-block;
           }
 
-          .fa-comment {
+          .icon-comment {
             margin-right: rem-calc(8);
           }
 
-          a .fa-expand {
+          a .icon-expand {
             color: #838383;
             font-size: $small-font-size;
             float: right;
@@ -669,7 +670,7 @@
             font-size: $small-font-size;
             background: #dfdfdf;
 
-            .fa-lightbulb {
+            .icon-proposals {
               color: #838383;
             }
 
@@ -753,8 +754,8 @@
                 }
               }
 
-              .fa-thumbs-up,
-              .fa-thumbs-down {
+              .icon-like,
+              .icon-unlike {
                 cursor: pointer;
                 color: #c7c7c7;
 
@@ -765,7 +766,7 @@
                 }
               }
 
-              .fa-thumbs-up {
+              .icon-like {
                 margin-right: rem-calc(4);
               }
             }
@@ -819,7 +820,7 @@
         text-decoration: underline;
       }
 
-      .fa-external-link-alt {
+      .icon-external {
         text-decoration: none;
         color: #999;
         line-height: 0;
@@ -842,7 +843,7 @@
 .legislation-comments {
 
   .comment-section {
-    background: $brand-secondary-background;
+    background: #fafafa;
     padding: rem-calc(16);
     border: 1px solid #dee0e3;
     margin-top: rem-calc(4);
@@ -857,18 +858,18 @@
         text-decoration: underline;
       }
 
-      .fa-expand,
-      .fa-comments {
+      .icon-expand,
+      .icon-comments {
         text-decoration: none;
         color: #999;
         line-height: 0;
       }
 
-      .fa-expand {
+      .icon-expand {
         margin-left: rem-calc(4);
       }
 
-      .fa-comments {
+      .icon-comments {
         margin-right: rem-calc(4);
       }
 
@@ -905,18 +906,18 @@
         text-decoration: underline;
       }
 
-      .fa-expand,
-      .fa-comments {
+      .icon-expand,
+      .icon-comments {
         text-decoration: none;
         color: #999;
         line-height: 0;
       }
 
-      .fa-expand {
+      .icon-expand {
         margin-left: rem-calc(4);
       }
 
-      .fa-comments {
+      .icon-comments {
         margin-right: rem-calc(4);
       }
 

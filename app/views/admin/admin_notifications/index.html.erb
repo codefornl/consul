@@ -31,17 +31,17 @@
         <td class="text-right">
           <% if admin_notification.draft? %>
             <%= link_to edit_admin_admin_notification_path(admin_notification), method: :get do %>
-              <i class="fas fa-pencil-alt" title="<%= t("shared.edit") %>"></i>
+              <i class="icon-edit" title="<%= t("shared.edit") %>"></i>
             <% end %>
             <%= link_to admin_admin_notification_path(admin_notification), method: :delete, class: "red" do %>
-              <i class="fas fa-trash-alt" title="<%= t("shared.delete") %>"></i>
+              <i class="icon-delete" title="<%= t("shared.delete") %>"></i>
             <% end %>
             <%= link_to admin_admin_notification_path(admin_notification) do %>
-              <i class="fas fa-eye" title="<%= t("admin.shared.view") %>"></i>
+              <i class="icon-eye" title="<%= t("admin.shared.view") %>"></i>
             <% end %>
           <% else %>
             <%= link_to admin_admin_notification_path(admin_notification) do %>
-              <i class="fas fa-eye" title="<%= t("admin.shared.view") %>"></i>
+              <i class="icon-eye" title="<%= t("admin.shared.view") %>"></i>
             <% end %>
           <% end %>
         </td>

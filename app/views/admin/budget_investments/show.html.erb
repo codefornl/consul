@@ -1,4 +1,7 @@
-<%= back_link_to admin_budget_budget_investments_path(Budget::Investment.filter_params(params)) %>
+<%= link_to admin_budget_budget_investments_path(Budget::Investment.filter_params(params)),
+            class: "back", data: {no_turbolink: true} do %>
+  <span class="icon-angle-left"></span><%= t("shared.back") %>
+<% end %>
 
 
 <%= render "written_by_author" %>

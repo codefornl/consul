@@ -1,0 +1,297 @@
+.icon-angle-down {
+  @extend .fas, .fa-fw, .fa-caret-down !optional;
+}
+.icon-angle-left {
+  @extend .fas, .fa-fw, .fa-caret-left !optional;
+}
+
+.icon-angle-right {
+  @extend .fas, .fa-fw, .fa-caret-right !optional;
+}
+
+.icon-angle-up {
+  @extend .fas, .fa-fw, .fa-caret-up !optional;
+}
+
+.icon-trash {
+  @extend .fas, .fa-fw, .fa-trash !optional;
+}
+.icon-comments {
+  @extend .far, .fa-fw, .fa-comments !optional;
+}
+
+.icon-twitter {
+  @extend .fab, .fa-fw, .fa-twitter !optional;
+}
+
+.icon-calendar {
+  @extend .fas, .fa-fw, .fa-calendar-alt !optional;
+}
+
+.icon-debates {
+  @extend .fas, .fa-fw, .fa-comment-alt !optional;
+}
+
+.icon-unlike {
+  @extend .fas, .fa-fw, .fa-thumbs-down !optional;
+}
+
+.icon-like {
+  @extend .fas, .fa-fw, .fa-thumbs-up !optional;
+}
+
+.icon-check {
+  @extend .fas, .fa-fw, .fa-check !optional;
+}
+
+.icon-edit {
+  @extend .fas, .fa-fw, .fa-pencil-alt !optional;
+}
+
+.icon-user {
+  @extend .fas, .fa-fw, .fa-user !optional;
+}
+
+.icon-inbox {
+  @extend .fas, .fa-fw, .fa-inbox !optional;
+}
+
+.icon-send {
+  @extend .fas, .fa-fw, .fa-paper-plane !optional;
+}
+
+.icon-settings {
+  @extend .fas, .fa-fw, .fa-cog !optional;
+}
+
+.icon-stats {
+  @extend .fas, .fa-fw, .fa-chart-line !optional;
+}
+
+.icon-proposals {
+  @extend .fas, .fa-fw, .fa-lightbulb !optional;
+}
+
+.icon-proposal-notifications {
+  @extend .fas, .fa-fw, .fa-sticky-note !optional;
+}
+
+.icon-delete {
+  @extend .fas, .fa-fw, .fa-trash-alt !optional;
+}
+
+.icon-organizations {
+  @extend .fas, .fa-fw, .fa-users !optional;
+}
+
+.icon-deleted {
+  @extend .fas, .fa-fw, .fa-user-times !optional;
+}
+
+.icon-tag {
+  @extend .fas, .fa-fw, .fa-tag !optional;
+}
+
+.icon-eye {
+  @extend .fas, .fa-fw, .fa-eye !optional;
+}
+
+.icon-x {
+  @extend .fas, .fa-fw, .fa-times !optional;
+}
+
+.icon-flag {
+  @extend .fas, .fa-fw, .fa-flag !optional;
+}
+
+.icon-comment {
+  @extend .fas, .fa-fw, .fa-comment !optional;
+}
+
+.icon-reply {
+  @extend .fas, .fa-fw, .fa-reply !optional;
+}
+
+.icon-facebook {
+  @extend .fab, .fa-fw, .fa-facebook !optional;
+}
+
+.icon-wordpress {
+  @extend .fab, .fa-fw, .fa-wordpress !optional;
+}
+
+.icon-google-plus {
+  @extend .fab, .fa-fw, .fa-google-plus !optional;
+}
+
+.icon-search {
+  @extend .fas, .fa-fw, .fa-search !optional;
+}
+
+.icon-link {
+  @extend .fas, .fa-fw, .fa-link !optional;
+}
+
+.icon-unlink {
+  @extend .fas, .fa-fw, .fa-unlink !optional;
+}
+
+.icon-external {
+  @extend .fas, .fa-fw, .fa-external-link-alt !optional;
+}
+
+.icon-video {
+  @extend .fas, .fa-fw, .fa-file-video !optional;
+}
+
+.icon-document {
+  @extend .fas, .fa-fw, .fa-file !optional;
+}
+
+.icon-print {
+  @extend .fas, .fa-fw, .fa-print !optional;
+}
+
+.icon-blog {
+  @extend .fab, .fa-fw, .fa-blogger !optional;
+}
+
+.icon-box {
+  @extend .fas, .fa-fw, .fa-person-booth !optional;
+}
+
+.icon-youtube {
+  @extend .fab, .fa-fw, .fa-youtube !optional;
+}
+
+.icon-letter {
+  @extend .fas, .fa-fw, .fa-envelope !optional;
+}
+
+.icon-circle {
+  @extend .fas, .fa-fw, .fa-circle !optional;
+}
+
+.icon-circle-o {
+  @extend .far, .fa-fw, .fa-circle !optional;
+}
+
+.icon-help {
+  @extend .fas, .fa-fw, .fa-question !optional;
+}
+
+.icon-budget {
+  @extend .fas, .fa-fw, .fa-hand-holding-heart !optional;
+}
+
+.icon-notification {
+  @extend .fas, .fa-fw, .fa-bell !optional;
+}
+
+.icon-no-notification {
+  @extend .far, .fa-fw, .fa-bell !optional;
+}
+
+.icon-whatsapp {
+  @extend .fab, .fa-fw, .fa-whatsapp !optional;
+}
+
+.icon-zip {
+  @extend .fas, .fa-fw, .fa-comment !optional;
+}
+
+.icon-banner {
+  @extend .fas, .fa-fw, .fa-bookmark !optional;
+}
+
+.icon-arrow-down {
+  @extend .fas, .fa-fw, .fa-arrow-down !optional;
+}
+
+.icon-arrow-left {
+  @extend .fas, .fa-fw, .fa-arrow-left !optional;
+}
+
+.icon-arrow-right {
+  @extend .fas, .fa-fw, .fa-arrow-right !optional;
+}
+
+.icon-check-circle {
+  @extend .fas, .fa-fw, .fa-check-circle !optional;
+}
+
+.icon-arrow-top {
+  @extend .fas, .fa-fw, .fa-arrow-up !optional;
+}
+
+.icon-checkmark-circle {
+  @extend .fas, .fa-fw, .fa-check-square !optional;
+}
+
+.icon-minus-square {
+  @extend .fas, .fa-fw, .fa-minus-square !optional;
+}
+
+.icon-plus-square {
+  @extend .fas, .fa-fw, .fa-plus-square !optional;
+}
+
+.icon-expand {
+  @extend .fas, .fa-fw, .fa-expand !optional;
+}
+
+.icon-telegram {
+  @extend .fab, .fa-fw, .fa-telegram !optional;
+}
+
+.icon-instagram {
+  @extend .fab, .fa-fw, .fa-instagram !optional;
+}
+
+.icon-image {
+  @extend .fas, .fa-fw, .fa-image !optional;
+}
+
+.icon-search-plus {
+  @extend .fas, .fa-fw, .fa-search-plus !optional;
+}
+
+.icon-search-minus {
+  @extend .fas, .fa-fw, .fa-search-minus !optional;
+}
+
+.icon-calculator {
+  @extend .fas, .fa-fw, .fa-calculator !optional;
+}
+
+.icon-map-marker {
+  @extend .fas, .fa-fw, .fa-map-marker !optional;
+}
+
+.icon-user-plus {
+  @extend .fas, .fa-fw, .fa-user-plus !optional;
+}
+
+.icon-file-text-o {
+  @extend .far, .fa-fw, .fa-file-alt !optional;
+}
+
+.icon-file-text {
+  @extend .fas, .fa-fw, .fa-file-alt !optional;
+}
+
+.icon-bars {
+  @extend .fas, .fa-fw, .fa-bars !optional;
+}
+
+.icon-quote-before {
+  @extend .fas, .fa-fw, .fa-quote-left !optional;
+}
+
+.icon-quote-after {
+  @extend .fas, .fa-fw, .fa-quote-right !optional;
+}
+
+.icon-finger {
+  @extend .far, .fa-fw, .fa-hand-point-up !optional;
+}

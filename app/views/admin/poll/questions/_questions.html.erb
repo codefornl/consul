@@ -28,10 +28,10 @@
           </td>
           <td class="text-right">
             <%= link_to edit_admin_question_path(question) do %>
-              <i class="fas fa-pencil-alt" title="<%= t("shared.edit") %>"></i>
+              <i class="icon-edit" title="<%= t("shared.edit") %>"></i>
             <% end %>
             <%= link_to admin_question_path(question), method: :delete, class: "red" do %>
-              <i class="fas fa-trash-alt" title="<%= t("shared.delete") %>"></i>
+              <i class="icon-delete" title="<%= t("shared.delete") %>"></i>
             <% end %>
           </td>
         </tr>

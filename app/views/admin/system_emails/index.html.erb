@@ -26,15 +26,15 @@
       <td class="text-right">
         <% if system_email_actions.include?("preview_pending") %>
           <%= link_to admin_system_email_preview_pending_path(system_email_title) do %>
-            <i class="fas fa-inbox" title="<%= t("admin.system_emails.preview_pending.action") %>"></i>
+            <i class="icon-inbox" title="<%= t("admin.system_emails.preview_pending.action") %>"></i>
           <% end %>
           <%= link_to admin_system_email_send_pending_path(system_email_title), method: :put, class: "green" do %>
-            <i class="fas fa-paper-plane" title="<%= t("admin.system_emails.preview_pending.send_pending") %>"></i>
+            <i class="icon-send" title="<%= t("admin.system_emails.preview_pending.send_pending") %>"></i>
           <% end %>
         <% end %>
         <% if system_email_actions.include?("view") %>
           <%= link_to admin_system_email_view_path(system_email_title) do %>
-            <i class="fas fa-eye" title="<%= t("admin.shared.view") %>"></i>
+            <i class="icon-eye" title="<%= t("admin.shared.view") %>"></i>
           <% end %>
         <% end %>
       </td>

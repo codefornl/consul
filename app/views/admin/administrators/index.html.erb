@@ -26,7 +26,7 @@
           </td>
           <td>
             <% if administrator.persisted? %>
-              <%= link_to icon("fas", "trash", class: "fa-fw"),
+              <%= link_to icon("icon-delete"),
                           admin_administrator_path(administrator),
                           method: :delete,
                           class: "button hollow alert"
