@@ -9,6 +9,7 @@
 // 07. Legislation comments
 // 08. Legislation draft comment
 // 09. Legislation proposals
+// 10. Legislation process question options
 //
 
 // 01. Hero
@@ -268,8 +269,9 @@
       display: inline-block;
       margin-bottom: $line-height / 2;
       margin-right: $line-height;
-      padding: $line-height / 2  $line-height * 2;
+      padding: $line-height / 2;
       position: relative;
+      max-width: 45%;
     }
 
     .is-active {
@@ -305,6 +307,9 @@
       border: 2px solid #9c9c9c;
       pointer-events: none;
       user-select: none;
+    }
+    .question-value {
+      padding-left: 1.5rem;
     }
   }
 }
@@ -952,3 +957,18 @@
     margin-top: 0;
   }
 }
+
+// 10. Legislation process question options
+// -------------------------
+.question-image-fields {
+  .images .button {
+    margin-top: 0;
+  }
+  .add_fields {
+    line-height: 1;
+  }
+  .js-image-attachment {
+    display: none
+  }
+}
+

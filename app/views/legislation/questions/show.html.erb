@@ -41,8 +41,5 @@
       <%= render "/shared/social_share", title: @question.title, url: legislation_process_question_url(@question.process, @question) %>
     </aside>
   </div>
-
-  <%= render partial: "/comments/comment_tree", locals: { comment_tree: @comment_tree,
-                                                          comment_flags: @comment_flags,
-                                                          display_comments_count: true } %>
+  <%= render partial: "/comments/open_answer_box", locals: { commentable: @question } %>
 </section>
