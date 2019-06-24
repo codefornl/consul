@@ -29,7 +29,7 @@
 }
 
 .icon-debates {
-  @extend .fas, .fa-fw, .fa-comment-alt !optional;
+  @extend .far, .fa-fw, .fa-comment-alt !optional;
 }
 
 .icon-unlike {
@@ -69,7 +69,7 @@
 }
 
 .icon-proposals {
-  @extend .fas, .fa-fw, .fa-lightbulb !optional;
+  @extend .far, .fa-fw, .fa-lightbulb !optional;
 }
 
 .icon-proposal-notifications {
@@ -183,6 +183,9 @@
 .icon-budget {
   @extend .fas, .fa-fw, .fa-hand-holding-heart !optional;
 }
+.icon-budgets {
+  @extend .fas, .fa-fw, .fa-hand-holding-heart !optional;
+}
 
 .icon-notification {
   @extend .fas, .fa-fw, .fa-bell !optional;
@@ -225,7 +228,11 @@
 }
 
 .icon-checkmark-circle {
-  @extend .fas, .fa-fw, .fa-check-square !optional;
+  @extend .far, .fa-fw, .fa-check-square !optional;
+}
+
+.icon-polls {
+  @extend .far, .fa-fw, .fa-check-square !optional;
 }
 
 .icon-minus-square {
