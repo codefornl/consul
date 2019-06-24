@@ -1,0 +1,39 @@
+<% valuation = local_assigns.fetch(:valuation, false) %>
+<% allow_comments = local_assigns.fetch(:allow_comments, true) %>
+<% cache [locale_and_user_status, commentable_cache_key(commentable), commentable.comments_count] do %>
+  <section class="expanded comments">
+    <div class="row">
+      <div id="comments" class="small-12 column">
+        <h2>
+          <%= comment_tree_title_text(commentable) %>
+        </h2> 
+        
+        <% if user_signed_in? %>
+          <% if comments_closed_for_commentable?(commentable) %>
+            <br>
+            <div data-alert class="callout primary">
+              <%= comments_closed_text(commentable) %>
+            </div>
+          <% elsif require_verified_resident_for_commentable?(commentable, current_user) %>
+            <br>
+            <div data-alert class="callout primary">
+              <%= t("comments.verified_only", verify_account: link_to(t("comments.verify_account"), verification_path )).html_safe %>
+            </div>
+          <% elsif allow_comments %>
+            <%= render "comments/form", { commentable: commentable,
+                                          parent_id: nil,
+                                          toggeable: false,
+                                          valuation: valuation } %>
+          <% end %>
+        <% else %>
+          <br>
+          <div data-alert class="callout primary">
+            <%= t("debates.show.login_to_comment",
+                signin: link_to(t("votes.signin"), new_user_session_path),
+                signup: link_to(t("votes.signup"), new_user_registration_path)).html_safe %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+<% end %>
