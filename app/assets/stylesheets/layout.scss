@@ -2806,6 +2806,12 @@ table {
     height: 100%;
     width: 100%;
   }
+
+  .youtube-video-wrapper {
+    iframe {
+      min-height: 480px;
+    }
+  }
 }
 
 .feeds-list {

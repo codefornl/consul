@@ -63,6 +63,7 @@
 //= require legislation_allegations
 //= require legislation_annotatable
 //= require watch_form_changes
+//= require youtube_embeds
 //= require followable
 //= require flaggable
 //= require documentable
@@ -129,6 +130,7 @@ var initialize_modules = function() {
   App.Globalize.initialize();
   App.SendAdminNotificationAlert.initialize();
   App.Settings.initialize();
+  App.YoutubeEmbeds.initialize();
 };
 
 $(function(){

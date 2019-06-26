@@ -18,6 +18,11 @@ CKEDITOR.editorConfig = function( config )
   config.allowedContent = true;
   config.format_tags = "p;h2;h3";
 
+  // youtube config
+  config.extraPlugins = 'youtube';
+  config.youtube_responsive = true;
+  config.youtube_related = false;
+
   // Rails CSRF token
   config.filebrowserParams = function(){
     var csrf_token, csrf_param, meta,
@@ -105,7 +110,7 @@ CKEDITOR.editorConfig = function( config )
   ]);
 
   config.toolbar_admin = config.toolbar_base.concat([
-    { name: "insert", items: [ "Image", "Table", "Iframe"] }
+    { name: "insert", items: [ "Image", "Table", "Youtube"] }
   ]);
   config.toolbar = "mini";
 };
