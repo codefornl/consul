@@ -26,11 +26,9 @@
           </td>
           <td>
             <% if administrator.persisted? %>
-              <%= link_to icon("icon-delete"),
-                          admin_administrator_path(administrator),
-                          method: :delete,
-                          class: "button hollow alert"
-              %>
+              <%= link_to admin_administrator_path(administrator), method: :delete, class: "red" do %>
+                <i class="icon-delete" title="<%= t("admin.administrators.administrator.delete") %>"></i>
+              <% end %>
             <% else %>
               <%= link_to t("admin.administrators.administrator.add"),
                           { controller: "admin/administrators", action: :create,
