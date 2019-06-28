@@ -1,7 +1,7 @@
 <% if header.present? %>
   <div class="jumbo highlight">
     <div class="row" data-equalizer>
-      <div class="small-12 medium-6 column <%= "medium-9 small-centered text-center" unless header.image.present? %>" data-equalizer-watch>
+      <div class="small-12 column <%= header.image.present? ? "medium-6" : " small-centered"  %>" data-equalizer-watch>
         <% if header.label.present? %>
           <span><%= header.label %></span>
         <% end %>
@@ -10,8 +10,8 @@
         <% end %>
         <p class="lead"><%= header.description.html_safe %></p>
         <% if header.link_url.present? %>
-        <div class="small-12 medium-6 large-4 <%= "small-centered" unless header.image.present? %>">
-          <%= link_to header.link_text, header.link_url, class: "button expanded large" %>
+        <div>
+          <%= link_to header.link_text, header.link_url, class: "button large" %>
         </div>
         <% end %>
       </div>
