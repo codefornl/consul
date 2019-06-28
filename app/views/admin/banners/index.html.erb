@@ -13,23 +13,20 @@
       <tr id="<%= dom_id(banner) %>">
         <th scope="col"><%= t("admin.banners.banner.post_started_at")%></th>
         <th scope="col"><%= t("admin.banners.banner.post_ended_at")%></th>
-        <th scope="col" class="small-4"><%= t("admin.actions.actions")%></th>
+        <th scope="col" class="small-4 text-right"><%= t("admin.actions.actions")%></th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><%= banner.post_started_at %></td>
         <td><%= banner.post_ended_at %></td>
-        <td>
-          <div class="small-12 medium-6 column">
-            <%= link_to t("admin.banners.index.edit"), edit_admin_banner_path(banner),
-                        class: "button hollow expanded" %>
-          </div>
-          <div class="small-12 medium-6 column">
-            <%= link_to t("admin.banners.index.delete"), admin_banner_path(banner),
-                        method: :delete,
-                        class: "button hollow alert expanded" %>
-          </div>
+        <td class="text-right">
+          <%= link_to edit_admin_banner_path(banner), target: "_blank" do %>
+            <i class="icon-edit" title="<%= t("admin.banners.index.edit") %>"></i>
+          <% end %>
+          <%= link_to admin_banner_path(banner), method: :delete, class: "red" do %>
+            <i class="icon-delete" title="<%= t("admin.banners.index.delete") %>"></i>
+          <% end %>
         </td>
       </tr>
       <tr>

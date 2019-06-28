@@ -11,7 +11,7 @@
       <th scope="col"><%= t("admin.officials.index.name") %></th>
       <th scope="col"><%= t("admin.officials.index.official_position") %></th>
       <th scope="col"><%= t("admin.officials.index.official_level") %></th>
-      <th scope="col" class="small-3"><%= t("admin.shared.actions") %></th>
+      <th scope="col" class="small-3 text-right"><%= t("admin.shared.actions") %></th>
     </thead>
     <tbody>
       <% @officials.each do |official| %>
@@ -27,9 +27,10 @@
           <td>
             <%= t("admin.officials.level_#{official.official_level}") %>
           </td>
-          <td>
-            <%= link_to official.official? ? t("admin.officials.search.edit_official") : t("admin.officials.search.make_official"),
-                        edit_admin_official_path(official), class: "button hollow expanded" %>
+          <td class="text-right">
+            <%= link_to edit_admin_official_path(official) do %>
+              <i class="icon-edit" title="<%= official.official? ? t("admin.officials.search.edit_official") : t("admin.officials.search.make_official") %>"></i>
+            <% end %>
           </td>
         </tr>
       <% end %>

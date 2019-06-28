@@ -11,7 +11,7 @@
         <th scope="col" class="text-center"><%= t("admin.administrators.index.id") %></th>
         <th scope="col"><%= t("admin.administrators.index.name") %></th>
         <th scope="col"><%= t("admin.administrators.index.email") %></th>
-        <th scope="col" class="small-3"><%= t("admin.shared.actions") %></th>
+        <th scope="col" class="small-3 text-right"><%= t("admin.shared.actions") %></th>
       </thead>
       <% @administrators.each do |administrator| %>
         <tr id="<%= dom_id(administrator)%>">
@@ -24,7 +24,7 @@
           <td>
             <%= administrator.email %>
           </td>
-          <td>
+          <td class="text-right">
             <% if administrator.persisted? %>
               <%= link_to admin_administrator_path(administrator), method: :delete, class: "red" do %>
                 <i class="icon-delete" title="<%= t("admin.administrators.administrator.delete") %>"></i>

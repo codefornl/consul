@@ -12,7 +12,7 @@
       <thead>
         <th scope="col"><%= t("admin.moderators.index.name") %></th>
         <th scope="col" class="small-6"><%= t("admin.moderators.index.email") %></th>
-        <th scope="col" class="small-3"><%= t("admin.shared.actions") %></th>
+        <th scope="col" class="small-3 text-right"><%= t("admin.shared.actions") %></th>
       </thead>
       <tbody>
         <% @moderators.each do |moderator| %>
@@ -23,13 +23,11 @@
             <td>
               <%= moderator.email %>
             </td>
-            <td>
+            <td class="text-right">
               <% if moderator.persisted? %>
-                <%= link_to t("admin.moderators.moderator.delete"),
-                            admin_moderator_path(moderator),
-                            method: :delete,
-                            class: "button hollow alert expanded"
-                %>
+               <%= link_to admin_moderator_path(moderator), method: :delete, class: "red" do %>
+                <i class="icon-delete" title="<%= t("admin.moderators.moderator.delete") %>"></i>
+                <% end %>
               <% else %>
                 <%= link_to t("admin.moderators.moderator.add"),
                             { controller: "admin/moderators", action: :create,

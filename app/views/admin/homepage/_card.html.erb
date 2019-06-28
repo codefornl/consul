@@ -10,21 +10,17 @@
   </td>
 
   <!-- remove conditional once specs have image validations -->
-  <td>
+  <td class="text-right">
     <% if card.image.present? %>
-      <%= link_to t("admin.shared.show_image"), card.image_url(:large),
-                  title: card.image.title, target: "_blank" %>
+      <%= link_to card.image_url(:large), title: card.image.title, target: "_blank" do %>
+        <i class="icon-eye" title="<%= t("admin.shared.show_image") %>"></i>
+      <% end %>
     <% end %>
-  </td>
-  <td>
-    <%= link_to t("admin.actions.edit"),
-                edit_admin_widget_card_path(card),
-                class: "button hollow" %>
-
-    <%= link_to t("admin.actions.delete"),
-                admin_widget_card_path(card),
-                method: :delete,
-                data: { confirm: t("admin.actions.confirm") },
-                class: "button hollow alert" %>
+    <%= link_to edit_admin_widget_card_path(card) do %>
+      <i class="icon-edit" title="<%= t("admin.actions.edit") %>"></i>
+    <% end %>
+    <%= link_to admin_widget_card_path(card), method: :delete, data: { confirm: t("admin.actions.confirm") }, class: "red" do %>
+      <i class="icon-delete" title="<%= t("admin.actions.delete") %>"></i>
+    <% end %>
   </td>
 </tr>

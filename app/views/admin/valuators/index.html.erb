@@ -14,7 +14,7 @@
         <th scope="col"><%= t("admin.valuators.index.email") %></th>
         <th scope="col"><%= t("admin.valuators.index.description") %></th>
         <th scope="col"><%= t("admin.valuators.index.group") %></th>
-        <th scope="col" class="small-3"><%= t("admin.actions.actions") %></th>
+        <th scope="col" class="small-3 text-right"><%= t("admin.actions.actions") %></th>
       </thead>
       <tbody>
         <% @valuators.each do |valuator| %>
@@ -35,14 +35,13 @@
                 <%= t("admin.valuators.index.no_group") %>
               <% end %>
             </td>
-            <td>
-              <%= link_to t("admin.actions.edit"),
-                          edit_admin_valuator_path(valuator),
-                          class: "button hollow" %>
-              <%= link_to t("admin.valuators.valuator.delete"),
-                          admin_valuator_path(valuator),
-                          method: :delete,
-                          class: "button hollow alert" %>
+            <td class="text-right">
+              <%= link_to edit_admin_valuator_path(valuator) do %>
+                <i class="icon-edit" title="<%= t("admin.actions.edit") %>"></i>
+              <% end %>
+              <%= link_to admin_valuator_path(valuator), method: :delete, class: "red" do %>
+                <i class="icon-delete" title="<%= t("admin.valuators.valuator.delete") %>"></i>
+              <% end %>
             </td>
           </tr>
         <% end %>

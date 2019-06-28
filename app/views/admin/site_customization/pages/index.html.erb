@@ -16,7 +16,7 @@
         <th><%= t("admin.site_customization.pages.page.created_at") %></th>
         <th><%= t("admin.site_customization.pages.page.updated_at") %></th>
         <th><%= t("admin.site_customization.pages.page.status") %></th>
-        <th class="small-4"><%= t("admin.actions.actions") %></th>
+        <th class="small-4 text-right"><%= t("admin.actions.actions") %></th>
       </tr>
     </thead>
     <tbody>
@@ -33,21 +33,15 @@
         <td><%= I18n.l page.created_at, format: :short %></td>
         <td><%= I18n.l page.created_at, format: :short %></td>
         <td><%= t("admin.site_customization.pages.page.status_#{page.status}") %></td>
-        <td>
-          <div class="small-6 column">
-            <% if page.status == "published" %>
-              <%= link_to t("admin.site_customization.pages.index.see_page"),
-                          page.url,
-                          target: "_blank",
-                          class: "button hollow expanded" %>
+        <td class="text-right">
+          <% if page.status == "published" %>
+            <%= link_to page.url, target: "_blank" do %>
+              <i class="icon-eye" title="<%= t("admin.site_customization.pages.index.see_page") %>"></i>
             <% end %>
-          </div>
-          <div class="small-6 column end">
-            <%= link_to t("admin.site_customization.pages.index.delete"),
-                        admin_site_customization_page_path(page),
-                        method: :delete,
-                        class: "button hollow alert expanded" %>
-          </div>
+          <% end %>
+          <%= link_to admin_site_customization_page_path(page), method: :delete, class: "red" do %>
+            <i class="icon-delete" title="<%= t("admin.site_customization.pages.index.delete") %>"></i>
+          <% end %>
         </td>
       </tr>
     <% end %>

@@ -92,6 +92,10 @@
   @extend .fas, .fa-fw, .fa-tag !optional;
 }
 
+.icon-eye-slash {
+  @extend .fas, .fa-fw, .fa-eye-slash !optional;
+}
+
 .icon-eye {
   @extend .fas, .fa-fw, .fa-eye !optional;
 }
@@ -245,6 +249,10 @@
 
 .icon-expand {
   @extend .fas, .fa-fw, .fa-expand !optional;
+}
+
+.icon-restore {
+  @extend .fas, .fa-fw, .fa-undo !optional;
 }
 
 .icon-telegram {

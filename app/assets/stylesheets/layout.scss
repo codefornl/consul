@@ -1095,7 +1095,9 @@ form {
     }
   }
 }
-
+.warning {
+  color: get-color(warning);
+}
 .callout {
   font-size: $small-font-size;
   overflow: hidden;
