@@ -1,5 +1,8 @@
 <ul id="information-texts-tabs" class="tabs" >
-  <% [:debates, :community, :proposals, :polls, :layouts, :mailers, :management, :welcome, :devise_views, :budgets, :legislation].each do |tab| %>
+  <% [:debates, :community, :proposals, :polls, :layouts, :mailers, :management, :welcome, :devise_views, :budgets, :legislation, 
+        :devise, :account, :application, :comments, :comments_helper, :errors, :form, :geozones, :notifications, :map, :poll_questions,
+        :proposal_notifications, :shared, :spending_proposals, :stats, :unauthorized, :users, :votes, :invisible_captcha, :related_content, :annotator
+      ].each do |tab| %>
     <li class="tabs-title">
       <% if tab.to_s == @tab %>
         <%= link_to t("admin.menu.site_customization.information_texts_menu.#{tab}"), admin_site_customization_information_texts_path(tab: tab), :class => "is-active" %>
