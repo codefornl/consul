@@ -77,7 +77,7 @@ nl:
       phase_empty:
         empty: Nog niets gepubliceerd
       process:
-        see_latest_comments: Test
+        see_latest_comments: Bekijk de laatste reacties
         see_latest_comments_title: Reageer op dit proces
       shared:
         allegations_dates: Reacties
