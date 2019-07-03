@@ -77,8 +77,8 @@ nl:
       phase_empty:
         empty: Nog niets gepubliceerd
       process:
-        see_latest_comments: Bekijk de laatste reacties
-        see_latest_comments_title: Reageer op dit proces
+        see_latest_comments: Bekijk de vragen
+        see_latest_comments_title: Bekijk de vragen
       shared:
         allegations_dates: Reacties
         debate_dates: Datum
@@ -100,7 +100,7 @@ nl:
           one: "%{count} reactie"
           other: "%{count} reacties"
           zero: Geen reacties
-        debate: Discussie
+        debate: Vraag
       show:
         answer_question: Antwoord indienen
         first_question: Eerste vraag
