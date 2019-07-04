@@ -61,20 +61,20 @@ nl:
       unsubscribe_account: Mijn account
     reply:
       hi: Hoi
-      new_reply_by_html: There is a new response from <b>%{commenter}</b> to your comment on
-      subject: Someone has responded to your comment
-      title: New response to your comment
+      new_reply_by_html: <b>%{commenter}</b> heeft gereageerd op jouw reactie
+      subject: Iemand heeft gereageerd op jouw reactie
+      title: Nieuwe reactie op jouw bijdrage
     unfeasible_spending_proposal:
       hi: Beste deelnemer,
       new_href: nieuw investeringsproject
       new_html: 'Voor al deze vragen nodigen we u uit een <strong>nieuw voorstel</ strong> uit te werken dat zich aanpast aan de voorwaarden van dit proces. U kunt dit doen door deze link te volgen: %{url}.'
       sincerely: Met vriendelijke groet,
       sorry: Sorry voor het ongemak en nogmaals bedankt voor het bijdragen!
-      subject: Your investment project '%{code}' has been marked as unfeasible
+      subject: Jouw investerings project '%{code}' is gemarkeerd als  onuitvoerbaar
     user_invite:
-      button: Complete registration
-      ignore: If you have not requested this invitation don't worry, you can ignore this email.
-      subject: Invitation to %{org_name}
-      text: 'Thank you for applying to join %{org}! In seconds you can start to participate, just fill the form below:'
+      button: Schrijf je in
+      ignore: Heb je deze uitnodiging ongevraagd ontvangen? Geen zorgen, dan kun je deze mail negeren.
+      subject: Uitnodiging voor %{org_name}
+      text: 'Je kan je inschrijven voor %{org}! Via de volgende link:'
       thanks: Heel erg bedankt.
-      title: Welcome to %{org}
+      title: Welkom op %{org}
