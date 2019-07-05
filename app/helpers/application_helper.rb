@@ -39,10 +39,20 @@ module ApplicationHelper
     authorable.author_id == user.id
   end
 
-  def back_link_to(destination = :back, text = t("shared.back"))
-    link_to destination, class: "consul-back-link" do
-      text
+  def back_link_to(destination = :back, text = t("shared.back"), style = nil)
+    if (style != nil)
+      link_to destination, style: style do
+        "<span class='icon-angle-left' title='#{text}'></span> #{text}".html_safe
+      end
+    else
+      link_to destination do
+        "<span class='icon-angle-left' title='#{text}'></span> #{text}".html_safe
+      end
     end
+  end
+
+  def back_icon(icon_name_postfix, hash={})
+    content_tag :span, nil, class: "icon-arrow-back"
   end
 
   def image_path_for(filename)
