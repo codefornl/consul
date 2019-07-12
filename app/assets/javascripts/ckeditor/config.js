@@ -89,7 +89,7 @@ CKEDITOR.editorConfig = function( config )
     { name: "editing", groups: [ "find", "selection", "spellchecker" ], items: [ "Find", "Replace", "-", "SelectAll", "-", "Scayt" ] },
     { name: "forms", items: [ "Form", "Checkbox", "Radio", "TextField", "Textarea", "Select", "Button", "ImageButton", "HiddenField" ] },
     { name: "links", items: [ "Link", "Unlink", "Anchor" ] },
-    { name: "insert", items: [ "Image", "Flash", "Table", "HorizontalRule", "SpecialChar" ] },
+    { name: "insert", items: [ "Flash", "Table", "HorizontalRule", "SpecialChar" ] },
     { name: "paragraph", groups: [ "list", "indent", "blocks", "align", "bidi" ], items: [ "NumberedList", "BulletedList", "-", "Outdent", "Indent", "-", "Blockquote", "CreateDiv", "-", "JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock" ] },
     "/",
     { name: "styles", items: [ "Styles", "Format", "Font", "FontSize" ] },
@@ -105,12 +105,12 @@ CKEDITOR.editorConfig = function( config )
   ]
 
   config.toolbar_mini = config.toolbar_base.concat([
-    { name: "insert", items: [ "Image", "Table"] }
+    { name: "insert", items: [ "Table"] }
     
   ]);
 
   config.toolbar_admin = config.toolbar_base.concat([
-    { name: "insert", items: [ "Image", "Table", "Youtube"] }
+    { name: "insert", items: [ "Table", "Youtube"] }
   ]);
   config.toolbar = "mini";
 };
