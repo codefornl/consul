@@ -8,7 +8,9 @@
         <% if header.title.present? %>
           <h1><%= header.title %></h1>
         <% end %>
+        <% if header.description.present? %>
         <p class="lead"><%= header.description.html_safe %></p>
+        <% end %>
         <% if header.link_url.present? %>
         <div>
           <%= link_to header.link_text, header.link_url, class: "button large" %>

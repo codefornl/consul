@@ -816,11 +816,11 @@ footer {
   a,
   a:active,
   a:focus {
-    color: invert($footer-background);
+    color: $footer-text;
     text-decoration: underline;
 
     &:hover {
-      color: lighten(invert($footer-background),20);
+      color: $footer-text-hover;
     }
   }
 
@@ -1716,7 +1716,7 @@ table {
     text-decoration: none;
 
     &:hover {
-      color: $brand;
+      color: $social-hover;
     }
   }
 }

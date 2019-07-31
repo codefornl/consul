@@ -1,5 +1,68 @@
-// Overrides and adds customized foundation settings in this file
-// Read more on documentation:
-// * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
-// * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
-//
+$brand:             #E90000;
+$dark:              darken($brand, 10%);
+
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace !important;
+$font-family-serif: Arial, Verdana, sans-serif;
+$body-font-family: Verdana, Arial, sans-serif;
+$primary-color: #E60004 !important;
+$brand-border: #E60004;
+$footer-background: #E60004;
+$footer-text: #fff;
+$footer-text-hover: #fff;
+footer {
+  a,
+  a:active,
+  a:focus {
+    color: $footer-text;
+    text-decoration: none !important;
+    &:hover {
+      color: $footer-text-hover;
+      text-decoration: underline !important;
+    }
+  }
+}
+$social-hover: $footer-text-hover;
+$link:              #000;
+$link-hover:        #000;
+.social {
+
+    a {
+      font-size: rem-calc(24);
+      margin: 0 $line-height / 2;
+      text-decoration: none;
+  
+      &:hover {
+        color: $social-hover;
+        text-decoration: underline !important;
+      }
+    }
+  }
+.jumbo {
+    &.highlight {
+        background-color: #fff;
+    }
+    h1::after {
+        background:  
+        linear-gradient(135deg, white 35%, transparent 25%) -25px 0,
+        linear-gradient(225deg, white 35%, transparent 25%) -25px 0,
+        linear-gradient(315deg, white 35%, transparent 25%),
+        linear-gradient(45deg, white 35%, transparent 25%);   
+        background-size: 50px 50px;
+        background-color: black;
+    }
+    a.button {
+        background-color: #554866;
+        color: #fff;
+    }
+    .row {
+        h1 {
+            color: #554866;
+        }
+        p {
+            color: #FCD02F;
+        }
+    }
+}
+.background-header {
+    display: none;
+}
