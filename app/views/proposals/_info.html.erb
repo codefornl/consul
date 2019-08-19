@@ -19,12 +19,12 @@
 <%= render_image(@proposal.image, :large, true) if @proposal.image.present? %>
 
 <br>
-<p>
+<p id="proposal-code">
   <%= t("proposals.show.code") %>
   <strong><%= @proposal.code %></strong>
 </p>
 
-<blockquote><%= @proposal.summary %></blockquote>
+<blockquote id="proposal-summary"><%= @proposal.summary %></blockquote>
 
 <% if @proposal.video_url.present? %>
   <div class="small-12 medium-7 small-centered">
