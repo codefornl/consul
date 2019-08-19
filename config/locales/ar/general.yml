@@ -43,7 +43,6 @@ ar:
     debate:
       comments:
         zero: لا توجد تعليقات
-        zero: "%{count} تعليقات"
         one: '%{count} تعليق'
         two: "%{count} تعليقات"
         few: "%{count} تعليقات"
@@ -81,7 +80,6 @@ ar:
       author_deleted: تم حذف المستخدم
       comments:
         zero: لا توجد تعليقات
-        zero: "%{count} تعليق"
         one: تعليق واحد
         two: "%{count} تعليق"
         few: "%{count} تعليق"
@@ -203,7 +201,6 @@ ar:
     proposal:
       comments:
         zero: لا توجد تعليقات
-        zero: "%{count} تعليق"
         one: تعليق واحد
         two: "%{count} تعليق"
         few: "%{count} تعليق"
@@ -212,7 +209,6 @@ ar:
       support: دعم
       supports:
         zero: لا يوجد دعم
-        zero: "%{count} يدعم"
         one: 1 دعم
         two: "%{count} يدعم"
         few: "%{count} يدعم"
@@ -222,7 +218,6 @@ ar:
       author_deleted: تم حذف المستخدم
       comments:
         zero: لا توجد تعليقات
-        zero: "%{count} تعليق"
         one: تعليق واحد
         two: "%{count} تعليق"
         few: "%{count} تعليق"
@@ -361,7 +356,6 @@ ar:
       support_title: ادعم هذا المشروع
       supports:
         zero: لا يوجد دعم
-        zero: "%{count} يدعم"
         one: 1 دعم
         two: "%{count} يدعم"
         few: "%{count} يدعم"
