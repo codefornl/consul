@@ -1247,9 +1247,9 @@
     a {
       display: flex;
       padding: $line-height / 2;
-
+      border: 1px solid transparent;
       &:hover {
-        border: 1px solid invert($border);
+        border: 1px solid $brand;
         text-decoration: none;
       }
     }
@@ -1259,9 +1259,7 @@
     }
 
     span {
-      color: $text;
       display: block;
-      font-size: $small-font-size;
     }
   }
 }

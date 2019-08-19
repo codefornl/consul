@@ -6,8 +6,8 @@ module BudgetsHelper
 
   def heading_name_and_price_html(heading, budget)
     content_tag :div do
-      concat(heading.name + " ")
-      concat(content_tag(:span, budget.formatted_heading_price(heading)))
+      concat(content_tag(:span, heading.name + " ", class: "heading-title"))
+      concat(content_tag(:span, budget.formatted_heading_price(heading), class: "heading-price"))
     end
   end
 
