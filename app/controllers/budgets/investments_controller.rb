@@ -19,7 +19,7 @@ module Budgets
     before_action :load_ballot, only: [:index, :show]
     before_action :load_heading, only: [:index, :show]
     before_action :set_random_seed, only: :index
-    before_action :load_categories, only: [:index, :new, :create]
+    before_action :load_categories, only: [:index, :new, :create, :edit, :update]
     before_action :set_default_budget_filter, only: :index
     before_action :set_view, only: :index
     before_action :load_content_blocks, only: :index
@@ -105,6 +105,21 @@ module Budgets
       respond_to do |format|
         format.json { render json: data }
       end
+    end
+
+    def edit
+      if @investment.author == current_user
+        return true
+      else
+        redirect_to root_path,
+                    notice: 'You have to be the original author of the project to edit it'
+      end
+    end
+  
+     def update
+      @investment.update(investment_params)
+      redirect_to budget_investment_path(@budget, @investment),
+                  notice: 'It was updated successfully.'
     end
 
     private

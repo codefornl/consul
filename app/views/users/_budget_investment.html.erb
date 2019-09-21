@@ -9,4 +9,10 @@
                   data: {confirm: "#{t("users.show.delete_alert")}"} %>
     <% end %>
   </td>
+  <td>
+    <% if can? :update, budget_investment %>
+      <%= link_to 'Editar', edit_budget_investment_path(budget_investment.budget, budget_investment),
+                  method: :get, class: "button hollow expanded" %>
+    <% end %>
+  </td>
 </tr>
