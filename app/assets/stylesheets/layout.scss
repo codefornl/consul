@@ -2235,7 +2235,9 @@ table {
 .flag-active {
   color: $delete;
 }
-
+.dropdown-pane {
+  z-index: 1001;
+}
 .dropdown-pane a {
   color: $text-medium;
 }
