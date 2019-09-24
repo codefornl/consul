@@ -110,7 +110,7 @@ CKEDITOR.editorConfig = function( config )
   ]);
 
   config.toolbar_admin = config.toolbar_base.concat([
-    { name: "insert", items: [ "Table", "Youtube"] }
+    { name: "insert", items: [ "Table", "Image", "Youtube"] }
   ]);
   config.toolbar = "mini";
 };
