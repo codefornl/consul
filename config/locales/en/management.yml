@@ -101,6 +101,7 @@ en:
     budget_investments:
       alert:
         unverified_user: User is not verified
+      edit: Edit budget investment
       create: Create a budget investment
       filters:
         heading: Concept

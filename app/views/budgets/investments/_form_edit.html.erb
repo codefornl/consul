@@ -1,7 +1,3 @@
-# Create the edit form 
-# in 
-# app/views/budgets/investments/_form_edit.html.erb 
-
 <%= form_for(@investment, url: budget_investment_path(@budget, @investment), html: { multipart: true }) do |f| %>
   <%= render 'shared/errors', resource: @investment %>
 
@@ -97,4 +93,4 @@
     </div>
   </div>
 <% end %>
-```
+
