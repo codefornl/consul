@@ -11,7 +11,7 @@
   </td>
   <td>
     <% if can? :update, budget_investment %>
-      <%= link_to 'Editar', edit_budget_investment_path(budget_investment.budget, budget_investment),
+      <%= link_to t("shared.edit"), edit_budget_investment_path(budget_investment.budget, budget_investment),
                   method: :get, class: "button hollow expanded" %>
     <% end %>
   </td>
