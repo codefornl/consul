@@ -1,0 +1,20 @@
+[main]
+host = https://www.transifex.com
+
+[consul-org.activemodel-yml]
+file_filter = config/locales/<lang>/activemodel.yml
+source_file = config/locales/en/activemodel.yml
+source_lang = en
+type = YML
+
+[consul-org.activerecord-yml]
+file_filter = config/locales/<lang>/activerecord.yml
+source_file = config/locales/en/activerecord.yml
+source_lang = en
+type = YML
+
+[consul-org.admin-yml]
+file_filter = config/locales/<lang>/admin.yml
+source_file = config/locales/en/admin.yml
+source_lang = en
+type = YML
