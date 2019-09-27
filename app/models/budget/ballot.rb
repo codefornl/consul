@@ -67,7 +67,7 @@ class Budget
     end
 
     def heading_for_group(group)
-      return nil unless has_lines_in_group?(group)
+      return nil unless (has_lines_in_group?(group) && investments.where(group: group).first)
       investments.where(group: group).first.heading
     end
 

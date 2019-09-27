@@ -249,7 +249,7 @@ nl:
         cannot_calculate_winners: Het budget moet in fase "Ballotage projecten", "Rekening houden met stemmingen" of "Voltooide begroting" zijn om aangenomen te kunnen worden
         download_current_selection: Selectie downloaden
         feasibility:
-          feasible: Haalbaar (%{price})
+          feasible: "Haalbaar"
           undecided: Onbeslist
           unfeasible: Onhaalbaar
         filters:
@@ -281,6 +281,7 @@ nl:
           valuation_group: Groep
           valuator: Beoordelaar
           visible_to_valuators: Beoordelen
+          price: Prijs
         no_admin_assigned: Geen
         no_budget_investments: Er zijn geen investeringsprojecten.
         no_valuation_groups: Geen
@@ -1290,8 +1291,8 @@ nl:
         administrator_filter_all: Alle beheerders
         assigned_admin: Beheerder
         feasibility:
-          feasible: Haalbaar (%{price})
-          not_feasible: Not feasible
+          feasible: "Haalbaar (%{price})"
+          not_feasible: Niet haalbaar
           undefined: Niet gedefinieerd
         filters:
           all: Alles
