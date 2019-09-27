@@ -1331,10 +1331,6 @@ form {
     p:not(.time) {
       color: $link;
     }
-
-    &::before {
-      content: "\43";
-    }
   }
 
   p {
