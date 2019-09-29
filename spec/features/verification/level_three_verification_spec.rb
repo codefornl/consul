@@ -1,93 +1,78 @@
 require "rails_helper"
 
 feature "Level three verification" do
-  scenario "Verification with residency and verified sms" do
-    create(:geozone)
+
+  background do
+    Zipcode.create!(code: "9713BH")
+  end
+
+  scenario "Verification with correct residency zipcode" do
     user = create(:user)
 
-    verified_user = create(:verified_user,
-                           document_number: "12345678Z",
-                           document_type:   "1",
-                           phone:           "611111111")
+    create(:verified_user, document_number: "12345678Z", document_type: "1")
 
     login_as(user)
 
     visit account_path
     click_link "Verify my account"
 
-    verify_residence
+    select "DNI", from: "residence_document_type"
+    fill_in "residence_document_number", with: "12345678Z"
+    select_date "31-#{I18n.l(Date.current.at_end_of_year, format: "%B")}-1980", from: "residence_date_of_birth"
 
-    within("#verified_user_#{verified_user.id}_phone") do
-      click_button "Send code"
-    end
+    fill_in "residence_postal_code", with: "9713BH"
+    check "residence_terms_of_service"
 
-    expect(page).to have_content "Security code confirmation"
+    click_button "new_residence_submit"
 
-    user = user.reload
-    fill_in "sms_confirmation_code", with: user.sms_confirmation_code
-    click_button "Send"
-
-    expect(page).to have_content "Code correct. Your account is now verified"
-
-    expect(page).not_to have_link "Verify my account"
     expect(page).to have_content "Account verified"
   end
 
-  scenario "Verification with residency and verified email" do
-    create(:geozone)
+  scenario "Verification with wrong residency zipcode" do
     user = create(:user)
 
-    verified_user = create(:verified_user,
-                           document_number: "12345678Z",
-                           document_type:   "1",
-                           email:           "rock@example.com")
+    create(:verified_user, document_number: "12345678Z", document_type: "1")
 
     login_as(user)
 
     visit account_path
     click_link "Verify my account"
 
-    verify_residence
+    select "DNI", from: "residence_document_type"
+    fill_in "residence_document_number", with: "12345678Z"
+    select_date "31-#{I18n.l(Date.current.at_end_of_year, format: "%B")}-1980", from: "residence_date_of_birth"
 
-    within("#verified_user_#{verified_user.id}_email") do
-      click_button "Send code"
-    end
+    fill_in "residence_postal_code", with: "9713BA"
+    check "residence_terms_of_service"
 
-    expect(page).to have_content "We have sent a confirmation email to your account: rock@example.com"
+    click_button "new_residence_submit"
 
-    sent_token = /.*email_verification_token=(.*)".*/.match(ActionMailer::Base.deliveries.last.body.to_s)[1]
-    visit email_path(email_verification_token: sent_token)
-
-    expect(page).to have_content "You are a verified user"
-
-    expect(page).not_to have_link "Verify my account"
-    expect(page).to have_content "Account verified"
+    expect(page).to have_css ".error", text: "In order to be verified, you must be registered."
+    expect(page).not_to have_content "Account verified"
   end
 
-  scenario "Verification with residency and sms and letter" do
-    create(:geozone)
+  scenario "Verification using an already registered document number" do
+    create(:user, document_number: "12345678Z", document_type: "1")
+
     user = create(:user)
+
+    create(:verified_user, document_number: "12345678Z", document_type: "1")
+
     login_as(user)
 
     visit account_path
     click_link "Verify my account"
 
-    verify_residence
+    select "DNI", from: "residence_document_type"
+    fill_in "residence_document_number", with: "12345678Z"
+    select_date "31-#{I18n.l(Date.current.at_end_of_year, format: "%B")}-1980", from: "residence_date_of_birth"
 
-    fill_in "sms_phone", with: "611111111"
-    click_button "Send"
+    fill_in "residence_postal_code", with: "9713BH"
+    check "residence_terms_of_service"
 
-    expect(page).to have_content "Security code confirmation"
+    click_button "new_residence_submit"
 
-    user = user.reload
-    fill_in "sms_confirmation_code", with: user.sms_confirmation_code
-    click_button "Send"
-
-    expect(page).to have_content "Code correct"
-
-    click_link "Send me a letter with the code"
-
-    expect(page).to have_content "Thank you for requesting your maximum security code (only required for the final votes)."\
-                                 " In a few days we will send it to the address featuring in the data we have on file."
+    expect(page).to have_css ".error", text: "has already been taken"
+    expect(page).not_to have_content "Account verified"
   end
 end
