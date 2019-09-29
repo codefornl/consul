@@ -112,14 +112,14 @@ module Budgets
         return true
       else
         redirect_to root_path,
-                    notice: 'You have to be the original author of the project to edit it'
+                    notice: t("budgets.investments.form.edit_permission")
       end
     end
-  
+
      def update
       @investment.update(investment_params)
       redirect_to budget_investment_path(@budget, @investment),
-                  notice: 'It was updated successfully.'
+                  notice: t("budgets.investments.form.updated_notice")
     end
 
     private
