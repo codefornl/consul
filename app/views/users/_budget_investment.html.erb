@@ -5,14 +5,13 @@
   <td>
     <% if can? :destroy, budget_investment %>
       <%= link_to t("shared.delete"), budget_investment_path(budget_investment.budget, budget_investment),
-                  method: :delete, class: "button hollow alert expanded",
+                  method: :delete, class: "button hollow alert",
                   data: {confirm: "#{t("users.show.delete_alert")}"} %>
     <% end %>
-  </td>
-  <td>
-    <% if can? :update, budget_investment %>
-      <%= link_to t("shared.edit"), edit_budget_investment_path(budget_investment.budget, budget_investment),
-                  method: :get, class: "button hollow expanded" %>
+    <% if can_edit_investment?(budget_investment, budget_investment.budget) %>
+      <%= link_to t("shared.edit"),
+                  edit_budget_investment_path(budget_investment.budget, budget_investment),
+                  method: :get, class: "button hollow" %>
     <% end %>
   </td>
 </tr>

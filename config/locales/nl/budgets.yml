@@ -68,6 +68,8 @@ nl:
         tags_instructions: "Voeg termen toe. Je kunt eigen termen opgeven of uit bestaande termen kiezen."
         tags_label: Termen
         tags_placeholder: Voer de termen in die je wilt gebruiken, gescheiden door kommas (',')
+        edit_permission: Je moet zelf het idee hebben ingediend om het te kunnen bewerken.
+        updated_notice: Je idee is aangepast.
       header:
         change_ballot: ALs je je bedenkt kun je je stemmen in %{check_ballot} verwijderen en opnieuw beginnen.
         check_ballot: Check mijn stemmen

@@ -49,4 +49,8 @@ module BudgetInvestmentsHelper
   def investments_secondary_view
     investments_current_view == "default" ? "minimal" : "default"
   end
+
+  def can_edit_investment?(investment, budget)
+    author_of?(investment, current_user) && can?(:update, investment) && budget.accepting?
+  end
 end

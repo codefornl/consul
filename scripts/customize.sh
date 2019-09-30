@@ -6,4 +6,5 @@ else
     bin/rake db:seed
     echo $CUSTOM_SET_NAME
     curl -s "https://consul-assets-service.consulproject.nl/?set=$CUSTOM_SET_NAME&alpine=true" | sh
+    bin/rake db:zipcodes
 fi

@@ -1281,6 +1281,80 @@ feature "Budget Investments" do
                   "budget_investment_path",
                   { "budget_id": "budget_id" }
 
+  context "Edit" do
+
+    scenario "Author can edit own budget investment from my activity" do
+      user = create(:user, :level_two)
+      investment = create(:budget_investment, heading: heading, author: user, title: "First title")
+
+      login_as(user)
+      visit user_path(user, tab: :budget_investments)
+
+      within("#budget_investment_#{investment.id}") do
+        expect(page).to have_link "Edit"
+      end
+
+      click_link "Edit"
+      fill_in "budget_investment_title", with: "The new title"
+      click_button "Update Investment"
+
+      visit budget_investment_path(budget, investment)
+      expect(page).to have_content "The new title"
+      expect(page).not_to have_content "First title"
+    end
+
+    scenario "Author can edit own budget investment from show" do
+      user = create(:user, :level_two)
+      investment = create(:budget_investment, heading: heading, author: user, title: "First title")
+
+      login_as(user)
+      visit budget_investment_path(budget, investment)
+      expect(page).to have_content "First title"
+      expect(page).to have_link "Edit"
+
+      click_link "Edit"
+      fill_in "budget_investment_title", with: "The new title"
+      click_button "Update Investment"
+
+      visit budget_investment_path(budget, investment)
+      expect(page).to have_content "The new title"
+      expect(page).not_to have_content "First title"
+    end
+
+    scenario "User cannot edit budget investment of another author" do
+      author = create(:user, :level_two)
+      user = create(:user, :level_two)
+      investment = create(:budget_investment, heading: heading, author: author)
+
+      login_as(user)
+      visit budget_investment_path(budget, investment)
+      expect(page).not_to have_link "Edit"
+
+      visit edit_budget_investment_path(investment.budget, investment)
+      expect(page).to have_content "You have to be the original author of the project to edit it."
+    end
+
+    scenario "Edit button only appears on accepting phase" do
+      user = create(:user, :level_two)
+      investment = create(:budget_investment, :selected, :feasible,
+                           heading: heading, author: user, valuation_finished: true)
+      budget.update(phase: "accepting")
+
+      login_as(user)
+      visit budget_investment_path(budget, investment)
+      expect(page).to have_link "Edit"
+
+      ["reviewing", "selecting", "valuating", "publishing_prices", "balloting",
+       "reviewing_ballots", "finished"].each do |phase|
+        budget.update(phase: phase)
+
+        login_as(user)
+        visit budget_investment_path(budget, investment)
+        expect(page).not_to have_link "Edit"
+      end
+    end
+  end
+
   context "Destroy" do
 
     scenario "Admin cannot destroy budget investments" do

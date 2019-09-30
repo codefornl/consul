@@ -71,6 +71,8 @@ en:
         map_remove_marker: "Remove map marker"
         location: "Location additional info"
         map_skip_checkbox: "This investment doesn't have a concrete location or I'm not aware of it."
+        edit_permission: You have to be the original author of the project to edit it.
+        updated_notice: Investment project updated successfully.
       index:
         title: Participatory budgeting
         unfeasible: Unfeasible investment projects
