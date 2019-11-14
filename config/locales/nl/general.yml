@@ -628,7 +628,7 @@ nl:
         found:
           one: Er is een voorstel met de term '%{query}', u kunt hierin deelnemen, in plaats van het openen van een nieuwe voorstel.
           other: Er is een voorstel met de term '%{query}', u kunt hierin deelnemen, in plaats van het openen van een nieuwe voorstel.
-        message: "%{limit} van %{count} beleggingen met de term '%{query}'"
+        message: "%{limit} van %{count} voorstellen met de term '%{query}'"
         see_all: Bekijk alles
       debate:
         found:
