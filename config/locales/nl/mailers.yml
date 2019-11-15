@@ -23,7 +23,7 @@ nl:
       new_html: 'Voor al deze vragen nodigen we u uit een <strong>nieuw voorstel</ strong> uit te werken dat zich aanpast aan de voorwaarden van dit proces. U kunt dit doen door deze link te volgen: %{url}.'
       sincerely: Oprecht
       sorry: Sorry for the inconvenience and we again thank you for your invaluable participation.
-      subject: Uw investeringsproject '%{code}' is als onhaalbaar gemarkeerd
+      subject: Uw project '%{code}' is als onhaalbaar beoordeeld
     budget_investment_unselected:
       hi: Beste deelnemer,
       sincerely: Hoogachtend
