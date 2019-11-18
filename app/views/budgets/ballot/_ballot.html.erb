@@ -1,6 +1,6 @@
 <div class="expanded budget no-margin-top padding">
   <div class="row">
-    <%= back_link_to @ballot_referer %>
+    <%= back_link_to budget_investments_path(investment.budget, heading_id: investment.heading) %>
 
     <h1 class="text-center"><%= t("budgets.ballots.show.title") %></h1>
 
