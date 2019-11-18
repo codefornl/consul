@@ -21,7 +21,7 @@ nl:
           one: U heeft op <span>één</span> begrotingsvoorstel gestemd.
           other: U heeft op <span>%{count}</span> begrotingsvoorstellen gestemd.
         voted_info_html: Uw stem is bevestigd!
-        voted_info_2: U kan te allen tijde uw stem wijzigen, tot de sluiting van deze fase.<br> U hoeft niet het héle bedrag uit te geven.  
+        voted_info_2: U kunt uw stem wijzigen tot de sluiting van deze fase.<br> U hoeft niet het héle bedrag uit te geven.  
         zero: U heeft op geen enkel begrotingsvoorstel gestemd.
     executions:
       filters:
