@@ -1,5 +1,7 @@
-<div id="map-budgets-investments" class="sidebar-block">
+<div id="map-budgets-investments" class="sidebar-block sidebar-map">
   <div class="sidebar-divider"></div>
   <h2 class="sidebar-title"><%= t("budgets.index.map") %></h2>
-  <%= render_map(@map_location, "budgets", false, nil, @investments_map_coordinates) %>
+  <div class="map">
+    <%= render_map(@map_location, "budgets", false, nil, @investments_map_coordinates) %>
+  </div>
 </div>
