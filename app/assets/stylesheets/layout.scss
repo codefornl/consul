@@ -901,6 +901,13 @@ footer {
   text-transform: uppercase;
 }
 
+.sidebar-map {
+
+  .map {
+    z-index: 0;
+  }
+}
+
 // 05. Auth pages
 // --------------
 
